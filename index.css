@@ -6,7 +6,9 @@ body {
 }
 
 .content {
-  margin: 10% 20%;
+  min-width: 600px;
+  max-width: 800px;
+  margin: auto;
 }
 
 p {
