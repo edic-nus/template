@@ -10,7 +10,65 @@ body {
 }
 
 p {
+  text-align: justify;
   font-size: 1.1rem;
+}
+
+sub {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.table-of-content {
+  border: 1px solid black;
+  padding: 24px 48px;
+}
+
+.image-text {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.text-image {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: lightcoral;
+}
+
+tr:nth-child(3) {
+  background-color: lightblue;
+}
+
+tr:last-child {
+  font-weight: bold;
+}
+
+iframe {
+  display: block;
+  margin: auto;
+}
+
+.references li {
+  margin: 8px 0px;
 }
 
 #render {
