@@ -6,9 +6,9 @@ body {
 }
 
 .content {
-  min-width: 600px;
   max-width: 800px;
   margin: auto;
+  padding: 10%;
 }
 
 p {

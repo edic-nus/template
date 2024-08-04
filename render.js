@@ -31,9 +31,18 @@ function addShadowedLight(x, y, z, color, intensity) {
 
 }
 
+let height = 400;
+let width = 600;
+
+if (width > window.innerWidth) {
+  width = window.innerWidth * 0.7;
+  height = height * width / 600;
+  console.log(width, height);
+}
+
 const camera = new THREE.PerspectiveCamera(
   75,
-  600 / 400,
+  width / height,
   0.1,
   1000
 )
@@ -42,7 +51,7 @@ camera.position.x = 2
 camera.position.y = 2
 
 const renderer = new THREE.WebGLRenderer()
-renderer.setSize(600, 400)
+renderer.setSize(width, height)
 const element = document.getElementById("render");
 element.appendChild(renderer.domElement)
 
