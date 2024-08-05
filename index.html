@@ -8,19 +8,22 @@
   <title>My Website</title>
   <link rel="stylesheet" href="./index.css">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@v0.166.1/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.166.1/examples/jsm/"
-    }
-  }
-  </script>
 </head>
 
 <body>
   <div class="content">
-    <h1>Project Title - Project Code</h1>
+    <h1>Project Title</h1>
+
+    <div class="names">
+      <h3>
+        Team members:
+      </h3>
+      <ul>
+        <li>Jane Doe (Mechanical Engineering)</li>
+        <li>John Smith (Electrical Engineering)</li>
+        <li>Hans Down (Computer Engineering)</li>
+      </ul>
+    </div>
 
     <div class="table-of-content">
       <h2>Table of Contents</h2>
@@ -112,7 +115,6 @@
           id venenatis a condimentum vitae sapien (Chamberlin et al., 2008). Vitae tempus quam pellentesque nec nam
           aliquam sem.
         </p>
-        <div id="render"></div>
         <sub>Render 1: Render of a benchy for demonstration purpose</sub>
       </div>
 
@@ -131,29 +133,6 @@
           <iframe id="rick" width="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
             allowfullscreen></iframe>
         </div>
-
-        <!-- <div class="image-text"> -->
-        <!--   <img src="https://placehold.co/300x200/grey/white"> -->
-        <!--   <p> -->
-        <!--     Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Dignissim convallis aenean et tortor -->
-        <!--     at risus viverra adipiscing. Facilisi nullam vehicula ipsum a arcu cursus. Adipiscing elit pellentesque -->
-        <!--     habitant morbi tristique senectus et netus. Turpis massa tincidunt dui ut ornare lectus. Suspendisse sed -->
-        <!--     nisi lacus sed. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Ut ornare lectus sit -->
-        <!--     amet est placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet. -->
-        <!--   </p> -->
-        <!-- </div> -->
-        <!---->
-        <!-- <div class="text-image"> -->
-        <!--   <p> -->
-        <!--     Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Dignissim convallis aenean et tortor -->
-        <!--     at risus viverra adipiscing. Facilisi nullam vehicula ipsum a arcu cursus. Adipiscing elit pellentesque -->
-        <!--     habitant morbi tristique senectus et netus. Turpis massa tincidunt dui ut ornare lectus. Suspendisse sed -->
-        <!--     nisi lacus sed. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Ut ornare lectus sit -->
-        <!--     amet est placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet. -->
-        <!--   </p> -->
-        <!--   <img src="https://placehold.co/300x200/grey/white"> -->
-        <!-- </div> -->
-
 
         <div id="sub-section-2-header-2">
           <h3>2.2. Sub-section Header 2</h3>
@@ -207,7 +186,7 @@
     <br />
     <div id="references">
       <h2>References</h2>
-      <ol class="references">
+      <ul class="references">
         <li>
           Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved from
           http://www.dowjones.com/factiva/
@@ -221,11 +200,12 @@
           Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied Psychology, 2(2),
           38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
         </li>
-      </ol>
+      </ul>
     </div>
 
 
     <script type="module" src="render.js"></script>
+    <script type="module" src="elements.js"></script>
   </div>
 </body>
 

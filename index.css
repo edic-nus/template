@@ -65,6 +65,7 @@ tr:last-child {
 }
 
 iframe {
+  aspect-ratio: 16 / 9;
   display: block;
   margin: auto;
 }
