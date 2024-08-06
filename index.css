@@ -22,11 +22,6 @@ sub {
   text-align: center;
 }
 
-.table-of-content {
-  border: 1px solid black;
-  padding: 24px 48px;
-}
-
 .image-text {
   display: flex;
   justify-content: space-between;

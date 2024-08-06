@@ -7,11 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Project Title</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" media="(prefers-color-scheme:light)"
-    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css"
-    onload="document.documentElement.classList.add('sl-theme-light');" />
-  <link rel="stylesheet" media="(prefers-color-scheme:dark)"
-    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/dark.css" />
+  <!-- <link rel="stylesheet" media="(prefers-color-scheme:light)" -->
+  <!--   href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" -->
+  <!--   onload="document.documentElement.classList.add('sl-theme-light');" /> -->
+  <!-- <link rel="stylesheet" media="(prefers-color-scheme:dark)" -->
+  <!--   href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/dark.css" /> -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
   <script type="module"
     src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 
@@ -19,6 +21,14 @@
 
   <link rel="stylesheet" href="./components/team-member/team-member.css">
   <script type="module" src="./components/team-member/team-member.js"></script>
+
+  <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
+  <!-- <script type="module" src="./components/team-member/team-member.js"></script> -->
+
+  <!-- <link rel="stylesheet" href="./components/image/image-component.css"> -->
+  <script type="module" src="./components/image/image-component.js"></script>
+
+  <script type="module" src="./components/video/video.js"></script>
 </head>
 
 <body>
@@ -41,22 +51,31 @@
 
     <div class="table-of-content">
       <h2>Table of Contents</h2>
-      <ol>
-        <li>
-          <h3><a href="#section-header-1">Section Header 1</a></h3>
-          <ol>
-            <li> <a href="#sub-section-1-header-1">Sub-section Header 1</a>
-            <li> <a href="#sub-section-1-header-2">Sub-section Header 2</a>
-          </ol>
-        <li>
-          <h3><a href="#section-header-2">Section Header 2</a></h3>
-          <ol>
-            <li> <a href="#sub-section-2-header-1">Sub-section Header 1</a>
-            <li> <a href="#sub-section-2-header-2">Sub-section Header 2</a>
-          </ol>
-        <li>
-          <h3><a href="#references">References</a></h3>
-      </ol>
+      <sl-tree>
+        <sl-tree-item expanded>
+          <a href="#section-header-1">1. Section Header 1</a>
+          <sl-tree-item>
+            <a href="#sub-section-1-header-1">1.1. Sub-section Header 1</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-1-header-2">1.2. Sub-section Header 2</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-2">2. Section Header 1</a>
+          <sl-tree-item>
+            <a href="#sub-section-2-header-1">2.1. Sub-section Header 1</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-2-header-2">2.2. Sub-section Header 2</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#references">References</a>
+        </sl-tree-item>
+      </sl-tree>
     </div>
 
     <div>
@@ -109,8 +128,9 @@
           nisl condimentum id venenatis a condimentum vitae sapien. Convallis posuere morbi leo urna molestie at
           elementum.
         </p>
-        <img src="assets/requirement.png" width="100%">
-        <sub>Figure 1: iDP suggested module and course progression</sub>
+
+        <image-component id="image" src="assets/requirement.png"
+          subtitle="Image 1: iDP suggested pathway"></image-component>
       </div>
     </div>
 
@@ -129,7 +149,6 @@
           id venenatis a condimentum vitae sapien (Chamberlin et al., 2008). Vitae tempus quam pellentesque nec nam
           aliquam sem.
         </p>
-        <sub>Render 1: Render of a benchy for demonstration purpose</sub>
       </div>
 
       <div id="sub-section-2-header-1">
@@ -140,13 +159,11 @@
           etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
           vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
           Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
-          fames ac.
+          fames ac. <a href="#image">Link to the image above</a>
         </p>
 
-        <div class="video-wrapper">
-          <iframe id="rick" width="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
-            allowfullscreen></iframe>
-        </div>
+        <video-component id="rick" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          subtitle="Video: Never gonna give you up?"></video-component>
 
         <div id="sub-section-2-header-2">
           <h3>2.2. Sub-section Header 2</h3>

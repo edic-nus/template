@@ -1,0 +1,4 @@
+sl-tree-item::part(item--selected) {
+  background-color: transparent;
+  border: none;
+}
