@@ -1,6 +1,6 @@
 class Video extends HTMLElement {
   static get observedAttributes() {
-    return ["id", "src", "subtitle"];
+    return ["tag", "source", "subtitle"];
   }
 
   constructor() {
@@ -19,7 +19,7 @@ class Video extends HTMLElement {
   render() {
     const div = document.createElement("div");
     div.innerHTML = `
-    <iframe id="${this.id}" width="100%" src="${this.src}"
+    <iframe id="${this.tag}" width="100%" src="${this.source}"
       allowfullscreen></iframe>
     <sub>${this.subtitle}</sub>
     <style>

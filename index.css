@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 18px;
+  font-family: var(--sl-font-sans);
 }
 
 .content {
@@ -14,24 +15,6 @@ body {
 p {
   text-align: justify;
   font-size: 1.1rem;
-}
-
-sub {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-.image-text {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.text-image {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
 }
 
 table {
@@ -57,12 +40,6 @@ tr:nth-child(3) {
 
 tr:last-child {
   font-weight: bold;
-}
-
-iframe {
-  aspect-ratio: 16 / 9;
-  display: block;
-  margin: auto;
 }
 
 .references li {

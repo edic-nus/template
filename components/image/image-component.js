@@ -1,6 +1,6 @@
 class ImageComponent extends HTMLElement {
   static get observedAttributes() {
-    return ["id", "src", "subtitle"];
+    return ["tag", "source", "subtitle"];
   }
 
   constructor() {
@@ -19,7 +19,7 @@ class ImageComponent extends HTMLElement {
   render() {
     const div = document.createElement("div");
     div.innerHTML = `
-    <img id="${this.id}" src="${this.src}" alt="${this.subtitle}">
+    <img id="${this.tag}" src="${this.source}" alt="${this.subtitle}">
     <sub>${this.subtitle}</sub>
     <style>
       :host {
