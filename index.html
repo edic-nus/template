@@ -6,24 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Project Title</title>
-  <link rel="stylesheet" href="./index.css">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" media="(prefers-color-scheme:light)"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css"
+    onload="document.documentElement.classList.add('sl-theme-light');" />
+  <link rel="stylesheet" media="(prefers-color-scheme:dark)"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/dark.css" />
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+  <link rel="stylesheet" href="./index.css">
+
+  <link rel="stylesheet" href="./components/team-member/team-member.css">
+  <script type="module" src="./components/team-member/team-member.js"></script>
 </head>
 
 <body>
   <div class="content">
     <h1>Project Title</h1>
 
-    <div class="names">
-      <h3>
-        Team members:
-      </h3>
-      <ul>
-        <li>Jane Doe (Mechanical Engineering)</li>
-        <li>John Smith (Electrical Engineering)</li>
-        <li>Hans Down (Computer Engineering)</li>
-      </ul>
+    <div class="team-member-wrapper">
+      <team-member avatar="assets/blackranger.png" name="Black" department="Mechanical Engineering"
+        year="1993"></team-member>
+      <team-member avatar="assets/yellowranger.png" name="Yellow" department="Computer Engineering"
+        year="1993"></team-member>
+      <team-member avatar="assets/redranger.png" name="Red" department="Electrical Engineering"
+        year="1993"></team-member>
+      <team-member avatar="assets/pinkranger.png" name="Pink" department="Biomedical Engineering"
+        year="1993"></team-member>
+      <team-member avatar="assets/blueranger.png" name="Blue" department="Chemical Engineering"
+        year="1993"></team-member>
     </div>
+
 
     <div class="table-of-content">
       <h2>Table of Contents</h2>
@@ -202,10 +216,6 @@
         </li>
       </ul>
     </div>
-
-
-    <script type="module" src="render.js"></script>
-    <script type="module" src="elements.js"></script>
   </div>
 </body>
 
