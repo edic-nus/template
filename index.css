@@ -41,7 +41,3 @@ tr:nth-child(3) {
 tr:last-child {
   font-weight: bold;
 }
-
-.references {
-  margin-top: 48px;
-}

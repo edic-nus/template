@@ -34,6 +34,11 @@
 
   <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
   <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+
+  <!-- <link rel="stylesheet" href="./components/table-component/"> -->
+  <script src="./components/table-component/table-component.js"></script>
+
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -184,39 +189,9 @@
           placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet.
         </p>
 
-        <table>
-          <tr>
-            <th>Engineering Programme</th>
-            <th>Male</th>
-            <th>Female</th>
-            <th>Total</th>
-          </tr>
-          <tr>
-            <td>Common Engineering</td>
-            <td>54</td>
-            <td>18</td>
-            <td>72</td>
-          </tr>
-          <tr>
-            <td>Electrical Engineering</td>
-            <td>622</td>
-            <td>155</td>
-            <td>777</td>
-          </tr>
-          <tr>
-            <td>Mechanical Engineering</td>
-            <td>1186</td>
-            <td>198</td>
-            <td>1384</td>
-          </tr>
-          <tr>
-            <td>Total</td>
-            <td>1,862</td>
-            <td>371</td>
-            <td>2,233</td>
-          </tr>
-        </table>
-        <sub>Table: Summary of undergraduate sutdent enrolment in the Faculty of Engineering</sub>
+        <table-component subtitle="Table: Demo table">
+          <div id="table-1"></div>
+        </table-component>
       </div>
     </div>
 
@@ -244,6 +219,9 @@
   <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
     <sl-icon name="arrow-up" label="Settings"></sl-icon>
   </sl-button>
+
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script type="module" src="./components/table-component/table-component.js"></script>
 </body>
 
 </html>
