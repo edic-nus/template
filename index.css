@@ -42,6 +42,6 @@ tr:last-child {
   font-weight: bold;
 }
 
-.references li {
-  margin: 8px 0px;
+.references {
+  margin-top: 48px;
 }

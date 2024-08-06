@@ -14,7 +14,6 @@ class ImageComponent extends HTMLElement {
 
   attributeChangedCallback(name, _, newValue) {
     this[name] = newValue;
-    console.log("test");
   }
 
   render() {

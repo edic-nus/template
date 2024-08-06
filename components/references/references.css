@@ -1,0 +1,13 @@
+.references {
+  margin-top: 64px;
+}
+
+.references ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.references li {
+  margin: 24px 0;
+  word-wrap: break-word;
+}
