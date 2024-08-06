@@ -31,6 +31,9 @@
   <script type="module" src="./components/video/video.js"></script>
 
   <link rel="stylesheet" href="./components/references/references.css">
+
+  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
+  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
 </head>
 
 <body>
@@ -50,7 +53,7 @@
         year="1993"></team-member>
     </div>
 
-
+    <sl-divider></sl-divider>
     <div class="table-of-content">
       <h2>Table of Contents</h2>
       <sl-tree>
@@ -79,6 +82,7 @@
         </sl-tree-item>
       </sl-tree>
     </div>
+    <sl-divider></sl-divider>
 
     <div>
       <div id="section-header-1">
@@ -139,6 +143,7 @@
 
     <br />
     <br />
+    <sl-divider></sl-divider>
     <div>
       <div id="section-header-2">
         <h2>2. Section Header 2</h2>
@@ -216,6 +221,7 @@
     </div>
 
     <div id="references" class="references">
+      <sl-divider></sl-divider>
       <h2>References</h2>
       <ul>
         <li>
@@ -234,6 +240,10 @@
       </ul>
     </div>
   </div>
+
+  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+    <sl-icon name="arrow-up" label="Settings"></sl-icon>
+  </sl-button>
 </body>
 
 </html>

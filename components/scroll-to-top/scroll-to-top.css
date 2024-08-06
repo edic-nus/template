@@ -1,0 +1,5 @@
+.scroll-to-top {
+  position: sticky;
+  bottom: 8px;
+  left: calc(98% - 54px);
+}
