@@ -7,11 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Project Title</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  <!-- <link rel="stylesheet" media="(prefers-color-scheme:light)" -->
-  <!--   href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" -->
-  <!--   onload="document.documentElement.classList.add('sl-theme-light');" /> -->
-  <!-- <link rel="stylesheet" media="(prefers-color-scheme:dark)" -->
-  <!--   href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/dark.css" /> -->
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
   <script type="module"
@@ -23,9 +18,7 @@
   <script type="module" src="./components/team-member/team-member.js"></script>
 
   <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
-  <!-- <script type="module" src="./components/team-member/team-member.js"></script> -->
 
-  <!-- <link rel="stylesheet" href="./components/image/image-component.css"> -->
   <script type="module" src="./components/image/image-component.js"></script>
 
   <script type="module" src="./components/video/video.js"></script>
@@ -35,7 +28,6 @@
   <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
   <script src="./components/scroll-to-top/scroll-to-top.js"></script>
 
-  <!-- <link rel="stylesheet" href="./components/table-component/"> -->
   <script src="./components/table-component/table-component.js"></script>
 
   <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
@@ -45,6 +37,7 @@
   <div class="content">
     <h1>Project Title</h1>
 
+    <!-- This is the team member component use to display details about your team members -->
     <div class="team-member-wrapper">
       <team-member avatar="assets/blackranger.png" name="Black" department="Mechanical Engineering"
         year="1993"></team-member>
@@ -58,7 +51,10 @@
         year="1993"></team-member>
     </div>
 
+    <!-- This is a divide from the shoelace library for aesthetic purpose -->
     <sl-divider></sl-divider>
+
+    <!-- This is the table-of-content component use to define all of the link directly to each section -->
     <div class="table-of-content">
       <h2>Table of Contents</h2>
       <sl-tree>
@@ -90,6 +86,8 @@
     <sl-divider></sl-divider>
 
     <div>
+
+      <!-- This is an example of what a section might look like -->
       <div id="section-header-1">
         <h2> 1. Section Header 1 </h2>
         <p>
@@ -140,6 +138,7 @@
           elementum.
         </p>
 
+        <!-- This is an example of how you might use the image component -->
         <image-component tag="image" source="assets/requirement.png"
           subtitle="Image 1: iDP suggested pathway"></image-component>
       </div>
@@ -174,6 +173,7 @@
           fames ac. <a href="#image">Link to the image above</a>
         </p>
 
+        <!-- This is an example of how you might use the video component -->
         <video-component tag="rick" source="https://www.youtube.com/embed/dQw4w9WgXcQ"
           subtitle="Video: Never gonna give you up?"></video-component>
       </div>
@@ -189,12 +189,14 @@
           placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet.
         </p>
 
+        <!-- This is an example of how you might use the table component -->
         <table-component subtitle="Table: Demo table">
           <div id="table-1"></div>
         </table-component>
       </div>
     </div>
 
+    <!-- This is an example of how you can use the references component to create references -->
     <div id="references" class="references">
       <sl-divider></sl-divider>
       <h2>References</h2>
@@ -216,6 +218,9 @@
     </div>
   </div>
 
+  <!-- This is the code to display the scroll to top button for ergonomic -->
+  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+  <!-- but it might reduce the user experience. -->
   <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
     <sl-icon name="arrow-up" label="Settings"></sl-icon>
   </sl-button>
