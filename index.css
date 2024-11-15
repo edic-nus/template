@@ -11,7 +11,9 @@ body {
   margin: auto;
   padding: 10%;
 }
-
+.title {
+  text-align: center;
+}
 p {
   text-align: justify;
   font-size: 1.1rem;

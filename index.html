@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project Title</title>
+  <title>ASI-401: Indoor Search Using Swarm of Drones</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
@@ -19,6 +19,22 @@
 
   <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
 
+  <script type="module" src="./components/table-of-abbreviations/table-of-abbreviations.js"></script>
+  
+  <script type="module" src="./components/scope-of-work/scope-of-work.js"></script>
+
+  <script type="module" src="./components/comparision-safmc/comparison-safmc.js"></script>
+  
+  <script type="module" src="./components/comparison-raw-jpeg/comparison-raw-jpeg.js"></script>
+
+  <script type="module" src="./components/msba-configuration/msba-configuration.js"></script>
+
+  <script type="module" src="./components/drift-test/drift-test.js"></script>
+
+  <script type="module" src="./components/run1_params/run1_params.js"></script>
+
+  <script type="module" src="./components/key-events/key-events.js"></script>
+  
   <script type="module" src="./components/image/image-component.js"></script>
 
   <script type="module" src="./components/video/video.js"></script>
@@ -35,122 +51,537 @@
 
 <body>
   <div class="content">
-    <h1>Project Title</h1>
+    <div class = "title">
+      <image-component tag="image" source="assets/title_page/nus_logo.png" subtitle=" ">
+      </image-component>
 
-    <!-- This is the team member component use to display details about your team members -->
-    <div class="team-member-wrapper">
-      <team-member avatar="assets/blackranger.png" name="Black" department="Mechanical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/yellowranger.png" name="Yellow" department="Computer Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/redranger.png" name="Red" department="Electrical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/pinkranger.png" name="Pink" department="Biomedical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/blueranger.png" name="Blue" department="Chemical Engineering"
-        year="1993"></team-member>
+      <h1>CDE4301 Innovation & Design Capstone</h1>
+
+      <h1>AY2024/2025 Semester 1</h1>
+
+      <h1>ASI-401: Indoor Search Using Swarm of Drones</h1>
+
+      <h1>Group Report</h1>
     </div>
 
-    <!-- This is a divide from the shoelace library for aesthetic purpose -->
+    <div class="team-member-wrapper">
+
+      <team-member avatar="assets//title_page/shuhui.jpeg" name="Foo Shu Hui" department="Engineering Science Programme" 
+       matric_number="A0244238E">
+      </team-member>
+
+      <team-member avatar="assets//title_page/yanyew.jpg" name="Low Yan Yew" department="Mechanical Engineering"
+        matric_number="A0245906Y">
+      </team-member>
+
+      <team-member avatar="assets//title_page/pinkranger.png" name="Govindanath Samuel Sudharsanan" department="Mechanical Engineering"
+        matric_number="A0239048Y">
+      </team-member>
+
+      <team-member avatar="assets/matthew/matthew.png" name="Matthew Yip Tze Herng" department="Mechanical Engineering"
+        matric_number="A0249201N">
+      </team-member>
+
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    
+    <div class ="acknowledgements">
+      <h2>Acknowledgements</h2>
+      
+      <p>We would like to express our sincere gratitude to Mr. Leong Wai Lun William, Mr. Chiun Wei Ming Jimmy, and Mr. Liew Yung Jun from the Centre for Flight Sciences at Temasek Laboratories for their invaluable expertise and support throughout this project.</p>
+    
+      <p> We are also deeply grateful to Dr. Elliot Law from the Engineering Design and Innovation Centre for his guidance and collaboration. This project would not have been possible without their dedication and encouragement.</p>
+
+    </div>
+
+    <br />
+    <br />
     <sl-divider></sl-divider>
 
-    <!-- This is the table-of-content component use to define all of the link directly to each section -->
     <div class="table-of-content">
+      
       <h2>Table of Contents</h2>
       <sl-tree>
+
         <sl-tree-item expanded>
-          <a href="#section-header-1">1. Section Header 1</a>
-          <sl-tree-item>
-            <a href="#sub-section-1-header-1">1.1. Sub-section Header 1</a>
+          <a href="#section-header-1">1.0 SAFMC 2025</a>
+          
+            <sl-tree-item>
+              <a href="#sub-section-1-header-1">1.1 Mission</a>
+            </sl-tree-item>
+
+            <sl-tree-item>
+              <a href="#sub-section-1-header-2">1.2 Scoring System</a>
+            </sl-tree-item>
+
+
+            <sl-tree-item expanded>
+              <a href="#sub-section-1-header-3">1.3 Playing Field</a>
+            
+                <sl-tree-item>
+                  <a href="#sub-section-1-header-3-header-1">1.3.1 Known Search Area</a>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                  <a href="#sub-section-1-header-3-header-2">1.3.2 Unknown Search Area</a>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                  <a href="#sub-section-1-header-3-header-3">1.3.3 Pillar Area</a>
+                </sl-tree-item>
           </sl-tree-item>
+
           <sl-tree-item>
-            <a href="#sub-section-1-header-2">1.2. Sub-section Header 2</a>
+            <a href="#sub-section-1-header-4">1.4 Victim Marker</a>
           </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-1-header-5">1.5 Danger Zone</a>
+          </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-1-header-6">1.6 Navigation Aid</a>
+          </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-1-header-7">1.7 Pillar Obstacle</a>
+          </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-1-header-8">1.8 SAFMC 2025 vs SAFMC 2024</a>
+          </sl-tree-item>
+          
         </sl-tree-item>
 
         <sl-tree-item expanded>
-          <a href="#section-header-2">2. Section Header 1</a>
+          <a href="#section-header-2">2.0 Hardware and Software</a>
+          
+            <sl-tree-item>
+              <a href="#sub-section-2-header-1">2.1 Hardware: Bitcraze Crazyflie</a>
+            </sl-tree-item>
+          
+            <sl-tree-item>
+              <a href="#sub-section-2-header-2">2.2 Software</a>
+            </sl-tree-item>
+
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-3">3.0 Mission Strategy</a>
+          
           <sl-tree-item>
-            <a href="#sub-section-2-header-1">2.1. Sub-section Header 1</a>
+            <a href="#sub-section-3-header-1">3.1 Search Strategy</a>
           </sl-tree-item>
+          
           <sl-tree-item>
-            <a href="#sub-section-2-header-2">2.2. Sub-section Header 2</a>
+            <a href="#sub-section-3-header-2">3.2 Object Detection</a>
           </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-3-header-3">3.3 Navigation Aids</a>
+          </sl-tree-item>
+          
+          <sl-tree-item>
+            <a href="#sub-section-3-header-4">3.4 Key Areas of Development</a>
+          </sl-tree-item>
+
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-4">4.0 Search Strategy</a>
+          
+          <sl-tree-item>
+            <a href="#sub-section-4-header-1">4.1 Mapping using Multiranger Deck</a>
+          </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-4-header-2">4.2 Mapping using Camera on AI Deck </a>
+          </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-4-header-3">4.3 Unmapped Decentralized: Modified Swarm Bug Algorithm (MSBA)</a>
+          </sl-tree-item>
+
+          <sl-tree-item expanded>
+            <a href="#sub-section-4-header-4">4.4 Future Work in Search Strategy</a>
+            <sl-tree-item>
+              <a href="#sub-section-4-header-4-header-1">4.4.1 Future Work in Mapped Centralised Strategy</a>
+            </sl-tree-item>
+  
+            <sl-tree-item>
+              <a href="#sub-section-4-header-4-header-2">4.4.2 Future Work in Unmapped Decentralised Strategy</a>
+            </sl-tree-item>
+
+
+          </sl-tree-item>
+
+        </sl-tree-item>
+          
+        <sl-tree-item expanded>
+          <a href="#section-header-5">5.0 Object Detection</a>
+
+          <sl-tree-item>
+            <a href="#sub-section-5-header-1">5.1 Hardware In Object Detection </a>
+          </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-5-header-2">5.2 Target Type</a>
+          </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-5-header-3">5.3 Factors in Modifying the Angle of Camera Mount </a>
+          </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-5-header-4">5.4 Image Streaming</a>
+          </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-5-header-5">5.5 Victim and Danger Zone Detection</a>
+          </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-5-header-6">5.6 Victim and Danger Zone Detection for One Crazyflie</a>
+          </sl-tree-item>
+
+          <sl-tree-item>
+            <a href="#sub-section-5-header-7">5.7 Future Work For Object Detection</a>
+          </sl-tree-item>
+
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+            <a href="#section-header-6">6.0 Obstacle Avoidance</a>
+
+            <sl-tree-item>
+              <a href="#sub-section-6-header-1">6.1 Known and Unknown Search Area</a>
+            </sl-tree-item>
+
+            <sl-tree-item>
+              <a href="#sub-section-6-header-2">6.2 Addition of Pillar Area</a>
+            </sl-tree-item>
+
+            <sl-tree-item>
+              <a href="#sub-section-6-header-3">6.3 Search for objects to replicate Pillars for testing</a>
+            </sl-tree-item>
+
+            <sl-tree-item>
+              <a href="#sub-section-6-header-4">6.4 Test of Crazyflie drones in the Pillar Area</a>
+            </sl-tree-item>
+
+            <sl-tree-item>
+              <a href="#sub-section-6-header-5">6.5 Future Work In Collision Avoidance</a>
+            </sl-tree-item>
+            
+        </sl-tree-item>
+          
+        <sl-tree-item expanded>
+            <a href="#section-header-7">7.0 Simulation</a>
+
+            <sl-tree-item>
+              <a href="#sub-section-7-header-1">7.1 Simulation Architecture Diagram for Decentralized Algorithm </a>
+            </sl-tree-item>
+
+            <sl-tree-item>
+              <a href="#sub-section-7-header-2">7.2 Webot Simulation of Crazyflies Performing MSBA </a>
+            </sl-tree-item>
+
+            <sl-tree-item>
+              <a href="#sub-section-7-header-3">7.3 Future Work in Simulation</a>
+            </sl-tree-item>
+
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-8">8.0 Testing the Suitability of Arena</a>
+          
+          <sl-tree-item>
+            <a href="#sub-section-8-header-1">8.1 Suitability Test</a>
+          </sl-tree-item>
+          
+          <sl-tree-item expanded>
+            <a href="#sub-section-8-header-2">8.2 System Integration Test</a>
+
+            <sl-tree-item>
+              <a href="#sub-section-8-header-2-header-1">8.2.1 Run 1</a>
+            </sl-tree-item>
+            
+            <sl-tree-item>
+              <a href="#sub-section-8-header-2-header-2">8.2.2 Run 2</a>
+            </sl-tree-item>
+
+          </sl-tree-item>
+
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-9">9.0 Future Work</a>
+          
+          <sl-tree-item>
+            <a href="#sub-section-9-header-1">9.1 Mission Planning</a>
+          </sl-tree-item>
+
         </sl-tree-item>
 
         <sl-tree-item>
-          <a href="#references">References</a>
+          <a href="#section-header-10">10.0 Timeline</a>
         </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#references">11.0 References</a>
+        </sl-tree-item>
+
       </sl-tree>
+
     </div>
+    
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+   
+    <div class="table-of-abbreviations">
+      <h2>Table of Abbreviations</h2>
+      <div id="table-of-abbreviation"></div>
+    </div>
+    
+    <br />
+    <br />
     <sl-divider></sl-divider>
 
     <div>
 
-      <!-- This is an example of what a section might look like -->
       <div id="section-header-1">
-        <h2> 1. Section Header 1 </h2>
+        <h2>1.0 SAFMC 2025</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna
-          aliqua. Tincidunt ornare massa eget egestas. At tellus at urna condimentum mattis pellentesque id nibh tortor.
-          Elementum sagittis vitae et leo duis ut diam. Morbi tristique senectus et netus et malesuada fames.
-          Suspendisse
-          ultrices gravida dictum fusce ut placerat orci. Risus nullam eget felis eget nunc lobortis mattis aliquam
-          faucibus
-          (Brody, 2007). Eget sit amet tellus cras adipiscing enim eu turpis egestas. Aliquet nibh praesent tristique
-          magna
-          sit amet purus. Adipiscing bibendum est ultricies integer quis auctor elit sed. Fermentum et sollicitudin ac
-          orci
-          phasellus egestas tellus rutrum. At in tellus integer feugiat scelerisque varius morbi enim nunc. Volutpat
-          blandit
-          aliquam etiam erat velit scelerisque in. Id diam maecenas ultricies mi eget mauris pharetra et. Nec dui nunc
-          mattis
-          enim ut tellus elementum sagittis vitae.
+          Our group is participating in Singapore Amazing Flying Machine Competition (SAFMC) 2025 Open Category (Category E). In this category, we are required to design an autonomous drone swarm to search and rescue for victims in a given area.
+          <br/><br/>
+          Drone swarms have been used in a variety of real-world implementations, including environmental mapping and search and rescue. Defence Science Organisation (DSO), the organiser of the competition, stands to gain technical know-how from organising this competition. This can be applied in their development of drone systems for defence.
         </p>
       </div>
 
       <div id="sub-section-1-header-1">
-        <h3>1.1 Sub-section Header 1</h3>
+        <h3>1.1 Mission</h3>
+        <image-component tag="image" source="./assets/section-1/figure_1_1_indoorArena.png"
+                         subtitle="Figure 1.1: Indoor Arena of SAFMC 2022"></image-component>
         <p>
-          Ultrices dui sapien eget mi. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Dolor purus non enim
-          praesent elementum facilisis. Lacus vestibulum sed arcu non odio euismod lacinia at. Metus aliquam eleifend mi
-          in nulla. Lacus sed viverra tellus in hac habitasse platea. Varius quam quisque id diam vel quam elementum
-          pulvinar. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Diam ut venenatis tellus in metus
-          vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Venenatis lectus magna
-          fringilla
-          urna. In nisl nisi scelerisque eu ultrices. Velit egestas dui id ornare arcu odio ut sem nulla. Quam id leo in
-          vitae. Egestas congue quisque egestas diam in arcu cursus euismod quis. Porttitor leo a diam sollicitudin
-          tempor
-          id eu nisl.
+          The mission of SAFMC 2025 Category E is: <br/><br/>
+
+          <i>Design a system of <b>10 to 25 drones</b> to navigate through an <b>indoor environment</b> and search for victims,
+          using either a <b>centralised</b> or <b>de-centralised</b> <u>fully autonomous control system</u>. The system must possess
+          <b>localization</b>, <b>obstacle sensing</b> and <b>obstacle avoidance</b> capabilities.</i>
         </p>
       </div>
-
+      
       <div id="sub-section-1-header-2">
-        <h3>1.2 Sub-section Header 2</h3>
+        <h3>1.2 Scoring System</h3>
+        <image-component tag="image" source="./assets/section-1/figure_1_2_scoringTable.png"
+                         subtitle="Figure 1.2: Scoring System for SAFMC 2025"></image-component>
         <p>
-          Fermentum dui faucibus in ornare quam viverra orci. Donec ultrices tincidunt arcu non sodales. A diam maecenas
-          sed enim ut sem viverra. Semper viverra nam libero justo laoreet sit. Mi sit amet mauris commodo quis. Auctor
-          augue mauris augue neque gravida in fermentum et. Auctor elit sed vulputate mi sit amet. Maecenas pharetra
-          convallis posuere morbi leo urna. Sem nulla pharetra diam sit amet nisl. Id nibh tortor id aliquet lectus.
-          Nibh
-          nisl condimentum id venenatis a condimentum vitae sapien. Convallis posuere morbi leo urna molestie at
-          elementum.
+          Figure 1.2 shows the scoring system for SAFMC 2025.
         </p>
 
-        <!-- This is an example of how you might use the image component -->
-        <image-component tag="image" source="assets/requirement.png"
-          subtitle="Image 1: iDP suggested pathway"></image-component>
       </div>
-    </div>
 
+      <div id="sub-section-1-header-3">
+        <h3>1.3 Playing Field</h3>
+        <p>
+          Figure 1.3 shows how the Playing Field this year will look like, which is not drawn to scale. Furthermore, the Danger Zones, Regular Victims and Bonus Victims may not be placed exactly where it is depicted in Figure 1.3. There is a maximum of two simultaneous take-offs of two runs per team. For each run, the placement of Danger Zones, Regular Victims and Bonus Victims may change. 
+        </p>
+
+        <image-component tag="image" source="assets\section-1\figure_1_3_SAFMC_2025_playing_field.png"
+        subtitle="Figure 1.3: SAFMC 2025 Playing Field"></image-component>
+
+        <p>
+          Figure 1.4 shows the dimensions of the key elements within the Playing Field.
+        </p>
+
+        <image-component tag="image" source="./assets/section-1/figure_1_4_SAFMC_2025_dimensions_of_elements.png"
+        subtitle="Figure 1.4: SAFMC 2025 Dimensions of Elements"></image-component>
+        
+        <p>
+          The Playing Field has a size of 20 m x 14 m. The Start Area (green) has a size of 20 m x 6 m.
+          </p>
+        
+        <p>
+          The Start Area is where the Crazyflies would take off from to start the mission. There is no limit to the number of Navigation Aids that can be used within the Start Area.
+          </p>
+
+        <p>
+          For our analysis, we split the Playing Field into three sections: (1) Known Search Area (grey). (2) Unknown Search Area (yellow). (3) Pillar Area.
+          </p>
+
+      </div>
+
+      <div id="sub-section-1-header-3-header-1">
+        <h4>1.3.1 Known Search Area</h4>
+
+        <image-component tag="image" source="assets\section-1\figure_1_5_known_search_area.png"
+        subtitle="Figure 1.5: Known Search Area"></image-component>  
+
+        <p>
+          The Known Search Area (grey) have the dimensions of 20 m x 14 m, which is the largest area in the Playing Field. The Known Search Area (Figure 1.5) will have Inner Walls of 2 m thickness and 2 m height, as well as Danger Zones, Regular Victims and Bonus Victims. The Inner Wall-to-Inner Wall distance is at least 2 m. There is a maximum of Ten Navigation Aids that can be used within the Playing Field (exclusive of the Unknown Search Area). 
+          </p>
+         
+        <p> 
+          Figure 1.5 shows a Danger Zone situated near a Regular Victim. The landing radius of the Regular Victim may overlap with the avoid landing radius of the Danger Zone, presenting an additional challenge for the team.
+        </p>       
+
+      </div>
+
+      <div id="sub-section-1-header-3-header-2">
+        <h4>1.3.2 Unknown Search Area</h4>
+
+        <image-component tag="image" source="assets\section-1\figure_1_6_unknown_search_area.png"
+        subtitle="Figure 1.6: Unknown Search Area"></image-component>
+
+        <p>
+          The Unknown Search Area have the size of 8 m x 8 m and is situated in the centre of the Playing Field. The Unknown Search Area (Figure 1.5) contains Danger Zones, Inner Walls and Bonus Victims. There are two floor-to-ceiling entrances/exits to the Unknown Search Area.
+          </p>
+        
+        <p>
+          Navigation Aids are not allowed within the Unknown Search Area. Furthermore, the layout of the Unknown Search Area will not be revealed on Competition Day Mission.          
+          </p>
+
+      </div>
+
+      <div id="sub-section-1-header-3-header-3">
+        <h4>1.3.3 Pillar Area</h4>
+
+        <image-component tag="image" source="assets\section-1\figure_1_7_pillar_area.png"
+        subtitle="Figure 1.7: Pillar Area"></image-component>
+
+        <p>
+          The Pillar Area (Figure 1.7) is the smallest area in the Playing Field. It consists of Eight pillars, with narrow paths (about 1 m wide) between the pillars. The Inner Wall-to-Pillar distance and the Pillar-to-Pillar distance is at least 1 m.
+          </p>
+
+        <p>
+          Figure 1.7 shows a Bonus Victim situated within the Pillar Area, which highlights the importance of developing a unique algorithm capable of navigating the Pillar Area.
+          </p>
+
+      </div>
+
+      <div id="sub-section-1-header-4">
+        <h3>1.4 Victim Marker</h3>
+
+        <image-component tag="image" source="assets\section-1\figure_1_8_specifications_of_victim_markers.png"
+        subtitle="Figure 1.8: Specifications of Victim Markers"></image-component>
+
+        <p>
+          For SAFMC 2025, eight non-electronic markers will be used as Victim Markers. Figure 1.8 shows the general specifications of the Victim Markers, which must not exceed 30 cm x 30 cm x 1 m. Figure 1.8 does not show the actual Victim Marker we are using for the competition.
+          </p>
+
+        <p>
+          Both Regular Victim and Bonus Victim will share the same type of Victim Markers. However, the Bonus Victim will be situated in areas that are more challenging to navigate. 
+          </p>
+
+        <image-component tag="image" source="assets\section-1\figure_1_9_scoring_process_rescue_victims.png"
+        subtitle="Figure 1.9: Scoring Process (Rescue Victims)"></image-component>
+        
+        <p>
+          To rescue a Victim, the Crazyflie needs to land within a 1 m radius of the Line of Sight (LOS) of the Regular Victim or a Bonus Victim (Figure 1.9). No obstacles are allowed within the Line of Sight.
+          </p>
+        
+          <p>
+          Each Victim Marker can be rescued only once by one Crazyflie.
+          </p>
+
+        <p>
+          If the Crazyflie rescues a Regular Victim, 5 points will be added to the total score. However, if the Crazyflie rescues a Bonus Victim, 15 points will be added to the total score.
+          </p>
+      </div>
+
+      <div id="sub-section-1-header-5">
+        <h3>1.5 Danger Zone</h3>
+
+        <image-component tag="image" source="assets\section-1\figure_1_10_specifications_of_danger_zones.png"
+        subtitle="Figure 1.10: Specifications of Danger Zones"></image-component>
+        <p>
+          For SAFMC 2025, four non-electronic markers will be used as Danger Zones. Figure 1.9 shows the general specifications of the Danger Zones, which must not exceed 30 cm x 30 cm x 1 m. Figure 1.9 does not show the actual Danger Zones we are using for the competition.
+          </p>
+        
+        <p>
+          Danger Zones may overlap with any navigation aids we place within the Playing Field.
+        </p>
+
+        <image-component tag="image" source="assets\section-1\figure_1_11_penalty_process_avoid_danger_zones.png"
+        subtitle="Figure 1.11: Penalty Process (Avoid Danger Zones"></image-component>
+
+        <p>
+          Crazyflies must not land within a 1 m radius of the Danger Zone. If they do, a penalty of 2 points will be removed from the total score (Figure 1.11). However, Crazyflies are allowed to fly over the Danger Zone, without landing within the 1 m radius.
+        </p>
+
+      </div>
+
+      <div id="sub-section-1-header-6">
+        <h3>1.6 Navigation Aid</h3>
+
+        <image-component tag="image" source="assets\section-1\figure_1_12_specifications_of_navigation_aids.png"
+        subtitle="Figure 1.: Specifications of Navigation Aids"></image-component>
+        
+        <p>
+          For SAFMC 2025, a total of ten Navigation Aids can be used within the Known Search Area and Pillar Area. Figure 1.12 shows the general specifications of the Navigation Aids, which must not exceed 1 m x 1 m x an unspecified height. Figure 1.12 does not show the actual Navigation Aids we are using for the competition.
+          </p>
+
+        <image-component tag="image" source="assets\section-1\figure_1_13_potential_navigation_aids.png"
+        subtitle="Figure 1.13: Potential Navigation Aids"></image-component>
+
+        <p>
+          Figure 1.13 shows the types of Navigation Aids the team is currently exploring. These physical aids can vary in colour and shape and may include electronic options.
+        </p>
+      </div>
+
+      <div id="sub-section-1-header-7">
+        <h3>1.7 Pillar Obstacle</h3>
+
+        <image-component tag="image" source="assets\section-1\figure_1_14_specifications_of_pillar_obstacles.png"
+        subtitle="Figure 1.14: Specifications of Pillar Obstacles"></image-component>
+
+        <p>
+          Eight Pillar Obstacles will be presented in the Pillar Area. The Pillar Obstacles have the dimensions of 0.3 m diameter and 2 m height, inclusive of a weighted circular base of 0.5 m diameter and 0.15 m height. Figure 1.13 does not show the actual Pillar Obstacles used for the competition.
+        </p>
+
+        <image-component tag="image" source="assets\section-1\figure_1_15_potential_pillar_obstacles.png"
+        subtitle="Figure 1.15: Potential Pillar Obstacles "></image-component>
+        
+        <p>
+          Taking reference from SAFMC 2022, Figure 1.15 shows the Pillar Obstacles that may be used in SAFMC 2025. However, the competition will take place in a well-lit indoor venue.
+          </p>
+
+      </div>
+
+      <div id="sub-section-1-header-8">
+        <h3>1.8 SAFMC 2025 vs SAFMC 2024</h3>
+
+        <comparison-safmc subtitle="Table 1.0: Comparison of Competition Rules for SAFMC 2024 and SAFMC 2025">
+          <div id="comparison-safmc"></div>
+        </comparison-safmc>
+
+        <p>
+          Table 1.0 shows an overview of the differences in the Competition Rules for SAFMC 2024 and SAFMC 2025.
+        </p>
+        <p>
+          For SAFMC 2025, an Unknown Search Area is introduced, in which the layout of the Unknown Search Area will remain undisclosed throughout the Competition Day Mission. Additionally, the layout of the Known Search Area will only be disclosed on the Competition Day Mission. In contrast, for SAFMC 2024, the layout of the entire playing field was only disclosed on the Competition Day Mission.
+          </p>
+        
+          <p>
+          Furthermore, SAFMC 2025 introduces eight Pillar Obstacles, which are a new type of static obstacles within the Playing Field. Eight Victims Markers will be present, which includes both Regular Victims and Bonus Victims. Each type of Victim Markers offers different scoring opportunities. The Double-Rescue Victims are removed from this year’s competition.
+          </p>
+          
+        <p>
+          Additionally, a maximum of four Danger Zones is introduced for SAFMC 2025. Ten Navigation Aids are allowed within the Known Search Area and no Navigation Aids are allowed within the Unknown Search Area.
+          </p>
+
+      </div>
 
     <br />
     <br />
     <sl-divider></sl-divider>
-    <div>
+
       <div id="section-header-2">
-        <h2>2. Section Header 2</h2>
+        <h2>2.0 Hardware and Software </h2>
         <p>
           Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Mi proin sed libero enim sed faucibus turpis in
           eu. Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar mattis nunc sed blandit libero. Lacus sed viverra
@@ -163,7 +594,7 @@
       </div>
 
       <div id="sub-section-2-header-1">
-        <h3>2.1. Sub-section Header 1</h3>
+        <h3>2.1 Hardware: BitCraze Crazyflie</h3>
         <p>
           Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
           Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
@@ -173,13 +604,28 @@
           fames ac. <a href="#image">Link to the image above</a>
         </p>
 
-        <!-- This is an example of how you might use the video component -->
-        <video-component tag="rick" source="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          subtitle="Video: Never gonna give you up?"></video-component>
+        <image-component tag="image" source="assets\section-2\figure_2_1_1_basic_bitcraze_crazyflie_without_add_ons.png"
+        subtitle="Figure 2.1.1: Basic Bitcraze Crazyflie Without Add-ons"></image-component>
+
+        <image-component tag="image" source="assets\section-2\figure_2_1_2_1_expansion_decks_left_ai_deck_middle_flow_deck_right_multi_ranger_deck.png"
+        subtitle="Figure 2.1.2: Expansion Decks: (Left) AI Deck, (Middle) Flow Deck, (Right) Multi-ranger Deck"></image-component>
+
+        <image-component tag="image" source="assets\section-2\figure_2_1_2_2_expansion_decks_left_ai_deck_middle_flow_deck_right_multi_ranger_deck.png"
+        subtitle="Figure 2.1.2: Expansion Decks: (Left) AI Deck, (Middle) Flow Deck, (Right) Multi-ranger Deck"></image-component>
+
+        <image-component tag="image" source="assets\section-2\figure_2_1_2_3_expansion_decks_left_ai_deck_middle_flow_deck_right_multi_ranger_deck.png"
+        subtitle="Figure 2.1.2: Expansion Decks: (Left) AI Deck, (Middle) Flow Deck, (Right) Multi-ranger Deck"></image-component>
+      
+        <image-component tag="image" source="assets\section-2\figure_2_1_3_configuration_of_upgraded_crazyflie_with_expansion_decks.png"
+        subtitle="Figure 2.1.3: Configuration of Upgraded Crazyflie with Expansion Decks"></image-component>
+
+        <image-component tag="image" source="assets\section-2\figure_2_1_4_upgraded_crazyflie_used_as_the_development_platform_in_this_project.png"
+        subtitle="Figure 2.1.4: Upgraded Crazyflie Used as the Development Platform in This Project"></image-component>
+
       </div>
 
       <div id="sub-section-2-header-2">
-        <h3>2.2. Sub-section Header 2</h3>
+        <h3>2.2 Software</h3>
         <p>
           Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Dignissim convallis aenean et tortor at
           risus viverra adipiscing. Facilisi nullam vehicula ipsum a arcu cursus. Adipiscing elit pellentesque
@@ -189,38 +635,786 @@
           placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet.
         </p>
 
-        <!-- This is an example of how you might use the table component -->
-        <table-component subtitle="Table: Demo table">
-          <div id="table-1"></div>
-        </table-component>
+        <image-component tag="image" source="assets\section-2\figure_2_2_1_ROS2_humble.png"
+        subtitle="Figure 2.2.1: ROS2 Humble"></image-component>
       </div>
-    </div>
+   
+    <br />
+    <br />
+    <sl-divider></sl-divider>
 
-    <!-- This is an example of how you can use the references component to create references -->
+      <div id="section-header-3">
+          <h2>3.0 Mission Strategy</h2>
+          <p>
+            With the vastly different arena layout this year, our mission strategy also must change accordingly. The main 
+            areas of consideration are the search strategy to use, object detection methods and use of navigation aids. 
+          </p>
+      </div>
+
+      <div id="sub-section-3-header-1">
+          <h3>3.1 Search Strategy</h3>
+          <p>
+            With the introduction of an entirely new Playing Field which can be split into 3 main areas – namely the Known Area,
+            Unknown Area and Pillar Area, there is a need to test and decide what search strategies to opt for. Last year’s search 
+            strategy was an unmapped, decentralized strategy (differences between strategies will be elaborated on in section 4.1), 
+            and it did work and were able to complete the search the fastest amongst the teams that participated last year.  
+          </p>
+
+          <p>
+            However, they did not win the first place as their approach lacked novelty, and did not use the hardware available to 
+            them to its fullest potential. Therefore, they lost marks in the team live presentation and eventually came in second.
+          </p>
+           
+          <p>
+          Hence, we will be exploring both mapped and unmapped strategies and possibly use a combination of them due to the variety 
+          of obstacles present, to improve the overall efficiency and novelty of the search strategy employed.
+          </p>
+  
+      </div>
+
+      <div id="sub-section-3-header-2">
+          <h3>3.2 Object Detection</h3>
+          <p>
+            The introduction of new obstacles does not only require a revamp of the search strategy, but also a revised approach on the 
+            object detection methods. With the presence of an Unknown Area, Danger Zones and Pillars, we will need to re-evalute our current 
+            object detection method and explore other methods before finalising on the method that is best suited for our use case. 
+          </p>
+  
+      </div>
+
+      <div id="sub-section-3-header-3">
+          <h3>3.3 Navigation Aids</h3>
+          <p>
+            With the presence of new obstacles, the use of Navigation Aids to help us in our search of the Victims Markers varies significantly. 
+            There are many more use cases for navigations aids this year, especially in more tricky areas like the unknown area and the pillar 
+            area. 
+          </p>
+
+          <p>
+            However, the number of Navigation Aids remain the same as last year, despite there being 3 distinct challenges unlike only 1 last year. 
+            We will evaluate on the most effective way to use the navigation aids, as well as what kind of items are we using. We will then need to 
+            test and decide the most effective way to use these Navigation Aids. 
+          </p>
+  
+      </div>
+
+      <div id="sub-section-3-header-4">
+          <h3>3.4 Key Areas of Development</h3>
+          <p>
+            Our goal is to complete the mission in the quickest time possible while using novel and superior methods for our mission. Therefore, we have 
+            split the key areas of development into the 4 roles below.  
+          </p>
+
+          <scope-of-work subtitle="Table 2.0: Scope of Work">
+            <div id="scope-of-work"></div>
+          </scope-of-work>
+  
+          <p>
+          Table 2.0 shows the designation of roles for the development of the various sub-systems.
+          </p>
+
+          <p>
+            The search strategy sub team will be exploring 2 mapping strategies while enhancing the unmapped strategy used last year as we the mapped approach 
+            is more difficult to implement and hence will be awarded more marks in the team presentation.  
+          </p>
+
+          <p>
+            The object detection sub team will be improving on the object detection method used last year as it was inaccurate and slow. Exploration of new methods 
+            such as object classification using neural networks will be done simultaneously.   
+          </p>
+
+          <p>
+            The obstacle detection and avoidance sub team will investigate strategies used to detect and avoid the new obstacles present, which are the pillars.   <a href="#image">Link to the image above</a>
+          </p>
+
+          <p>
+            The simulation sub team will investigate the use of simulation to simulate various search algorithms to improve testing efficiency.   <a href="#image">Link to the image above</a>
+          </p>
+  
+      </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+      <div id="section-header-4">
+          <h2>4.0 Search Strategy</h2>
+          <p>
+            Search strategies can be broadly classified into two main categories: mapped centralized and unmapped decentralized. A detailed list of differences is shown below.  
+          </p>
+
+          <image-component tag="image" source="assets/section-4/figure 4_1_search_strat_differences.png"
+        subtitle="Figure 4.1: Comparison between Mapped Centralised and Unmapped Decentralised Strategies"></image-component>
+
+          <p>
+            There are 3 main differences that play a key role in helping us determine the best strategy to use for our challenge.  
+          </p>
+
+          <p>
+            1. Processing Requirements 
+          </p>
+
+          <p>
+            Unmapped strategies require minimal processing as drones rely solely on obstacle detection to adjust their paths. This makes them ideal for large, dynamic environments with low computational needs. 
+            However, they lack awareness of other drones and previously explored areas, necessitating additional collision-avoidance algorithms and risking inefficiencies or missed victims in obscure locations  
+          </p>
+
+          <p>
+            Mapped strategies, while computationally intensive, enable drones to localize, track explored areas, and optimize search efficiency using virtual maps. This approach requires detection, classification, and mapping but ensures better resource allocation. 
+          </p>
+
+          <p>
+            2. Speed
+          </p>
+
+          <p>
+            Unmapped strategies perform faster since drones handle calculations onboard, with compact algorithms enabling quick adjustments. Conversely, mapped strategies rely on external processing, introducing potential delays in path updates and risks of central computer failure, particularly with large-scale deployments.
+          </p>
+
+          <p>
+            3. Algorithm Complexity
+          </p>
+
+          <p>
+            Unmapped strategies are simpler but may underutilize drone capabilities, such as the AI deck's advanced processing power, leading to less innovative solutions. Mapped strategies allow for more complex algorithms that maximize hardware potential, offering an edge in challenging environments.
+          </p>
+
+          <p>
+            We will evaluate both strategies, considering their respective strengths and weaknesses, to determine the optimal approach for specific areas in the mission.
+          </p>
+  
+      </div>
+
+      <div id="sub-section-4-header-1">
+        <h3>4.1 Mapping using Multiranger Deck</h3>
+        <p>
+          The first mapping method uses the ToF sensors on the multiranger deck. The Crazyflie uses the Multi-Ranger Deck to measure distances to obstacles in five directions (forward, backward, left, right, and up), allowing it to detect and avoid obstacles. These distance measurements are combined with localization data (e.g., from optical flow sensors or SLAM algorithms) to construct a map. As the drone moves, it updates the map by correlating new sensor readings with the existing data, refining the environment's representation. This iterative process enables the drone to navigate autonomously, plan paths, and avoid collisions while building a 2D or 3D map of its surroundings.
+        </p>
+
+        <image-component tag="image" source="assets/section-4/figure 4_2_map_using_multiranger.png"
+        subtitle="Figure 4.2: Map produced using Multiranger Deck"></image-component>
+
+        <p>
+          The figure above shows one of the map produced during one of our test runs. The drone crashed during the first test as it did not detect the pillar. This highlights the key limitation of the sensor in that its view is small and so may not be able to detect slim obstacles such as pillars. 
+        </p>
+
+        <p>
+          On top of that, the map produced was inaccurate. As can be seen in the figure, some of the area was not mapped, and the wall furthest away from the drone was slanted. This is due to both the limitations of the range and resolution of the sensor, as well as the drift of the drone 
+        </p>
+
+        <p>
+          Despite these shortcomings, we believe that we can improve on the issues faced by using multiple drones. Using multiple drones improves mapping by enabling faster and more efficient coverage, as they can explore different areas simultaneously and avoid redundancy. Collaborative efforts allow drones to validate each other's data, enhancing accuracy and resilience against individual errors. Multiple perspectives and dynamic sensor fusion provide greater detail and resolution, while relative positioning and shared data improve localization and the performance of SLAM algorithms. This approach is scalable for larger or more complex environments, though it requires effective communication, collision avoidance, and robust processing to handle the increased data volume. 
+        </p>
+
+        
+
+      </div>
+
+      <div id="sub-section-4-header-2">
+      <h3>4.2 Mapping using Camera on AI Deck</h3>
+      <p>
+        The second mapping method will utilize the camera on the AI deck and OpenCV's ORB (Oriented FAST and rotated BRIEF). To use ORB for SLAM with the AI deck's camera, capture frames and extract keypoints and descriptors using the ORB algorithm. Match features between consecutive frames to calculate the drone's relative motion (translation and rotation) through visual odometry. Incrementally build a map by integrating the extracted features and positional data into a point cloud or occupancy grid. Use loop closure detection to identify revisited areas, correcting accumulated errors with graph optimization. For robust performance, fuse camera data with other onboard sensors like the IMU or Multi-Ranger Deck, and optimize computations for real-time processing on the AI deck. 
+      </p>
+
+      <p>
+        We are unable to produce any results for this method just yet but will continue to explore further as ORB is widely used and results shown are promising. 
+      </p>
+
+
+
+      </div>
+
+      <div id="sub-section-4-header-3">
+        <h3>4.3 Unmapped Decentralized: Modified Swarm Bug Algorithm (MSBA)</h3>
+        <p>
+          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
+          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
+          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
+          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
+          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
+          fames ac.
+        </p>
+
+        <image-component tag="image" source="assets\section-4\figure_4_1_1_illustration_of_MSBA.png"
+        subtitle="Figure 4.1.2: Illustration of MSBA"></image-component>
+  
+        <image-component tag="image" source="assets\section-4\figure_4_1_2_navigation_architecture_diagram_of_MSBA_Running_onboard_of_crazyflie.png"
+        subtitle="Figure 4.1.3: Navigation Architecture Diagram of MSBA Running Onboard of Crazyflie"></image-component>
+
+      </div>
+
+      <div id="sub-section-4-header-4">
+        <h3>4.4 Future Work In Search Strategy</h3>
+        <p>
+          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
+          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
+          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
+          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
+          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
+          fames ac.
+        </p>
+      </div>
+
+      <div id="sub-section-4-header-4-header-1">
+        <h4>4.4.1 Future Work In Mapped Centralised Strategy</h4>
+        <p>
+          For the mapping using the Multiranger Deck, we will employ the use of multiple drones to see if we are able to obtain a more accurate representation of the arena. We will need to work on the integration and superimposing of maps from different drones, as well as the localization of the drones 
+        </p>
+
+        <p>
+          For the camera mapping, we will try to produce a map using a singular drone first, and then move on to implementing multiple drones. One successful, we will try combining both methods as Mapping with a camera provides detailed, high-resolution maps using visual features, ideal for textured environments, but requires significant processing and consistent lighting. The multiranger deck is lightweight and reliable in low-feature or dark environments, offering obstacle detection but producing less detailed maps. Combining both balances detail, efficiency, and robustness for versatile mapping. While the camera is best for visually complex areas, the Multi-Ranger Deck is well-suited for lightweight, obstacle-avoidance-focused mapping. Combining the two can leverage their strengths for robust and versatile mapping. 
+        </p>
+
+        <p>
+          We will then weigh each strategy depending on its speed and accuracy. Speed means how fast does it take for the drones to produce a complete map while taking the same path, and accuracy means how accurate the map is in its virtual representation, ie does it spot all obstacles etc. 
+        </p>
+
+        <p>
+          We will then explore the different mapped search strategies such as Theta* and frontier search and weigh them based on efficiency. 
+        </p>
+
+        <p>
+          Finally, we will be testing the completed strategy (mapping along with search algorithm) in the 3 distinct areas and compare them to the unmapped decentralized strategies. From there we will decide what kind of combination to go with so that we have a good balance of speed and novelty, maximising the points we can obtain in both the search mission and team presentation. 
+        </p>
+
+      </div>
+
+      <div id="sub-section-4-header-4-header-2">
+        <h4>4.4.2 Future Work in Unmapped Decentralized Strategy</h4>
+        <p>
+          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
+          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
+          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
+          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
+          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
+          fames ac.
+        </p>
+      </div>
+
+      <br />
+      <br />
+      <sl-divider></sl-divider>
+
+      <div id="section-header-5">
+        <h2>5.0 Object Detection</h2>
+        <p>
+          The Object Detection Subsystem involves streaming the images collected by the camera over Wi-Fi and processing these images with the AI deck to detect AprilTags (Victim Markers and Danger Zones) on a central computer.
+        </p>
+  
+      </div>
+
+      <div id="sub-section-5-header-1">
+        <h3>5.1 Hardware in Object Detection</h3>
+        
+        <image-component tag="image" source="./assets/section-5/figure_5_1_components_on_ai_deck.png"
+      subtitle="Figure 5.1: Components on AI Deck"></image-component>
+        <p>
+          The AI deck contains the GAP8 and the Himax HM01B0-MNA monochrome camera module. The full resolution of the Himax HM01B0-MNA monochrome camera module full is 324 x 324 pixels and can capture images up to 60 Frames per second (FPS) [3]. The GAP8 Microcontroller (MCU) on the AI Deck processes the RAW files collected by the camera.
+        </p>
+      </div>
+
+      <div id="sub-section-5-header-2">
+        <h3>5.2 Target Type</h3>
+        <p>
+          The target type used is AprilTags. (Figure 5.2). AprilTags are visual fiducial markers used in applications such as camera calibration. AprilTags are chosen because it is more accurate than other markers such as WhyCon [2] and easy to source. It allows calculating exact position, orientation and identity of a marker relative to a camera. Furthermore, it allows the user to specify a list of markers to detect and have existing ROS support.
+          </p>
+          <p>
+          AprilTags are used as Victim Markers for SAFMC 2024 and SAFMC 2025. For SAFMC 2025, they will also serve as markers for Danger Zones, forcing Crazyflies to fly past within its 1 m radius.          
+        </p>
+
+        <image-component tag="image" source="assets\section-5\figure_5_2_AprilTags_as_our_target_type.png"
+      subtitle="Figure 5.2 AprilTags as Our Target Type"></image-component>
+      
+      </div>
+
+      <div id="sub-section-5-header-3">
+          <h3>5.3 Factors in Modifying the Angle of Camera Mount</h3>
+
+          <image-component tag="image" source="./assets/section-5/figure_5_3_camera_mount_at_0 °_45°_and_90°_with_respect_to_the_vertical_axis.png"
+          subtitle="Figure 5.3: Camera Mount At 0 °, 45° and 90° With Respect to the Vertical Axis"></image-component>
+          <p>
+            The default configuration of the camera mount holding the Himax HM01B0-MNA monochrome camera module is 90°. 90° didn’t work for the camera mount because it only captured tall static obstacles like Inner Walls and Pillar Obstacles, missing the ground-level Victim Markers and Danger Zones. Meanwhile, 0° was not suitable due to noticeable latency during image streaming.
+            </p>
+          
+          <p>
+            After the image from the camera is processed, and a Victim Marker is detected, the Crazyflie will land further away from the Victim Marker (but within 1 m radius of LOS), which is not ideal. 
+            </p>
+          
+          <p>
+            From Figure 1.2, where a Danger Zone is located very near to a Regular Victim, it is ideal to land the Crazyflie as close as possible to the Victim Marker, to avoid it landing within the 1 m radius of the Danger Zone. Angling the camera mount is important to allow the Crazyflie to look ahead and account for the image processing delay. As such, any angles from 10° to 80° can be potentially considered.
+            </p>
+          
+          <p>
+            To determine the optimal camera mount angle for the Crazyflie, it is essential to balance several factors: velocity, flight attitude, and image resolution. The faster the Crazyflie flies, the “higher” it needs to look to detect the Victim Marker in time, which requires a steeper camera angle between 10° and 80° from the vertical axis. This ensures that the marker is detected early enough within the required LOS for a successful rescue.
+            </p>
+
+          <p>
+            Additionally, as the flight attitude increase, the angle of the camera mount must be adjusted downwards to allow the Crazyflie to maintain effective detection.
+            </p>
+
+          <p>
+            Lastly, image resolution decreases at higher speeds and altitudes due to motion blurs, impacting detection accuracy. Thus, to achieve clear and timely identification of the Victim Marker, the camera mount angle must be carefully adjusted in tandem with the Crazyflie’s speed, flight attitude, and image resolution.
+            </p>
+          
+          <p>
+            For SAFMC 2024, the angle of the camera mount used was 45°. 
+            </p>
+          
+          <p>
+            For SAFMC 2025, 45° camera mount proved to work well with a velocity of 0.5 m/s and an attitude of 0.3 m for the detection of a Victim Marker (Figure 5.3) for one Crazyflie. It makes sense to fly the Crazyflie at an attitude of 0.3 m as the depth of field of the camera module is 30 cm to infinity, which is the lowest attitude within the range [3]. 
+          </p>
+
+      </div>
+
+      <div id="sub-section-5-header-4">
+        <h3>5.4 Image Streaming</h3>
+
+        <comparison-raw-jpeg subtitle="Table 3.0: Comparison of Streaming RAW file and JPEG file">
+          <div id="comparison-raw-jpeg"></div>
+        </comparison-raw-jpeg>
+
+        <p>
+          Collecting RAW files presents several disadvantages. From Table 3.0, the RAW file is larger than the JPEG file format and needs to be processed by the AI deck, leading to processing time and visible lags.
+          </p>
+        
+        <p>    
+          As such, a repository was online which contained a modified image streaming firmware [4]. The modified firmware streams JPEG images and includes an autoexposure feature which improved image quality and streaming efficiency.
+          </p>
+
+        <image-component tag="image" source="./assets/section-5/figure_5_4_original_vs_updated_image_streaming_firmware.png"
+        subtitle="Figure 5.4: Original Image streaming Firmware (Left); Updated Image streaming Firmware (Right)"></image-component>
+
+      </div>
+
+      <div id="sub-section-5-header-5">
+        <h3>5.5 Victim and Danger Zone Detection</h3>
+
+        <image-component tag="image" source="./assets/section-5/figure_5_5_victim_and_danger_zone_detection_chart.png"
+        subtitle="Figure 5.5: Victim and Danger Zone Detection Chart"></image-component>
+
+        <p>
+          Figure 5.5 shows how Victim and Danger Zone Detection is conducted for SAFMC 2025. In this year’s competition, the take-off command is issued via a central computer, followed by checking the Crazyflie’s status to see if its ready for the Competition Mission. Thereafter, in the air, the Crazyflie will continuously scan its surroundings using the camera on the AI-Deck. When an AprilTag is detected (which can be found in the detected Tags and the Danger Zone dictionary), the AprilTag will be identified as either a Victim Marker or a Danger Zone.
+          </p>
+
+        <p>
+          If a Victim Marker is detected, a land command is issued, and the Crazyflie sets itself as inactive upon landing. In doing so, if the Crazyflie rescues the Victim within a 1 m LOS of the Victim Marker, a successful rescue has taken place.
+          </p>
+        
+        <p>
+          Conversely, if a Danger Zone is detected, the Crazyflie will take note of the AprilTag ID by storing it within a variable that can be reused. Thereafter, the Crazyflie will fly past the Danger Zone, never landing within its 1 m radius. 
+          </p>
+
+      </div>
+
+      <div id="sub-section-5-header-6">
+        <h3>5.6 Victim and Danger Zone Detection for One Crazyflie</h3>
+
+        <video-component tag="video" source="https://www.youtube.com/embed/7XYIzGDzUfc?si=Lv9ohnfTVAj5mW1s"
+        subtitle="Figure 5.6: Video of Object Detection for One Crazyflie"></video-component>
+
+        <p>
+          The test (Figure 5.6) was conducted in the Computer Vision room at Temasek Laboratories. In this test, the Crazyflie takes off to search for one Victim Marker autonomously. The Crazyflie flies over the Danger Zone (AprilTag in the middle of the room) and rescuing the victim (AprilTag at the end of the room). The Search Algorithm used in this test was MSBA. The angle of the camera mount was 45°.
+          </p>
+
+        <p>
+          This test confirms that the Crazyflie successfully maintains a distance within the 1 m radius of the Victim Marker, achieves a successful rescue by landing near the Victim Marker, and accurately detects the Danger Zone without landing within it.
+          </p>
+
+        <p> 
+          However, we acknowledge a limitation: there remains a possibility for the Crazyflie to inadvertently land within an area where radius of Victim Markers and Danger Zones overlap. This scenario was not addressed in the current test and represents an area for future work.
+        </p>
+
+      </div>
+      <div id="sub-section-5-header-7">
+        <h3>5.7 Future Work in Object Detection</h3>
+        <p>
+        One possible future direction Objection Detection can take involves detecting Navigation Aids using Convolutional Neural Networks (CNN) and successfully segmenting the field layout based on Navigation Aids. This approach could help address overlapping zones by enabling more precise navigation and allowing for the implementation of various search strategies throughout the entire Playing Field.
+        </p>
+
+        <image-component tag="image" source="./assets/section-5/figure_5_7_segmentation_of_playing_field.png"
+        subtitle="Figure 5.7: Segmentation of Playing Field"></image-component>
+
+        <p>
+        As shown in Figure 5.7, the Playing Field is divided into three distinct areas: the Known Search Area, the Unknown Search Area, and the Pillar Area. Each of these areas presents unique challenges, requiring different approaches as a single search algorithm is insufficient for all scenarios. To address these challenges, the SAFMC 2024 team implemented multiple search strategies, including wall-following, wall-following with obstacle avoidance, and the bug algorithm, tailored to the specific needs of each area. We believe that the SAFMC 2025 team should take a similar approach. 
+        </p>
+      </div>
+        
+      <br />
+      <br />
+      <sl-divider></sl-divider>
+
+      <div id="section-header-6">
+          <h2>6.0 Obstacle Avoidance</h2>
+
+          <p>
+            In the Playing Field, the Crazyflies encounter a mixture of Inner Walls and Pillar Obstacles. The Known and Unknown Search Areas contain only Inner Walls as obstacles, while the Pillar Zone includes only Pillar Obstacles and no Inner Walls.
+            </p>
+
+      </div>
+
+      <div id="sub-section-6-header-1">
+        <h3>6.1 Known and Unknown Search Area</h3>
+
+        <p>
+          In the Known and Unknown Search Area, the SGBA path-finding algorithm allows the Crazyflie to adhere to the walls that it detects as part of its path-finding strategy. The Crazyflie is programmed to follow a set distance from the wall and follow along it once a wall is detected. The algorithm would then allow the Crazyflie to avoid crashing into the walls that it encounters. Hence, no additional steps are required to avoid the walls and can be used as-is with the current implementation.
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-2">
+        <h3>6.2 Addition of Pillar Area</h3>
+          <image-component tag="image" source="assets/matthew/arenaWithPillarZone.png"
+            subtitle="Figure 6.2.1: SAFMC 2025 Playing Field"></image-component>
+        <p>
+          In SAFMC 2025, there is the addition of the “Pillar Area” which consists of only pillars (of 30 cm diameter) and no
+          additional walls placed in that area (Figure 4.3.1). Hence, a different approach from that used in the rest
+          of the playing field may have to be taken considering the differences in this area.
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-3">
+        <h3>6.3 Search for Objects to replicate Pillars for Testing</h3>
+        <p>
+          To test the performance of our Crazyflies in the Pillar Area,
+          we had to carry out at-scale testing in our own arena that included
+          modelling the Pillar Area. To do so, we first sought to work with electrical
+          pipes bundled together to simulate the Pillar Area.
+        </p>
+        <image-component tag="image" source="assets/matthew/oldPillar.png"
+                          subtitle="Figure 6.3.1: Electrical Pipes Used to Simulate Pillar Area"></image-component>
+        <p>
+          However, it was found that these pipes were too thin and did not accurately replicate
+          the pillars that would be used in the real setup (Figure 4.3.2). The Crazyflies were
+          not able to detect the pipes in flight and would often crash into it due to non-detection.
+        </p>
+        <video-component tag="video" source="https://www.youtube.com/embed/OxNeZHhW-sI?si=wiNocZl1OFRdu_7x" subtitle="Figure 6.3.2: Video of Drones hovering between new styrofoam blocks"></video-component>
+
+        <p>
+          Looking for alternatives, we were able to secure these Styrofoam blocks from Temasek Laboratories to
+          model the pillars (Figure 6.3.2). Being approximately 20 cm in diameter, this was an accurate scale
+          model of the pillars and provided a good representation of the cylindrical surface of the pillar area
+          that the Crazyflies would have to contend with in the actual arena.
+        </p>
+      </div>
+      
+      <div id="sub-section-6-header-4">
+        <h3>6.4 Test of Crazyflie in the Pillar Area</h3>
+        <p>
+          In conducting tests in the Pillar area, we were looking to validate two factors: 1. The Crazyflies
+          can fly in a stable manner between the pillars, and 2. The Crazyflies are able to navigate their way
+          around the pillars to move towards the victim both within and beyond the pillar area.
+          <br/><br/>
+          The test was conducted by allowing the Crazyflies flashed with the wall-following or bug algorithm used
+          in the rest of the area to fly within the pillar zone and observe its performance.
+        </p>
+
+        <video-component tag="video" source="https://www.youtube.com/embed/-OyrP666mzA?si=ktmBxre95ZHss4CD" subtitle="Figure 6.4.1: Video of Results of Tests"></video-component>
+
+        <p>
+          The results show the following (Figure 6.4.1):
+          <br/><br/>
+          <b>1</b>.	The Crazyflies can fly in a stable manner between pillars<br/><br/>
+          While in flight between the pillars, the presence of these obstacles to its left and right did not affect
+          the stability of flight nor did it affect its ability to maintain a constant altitude off the ground.
+          <br/><br/>
+          <b>2</b>.	The Crazyflies were not able to reliably detect the presence of pillars<br/><br/>
+          While the current bug algorithm was able to allow the Crazyflies to detect the pillars and fly around them
+          most of the time. However, at very specific angles, the multi-ranger deck would not be able to detect the pillars
+          and cause the Crazyflies to fly head-on towards it.
+        </p>
+
+        <image-component tag="image" source="assets/matthew/lineOfSightDoesNotPickUpPillar.png" subtitle="Figure 4.3.5: Line of Sight does not Pick-up Pillars"></image-component>
+
+        <p>
+          This limitation arises from the fact that the multi-ranger deck has only 4 sensors used in the distance sensing in the
+          x-y plane which include the forward, backwards, left and right sensors. At this angle as shown (Figure 4.3.5), none of
+          the sensors can pick up the pillar which results in the Crazyflie wrongly believing that it is in free space. It would
+          then plan its path based off this assumption and potentially crash head-on into the pillar.<br/><br/>
+          Hence, more work needs to be done to optimise the search algorithm of the Crazyflies in the pillar area to allow it to
+          reliably detect the pillars and navigate around them without crashing into them.
+        </p>
+      </div>
+      <div id="sub-section-6-header-5">
+        <h3>6.5 Future Work in Collision Avoidance</h3>
+        <image-component tag="image" source="assets/matthew/zigZagFlightPath.png"
+                         subtitle="Figure 6.5.1: Possible Zig-Zag flight path to counter non-detection of Pillars"></image-component>
+        <p>
+          In the Pillar Area, the focus of the future work would be to optimise the algorithm to prevent it from colliding with the pillars and to navigate around them. This would likely involve the use of different path-finding algorithms from that used in the rest of the area and may require the use of dedicated Crazyflies to search this area.
+          <br/><br/>
+          One such path-finding strategy would involve the use of a zig-zag flight path in the pillar area. This would increase the chance of the drone picking up the pillar in its line of sight by allowing it to continuously change its direction and minimise blind spots in its detection using the multiranger deck as seen in testing. This would mean that even where the drones are in the state of non-detection as seen on the left in Figure 6.5.1, a change in direction can allow it to move towards a state of detection as seen on the right.
+        </p>
+      </div>
+
+
+      <div id="section-header-7">
+          <h2>7.0 Simulation</h2>
+          <p>
+            Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
+            Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
+            etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
+            vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
+            Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
+            fames ac. <a href="#image">Link to the image above</a>
+          </p>
+  
+      </div>
+
+      <div id="sub-section-7-header-1">
+        <h3>7.1 Simulation Architecture Diagram for Decentralized Algorithm</h3>
+        <p>
+          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
+          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
+          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
+          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
+          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
+          fames ac.
+        </p>
+
+        <image-component tag="image" source="./assets/section-4/figure_4_4_1_navigation_architecture_diagram_of_simulated_crazyflie.png"
+        subtitle="Figure 4.4.1: Navigation Architecture Diagram of Simulated Crazyflie"></image-component>
+      
+      </div>
+
+      <div id="sub-section-7-header-2">
+        <h3>7.2 Webot Simulation of Crazyflies Performing MSBA</h3>
+        <p>
+          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
+          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
+          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
+          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
+          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
+          fames ac.
+        </p>
+        <msba-configuration subtitle="Table 4.0: MSBA Configuration of Simulated Crazyflies in Webots">
+          <div id="msba-configuration"></div>
+        </msba-configuration>
+
+        <image-component tag="image" source="./assets/section-4/figure_4_4_2_path_of_3_crazyflie_simulated_in_webots.png"
+        subtitle="
+        Figure 4.4.2: Path of 3 Crazyflie Simulated in Webots Using the Configuration in Table 4.0 (Green) Crazyflie 1 Path; (Pink) Crazyflie 2 Path; (Blue) Crazyflie 3 Path
+        "></image-component>
+
+        <video-component tag="video" source="https://www.youtube.com/embed/nrzu8jDMEnc?si=CZcKq72jN3VzLVef"
+        subtitle="Figure 4.4.3: Video of Swarm of 3 Crazyflies performing MSBA in Webots"></video-component>
+      
+      </div>
+
+      <div id="sub-section-7-header-3">
+        <h3>7.3 Future Work in Simulation</h3>
+        <p>
+          abcdefg
+        </p>
+      </div>
+   
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+ 
+      <div id="section-header-8">
+          <h2>8.0 Testing Suitability of Arena</h2>
+      </div>
+
+      <div id="section-header-8">
+          <h2>8.0 Testing the Suitability of Arena</h2>
+          <image-component tag="image" source="assets/matthew/arena.png"
+                         subtitle="Figure 8.1: SAFMC 2025 Competition Playing Field"></image-component>
+          <p>
+            The Competition Playing Field is a 20 m x 20 m space that comprises a Known Area, Unknown Area
+            and Pillar Area (Figure 8.1). While we would ideally have to test at a full-scale arena before
+            the actual competition, it would be more practical to have a smaller-scale arena that is more
+            accessible to conduct more regular testing.
+          </p>
+          <image-component tag="image" source="assets/matthew/tlabComputerRoom.png"
+                         subtitle="Figure 8.2: Computer Room in Temasek Laboratories"></image-component>
+          <p>
+            Testing was done by the SAFMC 2024 Team in a computer room in Temasek Laboratories (Figure 8.2).
+            However, as this room will be under renovation starting in January 2025, we had to search for a
+            new location to carry out our regular testing.
+          </p>
+          <image-component tag="image" source="assets/matthew/studio1.png"
+                         subtitle="Figure 8.3: iDP Studio 1"></image-component>
+          <p>
+            Innovation and Design Programme (iDP) Studio 1 (Figure 8.3) was chosen as a potential site due to
+            its convenience and ease of access to our team. However, we had to conduct a few tests to ascertain
+            the reliability of flying the Crazyflies in this area (with the given floor) as the Crazyflies have
+            been known to perform poorly in certain environments, especially when the floor is too smooth or uniform.
+          </p>
+      </div>
+
+      <div id="sub-section-8-header-1">
+          <h3>8.1 Suitability Test</h3>
+          <p>
+            1.	Hovering Test
+            <br/><br/>
+          </p>
+          <image-component tag="image" source="./assets/matthew/hoveringTest.png"
+          subtitle="
+          Figure 8.4: Drone undergoing Hovering Test
+          "></image-component>
+          <p>
+            This test involved allowing the Crazyflie to hover at a fixed height of 0.3 m for 30 s. The Crazyflies proved to be able to hover well at this fixed height, demonstrating the ability of the Crazyflies to recognise its height off the ground using the Time of Flight (ToF) sensor and maintain a constant height while hovering.
+            <br/><br/>
+            2. Drift Test
+            <br/><br/>
+          </p>
+
+          <drift-test subtitle="Table 5.0: Results of Drift Test">
+            <div id="drift-test"></div>
+          </drift-test>
+          <p>
+            In this test, the Crazyflie took off, flew forward by 1 m using cfclient and then land. We would then determine how far it has drifted from the theoretical position of where it should land which should be 1 m away from the take-off position.
+            <br/><br/>
+            ∆x represents the horizontal distance of the Crazyflie’s forward or backward movement. ∆y represents the lateral distance of the Crazyflie’s rightward or leftward movement.
+            <br/><br/>
+            The issue of drifting due to changes in environment was reported by SAFMC 2024’s team which seems not significantly affect our team this year.
+            <br/><br/>
+            From the drift test, it was found that the average displacement of ∆x_average=12.6 cm and ∆y_average=9.17 cm shows that the Crazyflie tended to drift forward and to the right from their initial positions. This drift pattern is consistent with observations made in the Temasek Laboratories computer room. Both ∆x_average and ∆y_average values fall within an acceptable error margin, especially considering that the minimum wall-to-wall distance on competition day is 1 m—making these drift values relatively minor by comparison.
+            <br/><br/>
+            With the two tests providing valuable results, we conclude that iDP Studio 1 is a suitable place for Crazyflie testing and therefore our choice of venue to build our scale model of the arena.
+          </p>
+  
+      </div>
+
+      <div id="sub-section-8-header-2">
+          <h3>8.2 System Integration Test</h3>
+
+          <p>
+            The system integration test was carried out with 3 Crazyflies, 2 Victim Markers and 1 Danger Zones. The purpose of this test is to see how the various sub-systems will come together under a new set of Playing Field, rules and obstacles. This allowed us to adapt the SAFMC 2024 team’s code to our needs, adding new features for new obstacles, such as the Pillar Obstacles, which was not present in the previous years.
+            </p>
+  
+      </div>
+
+      <div id="sub-section-8-header-2-header-1">
+        <h4>8.2.1 Run 1</h4>
+
+        <!--this is weird for the table cos i could only get the table to show for run1_params and only subtitle shown for msba configuration-->
+        <run1_params subtitle="Table 6.0: Parameters of the Crazyflie Used">
+          <div id="run1_params"></div>
+        </run1_params>
+        <msba-configuration subtitle="Table 6.0: Parameters of the Crazyflie Used">
+          <div id="msba-configuration"></div>
+        </msba-configuration>
+        
+        <p>
+          In this test, the Crazyflies were flown at an attitude of 0.3 m, and a velocity of 0.5 m/s. Each Crazyflie had their own preferred direction, wall-following side and wall distance (Table 6.0).
+        </p>
+
+        <image-component tag="image" source="assets\section-8\figure_8_5_layout_of_run_1.png"
+        subtitle="Figure 8.5: Layout of Run 1"></image-component>
+        
+        <p>
+          Figure 8.5 shows the Layout of Run 1, where each Victim Markers were either placed in a narrow area or a wide area. The Crazyflies (labelled 1, 2 and 3) were placed in their allocated spots.
+        </p>
+
+        <video-component tag="video" source="https://www.youtube.com/embed/htiBuillTQU?si=Ds-DbgeMn0HuN6nK" subtitle="Figure 8.6: Video of Run 1"></video-component>
+        
+        <p>
+          Figure 8.6 shows the video of the first run.
+        </p>
+
+        <image-component tag="image" source="assets/section-8/figure_8_7_successful_rescue_of_crazyflie.png"
+        subtitle="Figure 8.7: Successful Rescue of Crazyflie"></image-component>
+
+        <p>
+        For the first run, all three Crazyflies took off successfully, though one had a slight delay. Two out of three Crazyflies landed on the Victim Marker, and two out of three Crazyflies detected the Danger Zone. Most importantly, none of the Crazyflies landed within the Danger Zone. In this run, our team observed effective object detection for both Victim Markers and Danger Zones in both wide (Absence of Inner Walls) and narrow areas (Areas enclosed by Inner Walls), which meant that the Crazyflies landed in front of the April Tag without colliding with any walls during landing (Figure 8.7).
+        </p>
+
+      </div>
+
+      <div id="sub-section-8-header-2-header-2">
+        <h4>8.2.2 Run 2</h4>
+        <p>
+          The same Crazyflie parameters were used as Table 6.0 for run 2.
+          </p>
+
+        <image-component tag="image" source="assets\section-8\figure_8_8_layout_of_run_2.png"
+        subtitle="Figure 8.8: Layout of Run 2"></image-component>
+
+        <p>
+          For run 2, we modified the arena such that it is a smaller version of the actual Playing Field (Figure 8.8), where there is an Unknown Search Area in the centre of the Playing Field. In this run, the distance between Pillar Obstacle and Inner Wall is 1 m. 
+          </p>
+        
+          <p>
+          We observe that Crazyflie 2 did not pass through the area between the Pillar Obstacle and the Inner Wall, despite continuously approaching this area. Crazyflie 2 was not able to break out of this loop. As such, we conclude that we need to implement a loop detection in our search algorithm so that the other Crazyflies can break out of this loop in similar scenarios. However, the wall distance of 0.8 m for Crazyflie was too large for a 1 m pillar-to-wall distance. Furthermore, the Crazyflie did not enter the "Unknown Search Area”. This led us to the conclusion that our team requires a larger test arena (of 1:1 or 1:2 scale) for accurate testing.
+          </p>
+        <video-component tag="video" source="https://www.youtube.com/embed/pSzdsZPPaq0?si=wisSBEOyDS_sFoSb"
+        subtitle="Figure 8.9: Video of Run 2"></video-component>
+      
+      </div>
+   
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+      <div id="section-header-9">
+          <h2>9.0 Future Work</h2>
+      </div>
+
+      <div id="sub-section-9-header-1">
+          <h3>9.1 Mission Planning</h3>
+
+          <p>
+            Mission Planning integrates the development of all subsystems described in previous sections. Its goal is to design and organize the Crazyflies and strategies needed to achieve the fastest and safest run during the Competition Day Mission. Full-scale testing, covered in the next section, will assess mission planning strategies for the Crazyflies' attitude, velocity, and search algorithms within a 20m x 20m arena.
+            </p>
+
+          <p>
+            Additionally, we propose to segment the arena into specific areas as part of our strategy, and each area is assigned a group of Crazyflies. The Known Search Area, the largest section, will have six Crazyflies assigned, while the Unknown Search Area will be covered by four Crazyflies, and the smallest section, the Pillar Area, will have three Crazyflies. Overloading the Pillar Area with Crazyflies could lead to collisions due to its narrow and restricted paths. Additionally, the Crazyflies’ multi-ranger sensors have a limited detection angle, further restricting their ability to detect obstacles.
+            </p>
+
+          <p>
+            Furthermore, to ensure safe operation, it is critical to address the risk of collisions within the drone swarm, which can pose a serious safety hazard. To mitigate this, we proposed an algorithm as part of the future work that allows Crazyflies to share their positions and other relevant information in real-time, enabling effective drone-to-drone avoidance and coordination throughout the mission.  
+            </p>
+  
+      </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+      <div id="section-header-10">
+          <h2>10.0 Timeline</h2>
+          <p>
+            Moving forward, the team will work towards further developing the subsystems to achieve the key event milestones in Table 7.0. The team plans to perform three full-scale test in Utown Indoor Sports Hall in the upcoming semester. The date of the competition has yet to be announced but it was expected to take place at the end of March. Therefore, all major activities will be planned before the third week of March.
+            </p>
+
+            <key-events subtitle="Table 7.0: Key Events">
+              <div id="key-events"></div>
+            </key-events>
+
+          <p>
+            Figure 10.1 below illustrates the project Gantt chart for each subsystem, showing the activities that will take place.
+            </p>
+
+            <image-component tag="image" source="assets\section-10\figure_10_1_project_gantt_chart.png"
+            subtitle="Figure 7.1: Project Gantt Chart"></image-component>
+          
+      </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+ 
     <div id="references" class="references">
       <sl-divider></sl-divider>
-      <h2>References</h2>
+      <h2>11.0 References</h2>
       <ul>
         <li>
-          Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved from
-          http://www.dowjones.com/factiva/
+          [1]K. N. McGuire, C. De Wagter, K. Tuyls, H. J. Kappen, and G. C. H. E. De Croon, ‘Minimal navigation solution for a swarm of tiny flying robots to explore an unknown environment’, Sci. Robot., vol. 4, no. 35, p. eaaw9710, Oct. 2019, doi: 10.1126/scirobotics.aaw9710. 
         </li>
         <li>
-          Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker well-being: Occupational
-          health psychologists convene to share their research on work, stress, and health. Monitor on Psychology,
-          39(5), 26-29.
+          [2]“Comparison of Fiducial Markers”, Robotics Knowledgebase. [Online]. Available: https://roboticsknowledgebase.com/wiki/sensing/fiducial-markers/ 
         </li>
         <li>
-          Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied Psychology, 2(2),
-          38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
+          [3]"AI Deck Mono Camera Datasheet," Bitcraze, 2024. [Online]. Available: https://www.bitcraze.io/documentation/hardware/ai_deck_mono_camera/ai_deck_mono_camera-datasheet.pdf.
+        </li>
+        <li>
+          [4]“GitHub - williamleong/aideck-gap8-examples at dev/William”, GitHub. [Online]. Available: https://github.com/williamleong/aideck-gap8-examples
         </li>
       </ul>
     </div>
-  </div>
 
-  <!-- This is the code to display the scroll to top button for ergonomic -->
-  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-  <!-- but it might reduce the user experience. -->
+  </div>
+</div>
+
   <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
     <sl-icon name="arrow-up" label="Settings"></sl-icon>
   </sl-button>
