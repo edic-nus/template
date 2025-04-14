@@ -29,6 +29,7 @@ class ImageComponent extends HTMLElement {
 
       img {
         width: 100%;
+        border: 1px solid black;
       }
 
       sub {

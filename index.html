@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project Title</title>
+  <title>MIC@Home: Leveraging AI for Patient Care at Home to Enable Virtual Ward Operations</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
@@ -31,190 +31,3767 @@
   <script src="./components/table-component/table-component.js"></script>
 
   <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 7px;
+    }
+  </style>
 </head>
 
 <body>
   <div class="content">
-    <h1>Project Title</h1>
+    <h1>MIC@Home: Leveraging AI for Patient Care at Home to Enable Virtual Ward Operation</h1>
 
     <!-- This is the team member component use to display details about your team members -->
     <div class="team-member-wrapper">
-      <team-member avatar="assets/blackranger.png" name="Black" department="Mechanical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/yellowranger.png" name="Yellow" department="Computer Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/redranger.png" name="Red" department="Electrical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/pinkranger.png" name="Pink" department="Biomedical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/blueranger.png" name="Blue" department="Chemical Engineering"
-        year="1993"></team-member>
+      <team-member avatar="assets/JunBoon.png" name="Soo Jun Boon" department="Biomedical Engineering"
+        year="Year 4"></team-member>
+      <team-member avatar="assets/Hasina.png" name="Hasina Begum" department="Biomedical Engineering"
+        year="Year 4"></team-member>
+      <team-member avatar="assets/Swetha.png" name="Sridhar Swetha" department="Biomedical Engineering"
+        year="Year 4"></team-member>
+      <team-member avatar="assets/Deebika.png" name="Balamurugan Deebika" department="Biomedical Engineering"
+        year="Year 4"></team-member>
     </div>
 
     <!-- This is a divide from the shoelace library for aesthetic purpose -->
+    <sl-divider></sl-divider>
+
+    <!-- Acknowledgement -->
+    <div id="acknowledgement">
+      <h2>Acknowledgements</h2>
+      <p>
+        We would like to express our deepest gratitude to Mr. Keith Tan and Dr. Kate Lee for their unwavering guidance,
+        insightful feedback, and dedicated support throughout the course of this project. Their expertise, patience, and
+        valuable advice have been instrumental in shaping the direction of this work, and their encouragement has been a
+        source of motivation at every stage.
+        <br><br>
+        We also extend our sincere appreciation to our project partners from MOHT for their collaboration and
+        commitment. Their willingness to share their expertise, provide necessary resources, and engage in meaningful
+        discussions has been invaluable in ensuring the success of this project. Their contributions have played a
+        crucial role in refining our approach and achieving our objectives.
+        <br><br>
+        This project would not have been possible without the collective efforts of all those involved, and we are truly
+        grateful for their support and dedication.
+        <br><br>
+        -Project Team
+      </p>
+    </div>
+
     <sl-divider></sl-divider>
 
     <!-- This is the table-of-content component use to define all of the link directly to each section -->
     <div class="table-of-content">
       <h2>Table of Contents</h2>
       <sl-tree>
+        <sl-tree-item>
+          <a href="#acknowledgement">Acknowledgements</a>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#abstract">Abstract</a>
+        </sl-tree-item>
+
         <sl-tree-item expanded>
-          <a href="#section-header-1">1. Section Header 1</a>
+          <a href="#section-header-1">1. Introduction</a>
           <sl-tree-item>
-            <a href="#sub-section-1-header-1">1.1. Sub-section Header 1</a>
+            <a href="#sub-section-1-header-1">1.1 Current Situation in Singapore</a>
           </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-1-header-2">1.2. Sub-section Header 2</a>
+          <sl-tree-item expanded>
+            <a href="#sub-section-1-header-2">1.2. Current Measures</a>
+            <sl-tree-item>
+              <a href="#sub-section-1-header-2-1">1.2.1 Hospital-Based Measures</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-1-header-2-2">1.2.2 Community Care Apartments</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-1-header-2-3">1.2.3 Mobile Inpatient Care @ Home (MIC@Home)</a>
+            </sl-tree-item>
           </sl-tree-item>
         </sl-tree-item>
 
         <sl-tree-item expanded>
-          <a href="#section-header-2">2. Section Header 1</a>
+          <a href="#section-header-2">2. Problem Framing</a>
           <sl-tree-item>
-            <a href="#sub-section-2-header-1">2.1. Sub-section Header 1</a>
+            <a href="#sub-section-2-header-1">2.1 Current Issues of MIC@Home</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#sub-section-2-header-2">2.2. Sub-section Header 2</a>
+            <a href="#sub-section-2-header-2">2.2 How-Might-We Statements</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-2-header-3">2.3 Problem Statement</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#section-header-3">3. Value Proposition</a>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#section-header-4">4. Design Statement</a>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-5">5. Concept Design</a>
+          <sl-tree-item>
+            <a href="#sub-section-5-header-1">5.1 Functional Requirements</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-5-header-2">5.2 Design Specifications</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-6">6. Concept Generation</a>
+          <sl-tree-item>
+            <a href="#sub-section-6-header-1">6.1 Overall Concept</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-7">7. Developmental Phases of MediHeal</a>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-8">8. Frontend Prototyping</a>
+          <sl-tree-item>
+            <a href="#sub-section-8-header-1">8.1 Purpose and Objectives</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-8-header-2">8.2 Responsibilities and Deliverables</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-8-header-3">8.3 Overview of Frontend Architecture</a>
+          </sl-tree-item>
+          <sl-tree-item expanded>
+            <a href="#sub-section-8-header-4">8.4 First Iteration Prototype</a>
+            <sl-tree-item>
+              <a href="#sub-section-8-header-4-1">8.4.1 Feedback for First Iteration</a>
+            </sl-tree-item>
+          </sl-tree-item>
+          <sl-tree-item expanded>
+            <a href="#sub-section-8-header-5">8.5 Second Iteration Prototype</a>
+            <sl-tree-item>
+              <a href="#sub-section-8-header-5-1">8.5.1 Design Phase</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-8-header-5-2">8.5.2 Implementation Phase</a>
+            </sl-tree-item>
+          </sl-tree-item>
+          <sl-tree-item expanded>
+            <a href="#sub-section-8-header-6">8.6 Testing of Iteration 2</a>
+            <sl-tree-item>
+              <a href="#sub-section-8-header-6-1">8.6.1 Feedback by UI/UX Specialists</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-8-header-6-2">8.6.2 User Testing: Patient Experience SUS Survey</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-8-header-6-3">8.6.3 Frontend Functionality Tests</a>
+            </sl-tree-item>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-8-header-7">8.7 Third Iteration Prototype</a>
+          </sl-tree-item>
+          <sl-tree-item expanded>
+            <a href="#sub-section-8-header-8">8.8 Testing of Iteration 3</a>
+            <sl-tree-item>
+              <a href="#sub-section-8-header-8-1">8.8.1 User Testing: Patient Experience SUS Survey (Round 2)</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-8-header-8-2">8.8.2 Integrated Testing</a>
+            </sl-tree-item>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-9">9. Backend Prototyping</a>
+          <sl-tree-item>
+            <a href="#sub-section-9-header-1">9.1 Purpose and Objectives</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-9-header-2">9.2 Responsibilities and Deliverables</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-9-header-3">9.3 Overview of Backend Architecture</a>
+          </sl-tree-item>
+          <sl-tree-item expanded>
+            <a href="#sub-section-9-header-4">9.4 First Iteration Prototype</a>
+            <sl-tree-item>
+              <a href="#sub-section-9-header-4-1">9.4.1 Chatbot Architecture</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-9-header-4-2">9.4.2 Personalized Response Generation with Modifiable System
+                Prompts</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-9-header-4-3">9.4.3 Structured Patient Database and AI-Driven Data Extraction</a>
+            </sl-tree-item>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-9-header-5">9.5 Backend testing for iteration 1</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-9-header-6">9.6 Second Iteration</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-9-header-7">9.7 Backend testing for iteration 2</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-10">10. Integrated User Tests</a>
+          <sl-tree-item expanded>
+            <a href="#sub-section-10-header-1">10.1 Test Methodology</a>
+            <sl-tree-item>
+              <a href="#sub-section-10-header-1-1">10.1.1 Test Objectives</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-10-header-1-2">10.1.2 Test Environment</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-10-header-1-3">10.1.3 Test Participants</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-10-header-1-4">10.1.4 Test Scenarios</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-10-header-1-5">10.1.5 Data Collection</a>
+            </sl-tree-item>
+          </sl-tree-item>
+          <sl-tree-item expanded>
+            <a href="#sub-section-10-header-2">10.2 Test Results</a>
+            <sl-tree-item>
+              <a href="#sub-section-10-header-2-1">10.2.1 Result Summary</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-10-header-2-2">10.2.2 Key Takeaways and Conclusion</a>
+            </sl-tree-item>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#section-header-11">11. Evaluation whether intended deliverables were met</a>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-12">12. Future Works and Conclusion</a>
+          <sl-tree-item>
+            <a href="#sub-section-12-header-1">12.1 Frontend</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-12-header-2">12.2 Backend</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-12-header-3">12.3 Speech and Image Recognition</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-12-header-4">12.4 Conclusion</a>
           </sl-tree-item>
         </sl-tree-item>
 
         <sl-tree-item>
           <a href="#references">References</a>
         </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#appendix">Appendix</a>
+          <sl-tree-item>
+            <a href="#appendix-A">Appendix A: All Wireframes of 3 iterations</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#appendix-B">Appendix B: SUS Survey Instrument and Scoring Methodology</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#appendix-C">Appendix C: Information Flow and AI integration</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#appendix-D">Appendix D: Data Collected from Integrated User Tests</a>
+          </sl-tree-item>
+        </sl-tree-item>
       </sl-tree>
     </div>
+    <br><br>
+
     <sl-divider></sl-divider>
 
     <div>
+      <h2>List of Tables</h2>
+      <sl-tree>
+        <sl-tree-item>
+          <a href="#table-1">Table 1. Patient Pain Points</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-2">Table 2. List of Conceptual Functional Requirements</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-3">Table 3. List of Design Specifications</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-4">Table 4. Conceptual Features of Application</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-5">Table 5. Frontend Group Members' Responsibilities</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-6">Table 6. Feature List for Frontend</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-7">Table 7. Non-Functional Requirements for Frontend</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-8">Table 8. First Iteration Feedback</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-9">Table 9. Post-Iteration 1 Login Page Changes</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-10">Table 10. Post-Iteration 1 Home Page Changes</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-11">Table 11. Post-Iteration 1 Pills Page Changes</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-12">Table 12. Post-Iteration 1 Vitals Page Changes</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-13">Table 13. Post-Iteration 1 Chatbot Page Changes</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-14">Table 14. UI Feedback for MediHeal Screens</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-15">Table 15. SUS Feedback for MediHeal</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-16">Table 16. Frontend Functionality Test Results Across Devices</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-17">Table 17. Home Page Changes (Iteration 3)</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-18">Table 18. Pills Page Changes (Iteration 3)</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-19">Table 19. Vitals Page Changes (Iteration 3)</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-20">Table 20. Chat Page Changes (Iteration 3)</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-21">Table 21. SUS Survey Round 2</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-22">Table 22. Integration Testing with Backend</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-23">Table 23. Backend Group Members’ Responsibilities</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-24">Table 24. Functional Requirements of Backend</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-25">Table 25. Non- Functional Requirements for Backend</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-26">Table 26. Endpoints of Backend</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-27">Table 27. Testing Procedure for User Test</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-28">Table 28. Results Summary</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-29">Table 29. Summary of User Test Response</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#table-30">Table 30. Evaluation of Intended Deliverables</a>
+        </sl-tree-item>
+      </sl-tree>
+    </div>
+    <br><br>
 
-      <!-- This is an example of what a section might look like -->
-      <div id="section-header-1">
-        <h2> 1. Section Header 1 </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna
-          aliqua. Tincidunt ornare massa eget egestas. At tellus at urna condimentum mattis pellentesque id nibh tortor.
-          Elementum sagittis vitae et leo duis ut diam. Morbi tristique senectus et netus et malesuada fames.
-          Suspendisse
-          ultrices gravida dictum fusce ut placerat orci. Risus nullam eget felis eget nunc lobortis mattis aliquam
-          faucibus
-          (Brody, 2007). Eget sit amet tellus cras adipiscing enim eu turpis egestas. Aliquet nibh praesent tristique
-          magna
-          sit amet purus. Adipiscing bibendum est ultricies integer quis auctor elit sed. Fermentum et sollicitudin ac
-          orci
-          phasellus egestas tellus rutrum. At in tellus integer feugiat scelerisque varius morbi enim nunc. Volutpat
-          blandit
-          aliquam etiam erat velit scelerisque in. Id diam maecenas ultricies mi eget mauris pharetra et. Nec dui nunc
-          mattis
-          enim ut tellus elementum sagittis vitae.
-        </p>
-      </div>
+    <sl-divider></sl-divider>
 
+    <div>
+      <h2>List of Figures</h2>
+      <sl-tree>
+        <sl-tree-item>
+          <a href="#fig-1">Figure 1. Overview of MIC@Home</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-2">Figure 2. Storyboard of MIC@Home journey</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-3">Figure 3. User Journey Map of MIC@Home patients</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-4">Figure 4. Value Proposition Canvas Zoomed-In Part 1 (Patients)</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-5">Figure 5. Value Proposition Canvas Zoomed-In Part 2 (Patients)</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-6">Figure 6. Must-Have vs. Nice-to-Have Feature Classification</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-7">Figure 7. Frontend Architecture</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-8">Figure 8. Sitemap of mobile app structure</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-9">Figure 9. Login Page (Iteration 1)</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-10">Figure 10. Home Page (Iteration 1)</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-11">Figure 11. Progress Charts (Iteration 1)</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-12">Figure 12. Chatbot Page (Iteration 1)</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-13">Figure 13. Medications Page (Iteration 1)</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-14">Figure 14. Mood Board for Design Reference</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-15">Figure 15. Preliminary Wireframes</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-16">Figure 16. Screens implemented in flutter</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-17">Figure 17. Notification Reminder Designs in Figma</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-18">Figure 18. New and Modified Screens Compared to Iteration 2</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-19">Figure 19. Backend architecture</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-20">Figure 20. Diagrammatic Overview of The Chatbot's Graph-based Structure</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-21">Figure 21. System Prompt Template</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-22">Figure 22. Overview of Patient Database Schema</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-23">Figure 23. Prompt Template for Medication and Vitals Extraction</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-24">Figure 24. JSON Output from AI Extraction</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-25">Figure 25. Tracker Table with Daily Medication and Vital Reminders</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-26">Figure 26. JSON Output from Chat History and Updating Tracker Table</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-27">Figure 27. Backend Chatbot Testing Through Postman</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-28">Figure 28. Tracking of Tools Used Through The Terminal </a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-29">Figure 29. Output of Chatbot for Assessment</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-30">Figure 30. Revised Chatbot Architecture</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-31">Figure 31. Latency Analysis Results</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#fig-32">Figure 32. Sample Nurse Wireframe</a>
+        </sl-tree-item>
+      </sl-tree>
+    </div>
+    <br><br>
+
+    <sl-divider></sl-divider>
+
+    <div id="abstract">
+      <h2>Abstract</h2>
+      <p>
+        Mobile Inpatient Care at Home (MIC@Home) is a healthcare model that delivers hospital-level care to patients in
+        the comfort of their homes through remote monitoring, telehealth consultations, and periodic home visits by
+        medical professionals. Developed in response to rising hospital overcrowding, this program was conceived to
+        alleviate pressure on traditional healthcare facilities while providing continuous, coordinated care for
+        patients with a variety of conditions that require daily, but not urgent care. However, patient experience comes
+        at a cost when patients are warded at home and do not have 24/7 access to a nurse.
+        <br><br>
+        This project, MediHeal, seeks to address the mental burden associated with the absence of a healthcare provider
+        through an application that helps address patients' queries and helps them to track their MIC@Home related
+        duties, like a nurse usually would. Thus, MediHeal seeks to function as a 24/7 available nurse assistant for the
+        patient, helping to fill in the gaps in between the daily nurse visits.
+        <br><br>
+        This report focuses on the ideation, planning, prototyping and validation of the different aspects of the
+        MediHeal application and the integration of these aspects to produce a final product that can ultimately help
+        patients enrolled in MIC@Home.
+      </p>
+    </div>
+    <br><br>
+
+    <sl-divider></sl-divider>
+
+    <div id="section-header-1">
+      <h2>1. Introduction</h2>
       <div id="sub-section-1-header-1">
-        <h3>1.1 Sub-section Header 1</h3>
+        <h3>1.1 Current Situation in Singapore</h3>
         <p>
-          Ultrices dui sapien eget mi. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Dolor purus non enim
-          praesent elementum facilisis. Lacus vestibulum sed arcu non odio euismod lacinia at. Metus aliquam eleifend mi
-          in nulla. Lacus sed viverra tellus in hac habitasse platea. Varius quam quisque id diam vel quam elementum
-          pulvinar. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Diam ut venenatis tellus in metus
-          vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Venenatis lectus magna
-          fringilla
-          urna. In nisl nisi scelerisque eu ultrices. Velit egestas dui id ornare arcu odio ut sem nulla. Quam id leo in
-          vitae. Egestas congue quisque egestas diam in arcu cursus euismod quis. Porttitor leo a diam sollicitudin
-          tempor
-          id eu nisl.
+          Singapore's healthcare system is confronting escalating pressures stemming from significant demographic and
+          epidemiological transitions. Current projections indicate that by 2030, 24.1% of the resident population will
+          be aged 65 years or above, precipitating a substantial increase in demand for both acute medical interventions
+          and long-term chronic disease management services [1].
+          <br><br>
+          According to operational data, public hospital bed occupancy rates persistently exceed 85% [2], surpassing the
+          internationally recognized optimal threshold of 70-75% for maintaining healthcare service efficiency [3]. This
+          capacity constraint manifests in several critical operational challenges:
+        </p>
+        <ul>
+          <li>
+            Extended patient stays, with the average length of hospitalization increasing by 12% between 2019 and 2023
+            [4]
+          </li>
+          <li>
+            Prolonged emergency department wait times, with admission delays lasting an average of thirty minutes longer
+            than baselines prior to the pandemic [5]
+          </li>
+          <li>
+            Significant bed blockage, with 15-20% of acute care beds occupied by patients medically cleared for
+            discharge but awaiting appropriate step-down care arrangements [6]
+          </li>
+        </ul>
+        <p>
+          These systemic challenges collectively underscore the imperative for transformative care delivery models that
+          enhance healthcare system capacity while maintaining service quality and patient outcomes.
         </p>
       </div>
 
       <div id="sub-section-1-header-2">
-        <h3>1.2 Sub-section Header 2</h3>
-        <p>
-          Fermentum dui faucibus in ornare quam viverra orci. Donec ultrices tincidunt arcu non sodales. A diam maecenas
-          sed enim ut sem viverra. Semper viverra nam libero justo laoreet sit. Mi sit amet mauris commodo quis. Auctor
-          augue mauris augue neque gravida in fermentum et. Auctor elit sed vulputate mi sit amet. Maecenas pharetra
-          convallis posuere morbi leo urna. Sem nulla pharetra diam sit amet nisl. Id nibh tortor id aliquet lectus.
-          Nibh
-          nisl condimentum id venenatis a condimentum vitae sapien. Convallis posuere morbi leo urna molestie at
-          elementum.
-        </p>
+        <h3>1.2 Current Measures</h3>
+        <div id="sub-section-1-header-2-1">
+          <h4>1.2.1 Hospital-Based Measures</h4>
+          <p>
+            The Ministry of Health (MOH) plans to add 1,900 new hospital beds by 2026 to address immediate
+            infrastructure constraints [7] . Concurrently, hospitals are adopting dynamic bed management systems to
+            improve patient flow and reduce length-of-stay through standardized discharge protocols. However, physical
+            expansion alone cannot fully address projected demand growth from Singapore's aging population.
+          </p>
+        </div>
 
-        <!-- This is an example of how you might use the image component -->
-        <image-component tag="image" source="assets/requirement.png"
-          subtitle="Image 1: iDP suggested pathway"></image-component>
+        <div id="sub-section-1-header-2-2">
+          <h4>1.2.2 Community Care Apartments</h4>
+          <p>
+            Singapore has implemented Community Care Apartments (CCAs) as a transitional care solution, integrating
+            senior housing with basic healthcare services to alleviate pressure on hospital bed capacity. As of 2025,
+            the program has expanded to 1,200 units across five housing estates, demonstrating measurable impact through
+            a 22% reduction in hospital readmissions among residents [8]. However, current capacity meets only an
+            estimated 15% of projected needs, with waiting periods extending six to eight months in high-demand regions
+            [9]. The model's physical infrastructure requirements present inherent scalability limitations in
+            land-constrained Singapore, necessitating complementary virtual care solutions to achieve meaningful
+            system-wide impact.
+          </p>
+        </div>
+
+        <div id="sub-section-1-header-2-3">
+          <h4>1.2.3 Mobile Inpatient Care @ Home (MIC@Home)</h4>
+          <p>
+            MIC@Home is an innovative healthcare delivery model developed by MOH to provide hospital-level care in
+            patients' homes. This program represents a fundamental shift in healthcare delivery, combining advanced
+            remote monitoring technologies with in-person clinical care from multidisciplinary medical teams.
+          </p>
+          <image-component id="fig-1" tag="image" source="assets/fig1.png" subtitle="Figure 1. Overview of MIC@Home">
+          </image-component>
+          <p>
+            The MIC@Home program simultaneously addresses multiple critical healthcare system challenges through its
+            innovative design. Primarily, it mitigates bed capacity constraints through the establishment of "virtual
+            wards," having demonstrated the conservation of over 9,000 hospital bed days since program inception in 2022
+            [10]. Clinically, the model has shown superior patient outcomes, including a 35% reduction in
+            hospital-acquired infections alongside exceptional patient satisfaction scores of 92%. From a health
+            economics perspective, the program delivers substantial efficiency gains, providing equivalent care at
+            20-25% reduced cost per episode relative to conventional hospitalization[11].
+            <br><br>
+            This care model holds particular strategic value for Singapore's unique urban context, offering a scalable
+            healthcare solution unconstrained by physical infrastructure limitations. With current expansion plans
+            targeting 300 virtual beds, MIC@Home serves dual purposes: as an immediate capacity enhancement measure and
+            as a pioneering prototype for next-generation healthcare delivery models [12].
+          </p>
+        </div>
       </div>
     </div>
+    <br><br>
 
-
-    <br />
-    <br />
     <sl-divider></sl-divider>
-    <div>
-      <div id="section-header-2">
-        <h2>2. Section Header 2</h2>
-        <p>
-          Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Mi proin sed libero enim sed faucibus turpis in
-          eu. Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar mattis nunc sed blandit libero. Lacus sed viverra
-          tellus in hac habitasse platea dictumst vestibulum. At augue eget arcu dictum varius duis. Mauris ultrices
-          eros in cursus turpis massa (Lindberg, 1967). Libero nunc consequat interdum varius sit amet mattis. Ut ornare
-          lectus sit amet est placerat in egestas erat. Elementum curabitur vitae nunc sed. Proin nibh nisl condimentum
-          id venenatis a condimentum vitae sapien (Chamberlin et al., 2008). Vitae tempus quam pellentesque nec nam
-          aliquam sem.
-        </p>
-      </div>
+    <div id="section-header-2">
+      <h2>2. Problem Framing</h2>
 
       <div id="sub-section-2-header-1">
-        <h3>2.1. Sub-section Header 1</h3>
+        <h3>2.1 Current Issues of MIC@Home</h3>
         <p>
-          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
-          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
-          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
-          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
-          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
-          fames ac. <a href="#image">Link to the image above</a>
+          Without predefined problem statements from MOHT, our research concentrated on identifying operational
+          challenges in the MIC@Home program. Through extensive stakeholder engagement, including in-depth interviews
+          with nursing staff and consultation sessions with the MOHT implementation team, we developed a patient journey
+          map.
         </p>
+        <image-component id="fig-2" tag="image" source="assets/fig2.png"
+          subtitle="Figure 2. Storyboard of MIC@Home journey">
+        </image-component>
+        <p>
+          From this storyboard, several key areas of inconvenience and inefficiency can be identified in the journeys of
+          patients. These pain points are summarised below in the table and figure.
+        </p>
+        <table id="table-1" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 1. Patient Pain Points</i></caption>
+          <tr>
+            <th>Phase of Treatment</th>
+            <th>Pain Points</th>
+            <th>Design Opportunities</th>
+          </tr>
 
-        <!-- This is an example of how you might use the video component -->
-        <video-component tag="rick" source="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          subtitle="Video: Never gonna give you up?"></video-component>
+          <!-- Row 1 -->
+          <tr>
+            <td>Hospital-to-Home Transition</td>
+            <td>
+              <ul>
+                <li>
+                  Patients experience significant difficulties in operating medical monitoring equipment due to
+                  insufficient training prior to discharge.
+                </li>
+                <li>
+                  Many individuals report uncertainty about the accuracy of their self-measured vital signs, creating
+                  anxiety about their health status.
+                </li>
+                <li>
+                  The current documentation process requires manual recording and photographing of readings, which
+                  introduces errors and inefficiencies.
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Step-by-step visual guides for treatments and device usage.
+                </li>
+                <li>
+                  Smart medical devices with automatic calibration features could ensure measurement accuracy and
+                  provide real-time feedback to users.
+                </li>
+                <li>
+                  A secure cloud-based platform for vital sign documentation would eliminate manual recording while
+                  maintaining data integrity.
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr>
+            <td>Independent Monitoring</td>
+            <td>
+              <ul>
+                <li>
+                  The absence of immediate professional feedback leaves patients uncertain about their health status
+                  between visits.
+                </li>
+                <li>
+                  Medication adherence suffers due to complex dosing schedules and lack of structured reminders.
+                </li>
+                <li>
+                  Psychological distress develops from isolation and the burden of continuous self-monitoring.
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  An AI-powered monitoring system could automatically detect and flag abnormal readings for clinical
+                  review.
+                </li>
+                <li>
+                  Scheduled medication reminders.
+                </li>
+                <li>
+                  Integrated messaging system with provider alerts for urgent values.
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr>
+            <td>Provider Home Visits</td>
+            <td>
+              <ul>
+                <li>
+                  Patients frequently forget important care instructions provided during home visits.
+                </li>
+                <li>
+                  Physical examinations often leave patients feeling fatigued and uncomfortable.
+                </li>
+                <li>
+                  Time limitations prevent thorough discussion of all health concerns during visits.
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Context-aware reminders synced with individual care plans.
+                </li>
+                <li>
+                  Digital care plan updates accessible via patient portals would reinforce verbal instructions.
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr>
+            <td>Long-Term Recovery</td>
+            <td>
+              <ul>
+                <li>
+                  The sudden reduction in clinical support creates feelings of abandonment during recovery.
+                </li>
+                <li>
+                  Patients lack clear indicators to assess their recovery progress objectively.
+                </li>
+                <li>
+                  Emotional challenges emerge as patients adjust to managing their health independently.
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Personalized recovery dashboards would visualize progress metrics and milestones.
+                </li>
+                <li>
+                  Scheduled provider check-ins and automated wellness messages.
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <image-component id="fig-3" tag="image" source="assets/fig3.png"
+          subtitle="Figure 3. User Journey Map of MIC@Home patients">
+        </image-component>
+        <p>
+          The MIC@Home program reveals inherent tensions between healthcare efficiency and patient-centered care. While
+          intended to streamline post-hospitalization recovery, the current model inadvertently places excessive
+          responsibility on patients without providing adequate support systems. The identified pain points,
+          particularly around technological complexity and care transitions reflect deeper systemic issues in how we
+          operationalize home-based care. Digital solutions present compelling opportunities, but their effectiveness
+          hinges on addressing three critical dimensions:
+        </p>
+        <ul>
+          <li>
+            Redesigning clinician workflows to accommodate remote monitoring
+          </li>
+          <li>
+            Rebuilding patient trust in self-management tools
+          </li>
+          <li>
+            Creating meaningful feedback loops between patients and providers
+          </li>
+        </ul>
+        <p>
+          Therefore, there are certainly multiple design opportunities for MIC@Home to be further
+          optimised to increase its outreach, to reach the target of 10% of hospital beds in Singapore.
+        </p>
       </div>
 
       <div id="sub-section-2-header-2">
-        <h3>2.2. Sub-section Header 2</h3>
+        <h3>2.2. How-Might-We Statements</h3>
         <p>
-          Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Dignissim convallis aenean et tortor at
-          risus viverra adipiscing. Facilisi nullam vehicula ipsum a arcu cursus. Adipiscing elit pellentesque
-          habitant
-          morbi tristique senectus et netus. Turpis massa tincidunt dui ut ornare lectus. Suspendisse sed nisi lacus
-          sed. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Ut ornare lectus sit amet est
-          placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet.
+          Using these design opportunities, several How-Might-We statements are generated to better
+          frame the problem:
         </p>
+        <ul>
+          <li>
+            How might we provide patients with simple, personalized reminders and guides to help them manage medication,
+            monitor vitals and follow daily care routines independently?
+          </li>
+          <li>
+            How might we provide patients with instant, personalized health reassurance and smart escalation to
+            healthcare providers when needed?
+          </li>
+          <li>
+            How might we create an intuitive vital sign monitoring system that helps patients track their health trends
+            with clarity and confidence, reducing unnecessary anxiety?
+          </li>
+        </ul>
+      </div>
 
-        <!-- This is an example of how you might use the table component -->
-        <table-component subtitle="Table: Demo table">
-          <div id="table-1"></div>
-        </table-component>
+      <div id="sub-section-2-header-3">
+        <h3>2.3. Problem Statement</h3>
+        <p>
+          Patients recovering at home need a supportive way to monitor their health, receive personalized feedback, and
+          stay connected to their healthcare team because they often feel isolated and anxious without clear guidance
+          and real-time insights into their condition. This lack of support diminishes their confidence in the recovery
+          process and hinders their ability to actively engage in their own health journey.
+        </p>
       </div>
     </div>
+    <br><br>
+    <sl-divider></sl-divider>
+
+    <!-- Section 3 -->
+    <div id="section-header-3">
+      <h2>3. Value Proposition</h2>
+      <p>
+        Based on the How-Might-We statements and pain points identified in the user journey maps, essential insights
+        were organized into a value proposition canvas:
+      </p>
+      <image-component id="fig-4" tag="image" source="assets/fig4.png"
+        subtitle="Figure 4. Value Proposition Canvas Zoomed-In Part 1 (Patients)">
+      </image-component>
+      <image-component id="fig-5" tag="image" source="assets/fig5.png"
+        subtitle="Figure 5. Value Proposition Canvas Zoomed-In Part 2 (Patients)">
+      </image-component>
+      <p>
+        The MIC@Home Monitoring System delivers an integrated digital health platform that transforms remote patient
+        care through three key services:
+      </p>
+      <ol>
+        <li>
+          Smart Communication Platform - Secure messaging and automated alerts connect patients with clinicians in
+          real-time, reducing isolation and enabling timely interventions.
+        </li>
+        <li>
+          Intelligent Vital Monitoring - AI-powered trend analysis with intuitive traffic-light displays helps patients
+          understand their health status while flagging critical changes for care teams.
+        </li>
+        <li>
+          Personalized Care Engine - An adaptive support system that delivers context-aware medication and measurement
+          reminders, intelligently adjusts notification frequency based on patient preferences and compliance patterns,
+          and provides tailored educational content aligned with each patient's recovery journey.
+        </li>
+      </ol>
+    </div>
+    <br><br>
+    <sl-divider></sl-divider>
+
+    <!-- Section 4 -->
+    <div id="section-header-4">
+      <h2>4. Design Statement</h2>
+      <p>
+        The project aims to develop a comprehensive solution for virtual patient monitoring that facilitates seamless
+        communication between patients and the healthcare team. This will be achieved through a software system
+        featuring modules tailored to meet the specific needs of patients, nurses, and hospital care teams. A key
+        component of this solution is the integration of Large Language Models (LLMs) to power an advanced chatbot
+        feature. This chatbot will enhance patient engagement by addressing secondary-level concerns in the absence of
+        healthcare professionals, providing reminders for medication and vital signs monitoring, and generating
+        concise summaries for nursing staff. This approach is designed to improve care coordination, streamline
+        workflows, and ultimately enhance patient outcomes.
+      </p>
+    </div>
+    <br><br>
+    <sl-divider></sl-divider>
+
+    <!-- Section 5 -->
+    <div id="section-header-5">
+      <h2>5. Concept Design</h2>
+      <div id="sub-section-5-header-1">
+        <h3>5.1 Functional Requirements</h3>
+        <table id="table-2" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 2. List of Conceptual Functional Requirements</i></caption>
+
+          <!-- Row 1 -->
+          <tr>
+            <th>Main Functional Requirements</th>
+            <th>Features that address functional requirements</th>
+            <th>Enhanced Features with LLM Integration</th>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr>
+            <td>Engaging patients in their recovery journey</td>
+            <td>
+              A chatbot that can provide:
+              <ul>
+                <li>tailored advice</li>
+                <li>reminders and nudges</li>
+                <li>personalized resources that suits patients' unique recovery needs</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Chatbot to generate personalized, context-aware messages.
+                </li>
+                <li>
+                  Tailored advice based on medical history, care plan, habits and recovery progress.
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr>
+            <td>Handling secondary-level patient concerns</td>
+            <td>
+              Well constrained chatbot to handle simple medical queries with appropriate escalation of patient concerns
+              <ul>
+                <li>
+                  To handle non-urgent health concerns like dietary advice, medication clarification, or general
+                  symptoms
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  <b>Smart Triage:</b> Using predefined clinical protocols, chatbot can access patient concerns and
+                  escalate when necessary
+                </li>
+                <li>
+                  <b>Natural Language Symptom Input:</b> Chatbot understands and clarifies symptoms described in
+                  everyday language
+                </li>
+                <li>
+                  <b>Automated Summaries:</b> Generates concise summaries of patient issues for efficient clinical
+                  follow-up
+                </li>
+                <li>
+                  <b>Domain-constrained responses:</b> Uses a tailored system prompt and medical database to ensure
+                  safe, accurate replies
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr>
+            <td>Automated Medication and Vitals Monitoring</td>
+            <td>
+              <ul>
+                <li>
+                  Scheduled reminders for medications, vital signs measurement, and hydration.
+                </li>
+                <li>
+                  Alert generation for missed inputs or abnormal values.
+                </li>
+                <li>
+                  Educational support about normal ranges and interpretation of vitals.
+                </li>
+                <li>
+                  Alerts if readings are significantly off.
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Personalized scheduling and reminder adjustments based on patient behavior and history.
+                </li>
+                <li>
+                  Anomaly detection using past vitals and dynamic chatbot follow-ups.
+                </li>
+                <li>
+                  LLMs can summarize patient adherence and trends for weekly nurse review.
+                </li>
+                <li>
+                  Contextual chatbot coaching for vitals-taking errors (e.g., “try relaxing for 5 mins and rechecking
+                  your BP”).
+                </li>
+                <li>
+                  Explains results using layperson language and answers patient questions (“What does 145/90 BP mean?”).
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 5 -->
+          <tr>
+            <td>Escalation for Emergency Situations</td>
+            <td>
+              Detection of critical symptoms from chat input or vital sign anomalies.
+            </td>
+            <td>
+              Chatbot understands symptom escalation (e.g., chest pain + dizziness) and triggers emergency workflow.
+            </td>
+          </tr>
+
+          <!-- Row 6 -->
+          <tr>
+            <td>Patient Summary Generation for Nurses</td>
+            <td>
+              Convert patient-chat interaction, vitals, and medication data into concise summaries.
+            </td>
+            <td>
+              Automatic nurse report generation summarizing:
+              <ul>
+                <li>
+                  Key concerns raised by the patient
+                </li>
+                <li>
+                  Medication and vitals adherence
+                </li>
+                <li>
+                  Any anomalies or red flags for review
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="sub-section-5-header-2">
+        <h3>5.2. Design Specifications</h3>
+        <table id="table-3" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+          <caption><i>Table 3. List of Design Specifications</i></caption>
+          <th style="border:none;">
+            <img src="assets/table3.png" style="max-width:800px;">
+          </th>
+        </table>
+      </div>
+    </div>
+    <br><br>
+    <sl-divider></sl-divider>
+
+    <!-- Section 6 -->
+    <div id="section-header-6">
+      <h2>6. Concept Generation</h2>
+      <div id="sub-section-6-header-1">
+        <h3>6.1 Overall Concept</h3>
+        <p>
+          This project envisions a comprehensive, AI-powered virtual care platform designed to enhance patient recovery,
+          and improve care coordination for MIC@Home patients. At its core is an AI-powered chatbot interface, powered
+          by Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG), enabling responsive, safe, and
+          context-aware communication between patients and the healthcare team.
+        </p>
+        <table id="table-4" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+          <caption><i>Table 4. Conceptual Features of Application</i></caption>
+          <th style="border:none;">
+            <img src="assets/table4.png" style="max-width:800px;">
+          </th>
+        </table>
+        <p>
+          With the functional requirements, design specifications, and overall concept clearly defined, the virtual
+          patient care system presents a robust, scalable, and intelligent framework for enhancing patient care at home.
+          The architecture combines a domain-constrained LLM chatbot with system-prompt-driven behaviour, tailored
+          reminders, and backend monitoring to ensure high-quality patient engagement and effective clinical oversight.
+          <br><br>
+          Each system component has been mapped to specific use cases and healthcare workflows, forming a technical
+          foundation that is to be translated into a user-facing application, Mediheal.
+          <br><br>
+          Like most systems-level applications, this project follows a clear separation of concerns between the frontend
+          and backend components.
+        </p>
+        <ul>
+          <li>
+            The frontend serves as the main interface between the user and the application, responsible for delivering
+            the system's core features through an aesthetically pleasing, intuitive, and responsive interface.
+          </li>
+          <li>
+            The backend manages the functional and system logic, data processing, and system integrations - including
+            the LLM model, patient database and vitals and medication scheduler engine.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br><br>
+    <sl-divider></sl-divider>
+
+    <!-- Section 7 -->
+    <div id="section-header-7">
+      <h2>7. Developmental Phases of MediHeal</h2>
+      <p>
+        The development of MediHeal followed a structured approach with clearly defined roles and responsibilities
+        across the team. The project was divided into three key phases - Winter Break, Semester 2 Part 1, and Semester 2
+        Part 2 - with work distributed among team members based on their expertise.
+      </p>
+      <ol>
+        <li>
+          Winter Break Development (Weeks 1-4)
+          <br><br>
+          The initial development phase established the foundational architecture of the system. The backend team
+          focused on implementing the conversation-saving architecture and testing integration with the vitals database,
+          while simultaneously finalizing the medical knowledge base for jaundice. Concurrently, the frontend team
+          developed the core chat interface and established API connections to support basic functionality. This phase
+          concluded with initial integration testing between frontend and backend components, along with validation of
+          the medical knowledge base for two additional use cases.
+        </li>
+        <br>
+        <li>
+          Semester 2: Core Implementation (Weeks 1-6)
+          <br><br>
+          The project entered its intensive development phase during the first half of Semester 2. Key achievements
+          included:
+          <br><br>
+          <ul>
+            <li>
+              Implementation of the integrated RAG architecture for enhanced chatbot functionality
+            </li>
+            <li>
+              Completion of remaining frontend screens with particular focus on vitals monitoring interfaces
+            </li>
+            <li>
+              Full system integration testing to verify seamless data flow between components
+            </li>
+            <li>
+              Buffer time allocation to address unforeseen technical challenges
+            </li>
+            <li>
+              Initial user acceptance testing to gather early feedback on core features
+            </li>
+            <li>
+              Finalizing medical knowledge base for Dengue
+            </li>
+          </ul>
+        </li>
+        <br>
+        <li>
+          Semester 2: Refinement and Validation (Weeks 7-12)
+          <br><br>
+          The final phase prioritized refinement and system validation:
+          <br><br>
+          <ul>
+            <li>
+              Backend and frontend revisions based on user feedback collected during testing
+            </li>
+            <li>
+              Comprehensive user acceptance testing with clinical stakeholders
+            </li>
+            <li>
+              Final system integration testing to ensure all components worked cohesively
+            </li>
+            <li>
+              Preparation and delivery of the final project presentation
+            </li>
+            <li>
+              Additional validation of the expanded medical knowledge base to include Urinary Tract Infection (UTI)
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <p>
+        Areas of Focus & Responsibilities:
+      </p>
+      <ul>
+        <li>UI/UX Design & User Research (Deebika)</li>
+        <li>Frontend Development (Jun Boon)</li>
+        <li>Backend Development & AI Integration (Hasina)</li>
+      </ul>
+      <p>
+        Given the project's broad scope, we adopted a structured approach to prioritize development by categorizing
+        features into must-have and nice-to-have functionalities. This classification ensured we focused first on core
+        components critical for patient care while allowing flexibility for enhancements. The feature list served as our
+        primary reference for sprint planning, with must-have items completed during initial phases before addressing
+        enhancement opportunities.
+      </p>
+      <image-component id="fig-6" tag="image" source="assets/fig6.png"
+        subtitle="Figure 6. Must-Have vs. Nice-to-Have Feature Classification">
+      </image-component>
+    </div>
+    <br><br>
+    <sl-divider></sl-divider>
+
+    <div id="section-header-8">
+      <h2>8. Frontend Prototyping</h2>
+
+      <div id="sub-section-8-header-1">
+        <h3>8.1 Purpose and Objectives</h3>
+        <p>
+          The UI/UX development framework establishes a rigorous methodology for creating optimal healthcare management
+          interfaces through close collaboration between design and engineering disciplines. This process harmonizes
+          aesthetic design principles with technical implementation requirements to deliver solutions that meet three
+          fundamental objectives:
+        </p>
+        <ul>
+          <li>
+            The framework prioritizes enhanced usability by transforming complex medical data into intuitive visual
+            representations, optimizing navigation pathways between critical functions, and refining interactive
+            elements to maximize patient engagement and comprehension.
+          </li>
+          <li>
+            Ensures clinical effectiveness through precise data visualization techniques, implementation of fail-safe
+            alert notification systems, and strict compliance with WCAG 2.1 accessibility standards to accommodate
+            diverse user needs.
+          </li>
+          <li>
+            The methodology guarantees technical excellence by achieving consistent performance across all target
+            devices, maintaining sub-500 ms interface response times, and implementing enterprise-grade security
+            protocols for sensitive health data protection.
+          </li>
+        </ul>
+      </div>
+
+      <div id="sub-section-8-header-2">
+        <h3>8.2 Responsibilities and Deliverables</h3>
+        <table id="table-5" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+          <caption><i>Table 5. Frontend Group Members' Responsibilities</i></caption>
+          <th style="border:none;">
+            <img src="assets/table5.png" style="max-width:800px;">
+          </th>
+        </table>
+      </div>
+
+      <div id="sub-section-8-header-3">
+        <h3>8.3 Overview of Frontend Architecture</h3>
+        <p>
+          The frontend architecture for our application is as follows:
+        </p>
+        <image-component id="fig-7" tag="image" source="assets/fig7.png" subtitle="Figure 7. Frontend Architecture">
+        </image-component>
+        <p>
+          The above illustration is a summary of the frontend architecture of our implementation, with different control
+          flows if the user is authenticated or not. The arrows within the frontend block also display the navigability
+          between screens and components. This is the result of the design specifications outlined in the planning phase
+          as shown below.
+        </p>
+        <table id="table-6" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+          <caption><i>Table 6. Feature List for Frontend</i></caption>
+          <th style="border:none;">
+            <img src="assets/table6.png" style="max-width:800px;">
+          </th>
+        </table>
+        <p>
+          In addition to the features mentioned above, there are a number of non-functional requirements specified for
+          the frontend implementation.
+        </p>
+        <table id="table-7" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+          <caption><i>Table 7. Non-Functional Requirements for Frontend</i></caption>
+          <th style="border:none;">
+            <img src="assets/table7.png" style="max-width:800px;">
+          </th>
+        </table>
+        <p>
+          With these requirements laid out, the initial design of the UI layout was created for the first iteration of
+          the application in Semester 1.
+        </p>
+      </div>
+
+      <div id="sub-section-8-header-4">
+        <h3>8.4 First Iteration Prototype</h3>
+        <p>
+          The overall structure of this application is shown in the sitemap below.
+        </p>
+        <image-component id="fig-8" tag="image" source="assets/fig8.png"
+          subtitle="Figure 8. Sitemap of mobile app structure">
+        </image-component>
+        <p>
+          The design tools were strategically selected based on each phase's requirements. Canva was used initially for
+          rapid concept visualization and foundational design establishment, leveraging its templated environment for
+          efficient early iterations. For advanced stages, Figma was adopted to handle complex technical demands,
+          offering robust features for creating interactive prototypes, reusable components, and seamless developer
+          handoffs. This progression from low-fidelity exploration to high-fidelity implementation ensured optimal
+          resource use and design fidelity at each development phase. All wireframe iterations (1-3) are archived in
+          Appendix A for comprehensive reference.
+        </p>
+        <image-component id="fig-9" tag="image" source="assets/fig9.png" subtitle="Figure 9. Login Page (Iteration 1)">
+        </image-component>
+        <br>
+        <image-component id="fig-10" tag="image" source="assets/fig10.png"
+          subtitle="Figure 10. Home Page (Iteration 1)">
+        </image-component>
+        <br>
+        <image-component id="fig-11" tag="image" source="assets/fig11.png"
+          subtitle="Figure 11. Progress Charts (Iteration 1)">
+        </image-component>
+        <br>
+        <image-component id="fig-12" tag="image" source="assets/fig12.png"
+          subtitle="Figure 12. Chatbot Page (Iteration 1)">
+        </image-component>
+        <br>
+        <image-component id="fig-13" tag="image" source="assets/fig13.png"
+          subtitle="Figure 13. Medications Page (Iteration 1)">
+        </image-component>
+
+        <div id="sub-section-8-header-4-1">
+          <h4>8.4.1 Feedback for first iteration</h4>
+          <p>
+            For the initial prototype evaluation, MOHT representatives and experienced MIC@home patients were selected
+            as the target audience. Their feedback was instrumental in assessing whether the proposed MediHeal
+            application aligned with user expectations and operational requirements. The inputs obtained have been
+            systematically documented in the table below, accompanied by actionable recommendations for integration into
+            the next design iteration.
+          </p>
+          <table id="table-8" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+            <caption><i>Table 8. First Iteration Feedback</i></caption>
+            <th style="border:none;">
+              <img src="assets/table8.png" style="max-width:800px;">
+            </th>
+          </table>
+          <p>
+            After the first round of UI testing and feedback was received, the first iteration of UI tweaks was
+            designed, with the frontend implementation being sufficiently functional to seek to match the UI layout.
+          </p>
+        </div>
+      </div>
+
+      <div id="sub-section-8-header-5">
+        <h3>8.5. Second Iteration Prototype</h3>
+        <div id="sub-section-8-header-5-1">
+          <h4>8.5.1 Design Phase</h4>
+          <p>
+            During the design phase for MediHeal's second iteration, a Mood Board was created to systematically evaluate
+            and incorporate proven healthcare app interfaces. The Mood Board served as a critical reference point to
+            balance established best practices with MediHeal's specific user needs.
+          </p>
+          <image-component id="fig-14" tag="image" source="assets/fig14.png"
+            subtitle="Figure 14. Mood Board for Design Reference">
+          </image-component>
+          <p>
+            The color scheme (#6290C3, #F0F7EE, #2F3061) was selected to meet healthcare interface requirements while
+            optimizing usability. The primary blue (#6290C3) balances professionalism and approachability for
+            interactive elements, while the light mint background (#F0F7EE) ensures readability and reduces eye strain.
+            The deep navy (#2F3061) provides authoritative contrast for critical information. This palette adheres to
+            WCAG 2.1 AA accessibility standards, maintains distinction for colorblind users, and aligns with clinical
+            environments by avoiding overstimulating hues—prioritizing both patient comfort and functional clarity.
+          </p>
+          <image-component id="fig-15" tag="image" source="assets/fig15.png"
+            subtitle="Figure 15. Preliminary Wireframes">
+          </image-component>
+          <p>
+            Preliminary wireframes were constructed to define the structural composition and functional organization of
+            interface elements across all application screens. These schematic representations establish the
+            foundational layout architecture prior to the application of aesthetic treatments or content population,
+            serving as the primary reference for subsequent high-fidelity design implementation.
+          </p>
+          <table id="table-9" style="margin-left:auto; margin-right:auto; padding:0px;">
+            <caption><i>Table 9. Second Iteration Wireframes</i></caption>
+            <tr>
+              <th>Login Page</th>
+            </tr>
+            <tr>
+              <td><img src="assets/table9.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td>
+                The MediHeal login interface has undergone targeted refinements to enhance usability while preserving
+                its foundational structure. A secondary "Sign Up" option has been introduced beneath the primary login
+                form to accommodate new users without disrupting the existing authentication workflow. The tagline
+                "MediHeal recovery made simpler!" has been prominently positioned to reinforce brand identity and
+                application purpose.
+              </td>
+            </tr>
+          </table>
+          <br>
+          <table id="table-10" style="margin-left:auto; margin-right:auto; padding:0px;">
+            <caption><i>Table 10. Post-Iteration 1 Home Page Changes</i></caption>
+            <tr>
+              <th>Home Page</th>
+            </tr>
+            <tr>
+              <td><img src="assets/table10.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td>
+                The redesigned homepage introduces a streamlined clinical interface prioritizing time-sensitive patient
+                needs. Key modifications include a consolidated task dashboard replacing fragmented notifications, with
+                medication and vital measurement reminders now displayed as chronologically ordered action cards. A
+                reconfigured vitals panel presents last-recorded metrics with clinical status indicators, while
+                integrated nurse visit schedules provide transparent care coordination. Non-essential content has been
+                removed to reduce cognitive load, including the emergency button which was relocated to a more prominent
+                position in the app's navigation hub to prevent accidental activation while maintaining immediate
+                access. The layout employs consistent visual hierarchies and standardized interactive elements to reduce
+                cognitive load, with all modifications validated against healthcare usability benchmarks.
+              </td>
+            </tr>
+          </table>
+          <br>
+          <table id="table-11" style="margin-left:auto; margin-right:auto; padding:0px;">
+            <caption><i>Table 11. Post-Iteration 1 Pills Page Changes</i></caption>
+            <tr>
+              <th>Medication/Pills Page</th>
+            </tr>
+            <tr>
+              <td><img src="assets/table11.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td>
+                The redesigned medication management system introduces comprehensive structural and functional
+                improvements to optimize patient adherence and usability. A new calendar view has been implemented,
+                enabling patients to toggle between weekly and daily medication schedules, with horizontal scrolling
+                functionality for seamless temporal navigation. The interface now incorporates interactive checkboxes
+                adjacent to each medication entry, allowing users to track dose administration in real-time. These
+                enhancements complement the previously established temporal grouping of medications (Before/After Food
+                categories) and chronological dosage display, while maintaining consistent bottom navigation. The
+                calendar integration provides longitudinal treatment visibility, with visual indicators distinguishing
+                planned, completed, and missed doses.
+              </td>
+            </tr>
+          </table>
+          <br>
+          <table id="table-12" style="margin-left:auto; margin-right:auto; padding:0px;">
+            <caption><i>Table 12. Post-Iteration 1 Vitals Page Changes</i></caption>
+            <tr>
+              <th>Vitals Page</th>
+            </tr>
+            <tr>
+              <td><img src="assets/table12.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td>
+                The redesigned vital signs monitoring system introduces comprehensive structural and functional
+                improvements to optimize clinical data comprehension and patient engagement. A dual-view interface has
+                been implemented, separating real-time metrics from historical trend analysis to reduce cognitive
+                overload. The trend visualization incorporates a three-tier color-coding system (green/yellow/red) to
+                provide immediate visual indicators of measurement status when accessing graphical data. Continuous
+                monitoring capabilities now record measurements throughout the day and aggregated weekly summaries for
+                longitudinal review. These enhancements complement the existing timeframe flexibility (daily/weekly view
+                toggle) and status classification system (Good/Below Average/Above Average), while maintaining strict
+                adherence to WCAG 2.1 AA accessibility standards for color contrast.
+              </td>
+            </tr>
+          </table>
+          <br>
+          <table id="table-13" style="margin-left:auto; margin-right:auto; padding:0px;">
+            <caption><i>Table 13. Post-Iteration 1 Chatbot Page Changes</i></caption>
+            <tr>
+              <th>Chatbot Page</th>
+            </tr>
+            <tr>
+              <td><img src="assets/table13-1.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"><img src="assets/table13-2.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td>
+                The redesigned chatbot interface introduces comprehensive improvements to enhance usability and
+                functionality. Key modifications include the implementation of structured prompts to guide users through
+                medical queries, such as condition-specific recovery timelines (e.g., dengue) and measurement
+                instructions (e.g., blood pressure). A personalized greeting ("How are you feeling today?") has been
+                added to foster engagement, while maintaining a warm and approachable tone throughout interactions. New
+                features now allow users to bookmark clinically relevant responses for quick reference and review
+                conversation history, enabling seamless tracking of past discussions. These enhancements are
+                complemented by a streamlined navigation system, ensuring intuitive access to core functionalities.
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="sub-section-8-header-5-2">
+          <h4>8.5.2 Implementation Phase</h4>
+          <p>
+            In the second iteration, the UI layout is also used as a template to create the functioning application.
+            With the novelty of the flutter framework for the group, the UI layout of the application in the flutter
+            project was the focus of this iteration. In particular, we wanted to ensure that the implementation in
+            flutter matched the design created by the designer as closely as is possible within the limits of the
+            flutter framework. Thus, the scope of this iteration does not include the full functionality of components
+            and screens. The result of the implementation phase of the second iteration is the screens shown below.
+          </p>
+          <image-component id="fig-16" tag="image" source="assets/fig16.png"
+            subtitle="Figure 16. Screens implemented in flutter">
+          </image-component>
+          <p>
+            For the approach towards implementing the screens in flutter from the design templates given, each screen
+            had varying levels of difficulty in translating design to application.
+            <br><br>
+            The landing page, login page, and the signup page are the simplest to implement from the design, given that
+            they are mostly UI, and that the layout is relatively simple. The vitals page is also relatively simple due
+            to the above mentioned reasons.
+            <br><br>
+            In comparison, the home page is more difficult due to the sheer volume of customised UI components. In
+            addition, the specification for the design of the reminders is that each reminder UI element has to be able
+            to be checked and thus be stateful, making it more difficult to scale the screen component to an arbitrary
+            number of reminders.
+            <br><br>
+            The pills page was challenging to implement due to the complexities of managing dates, times, and scheduling
+            events. To save development time, an open-source Dart calendar package called calendar_view was used because
+            it closely matched the template designs. However, this choice also imposed restrictions on certain design
+            elements, such as the day view layout and event presentation.
+            <br><br>
+            The chat page was also challenging to implement due to the complexities of dynamically rendering incoming
+            messages and ensuring scalable design. To address these issues, the open-source package flutter_chat_ui was
+            utilized to manage the UI layout, allowing the development team to focus on optimizing backend communication
+            for chat functionality.
+          </p>
+        </div>
+      </div>
+
+      <div id="sub-section-8-header-6">
+        <h3>8.6 Testing of Iteration 2</h3>
+        <p>
+          With the design and implementation done to an appropriate level, we conducted testing for both the design and
+          implementation aspect of the frontend. This consisted of a focus group discussion with 5 relevant users on the
+          design aspects of the UI, a review and discussion with a UI expert, and a series of frontend implementation
+          functionality tests.
+        </p>
+
+        <div id="sub-section-8-header-6-1">
+          <h3>8.6.1 Feedback by UI/UX Specialists</h3>
+          <p>
+            During Iteration 2, a comprehensive UX evaluation was conducted by expert UI/UX professionals from the
+            National University of Singapore—a professor and a graduate-level researcher. They performed a complete
+            heuristic walkthrough of the prototype interface, with all observations and recommendations systematically
+            documented for further analysis. The table below synthesizes their expert assessments and proposed
+            enhancements.
+          </p>
+          <table id="table-14" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+            <caption><i>Table 14. UI Feedback for MediHeal Screens</i></caption>
+            <th style="border:none;">
+              <img src="assets/table14.png" style="max-width:800px;">
+            </th>
+          </table>
+        </div>
+
+        <div id="sub-section-8-header-6-2">
+          <h3>8.6.2 User Testing: Patient Experience SUS Survey</h3>
+          <table id="table-15" style="margin-left:auto; margin-right:auto;">
+            <caption><i>Table 15. SUS Feedback for MediHeal</i></caption>
+
+            <!-- Row 1 -->
+            <tr>
+              <td>Introduction</td>
+              <td>
+                The System Usability Scale (SUS) is a widely recognized, standardized tool for evaluating the usability
+                of digital products [14]. It consists of a 10-item questionnaire with a 5-point Likert scale (1 =
+                Strongly Disagree to 5 = Strongly Agree), designed to measure users' perceptions of a system's
+                effectiveness, efficiency, and satisfaction.
+                <br><br>
+                For the MediHeal App, the SUS was administered to 5 participants (patients and nurses acting on behalf
+                of patients) to assess:
+                <ul>
+                  <li>
+                    Ease of use - Intuitiveness of navigation and features
+                  </li>
+                  <li>
+                    Learnability - Speed of understanding core functions
+                  </li>
+                  <li>
+                    Perceived complexity - Absence of unnecessary difficulty
+                  </li>
+                  <li>
+                    Confidence in use - Comfort level during interaction
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <!-- Row 2 -->
+            <tr>
+              <td>Methodology</td>
+              <td>
+                <b>Participant Demographics:</b>
+                <br>
+                The study included 5 carefully selected participants representing key user groups:
+                <ul>
+                  <li>3 active patients enrolled in the MIC@Home program</li>
+                  <li>2 experienced MIC@Home nurses familiar with patient care workflows</li>
+                </ul>
+                <b>Testing Environment:</b>
+                <br>
+                The SUS survey was conducted in a controlled yet realistic testing environment to ensure accurate
+                feedback. Participants interacted with a high-fidelity Figma prototype that faithfully replicated the
+                complete MediHeal App user experience, including:
+                <ol>
+                  <li>
+                    Full User Flow Simulation:
+                    <ul>
+                      <li>
+                        Landing Page → Login/Signup → Dashboard → Pills/Vitals Tracking → Chatbot Interaction
+                      </li>
+                      <li>
+                        All key screens were fully interactive, with navigation links mirroring the actual app
+                        functionality
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Evaluation Protocol:
+                    <ul>
+                      <li>
+                        SUS Administration: Following task completion, participants rated the standard 10-item SUS
+                        questionnaire
+                      </li>
+                      <li>
+                        Qualitative Feedback: Open-ended responses were collected to provide context for quantitative
+                        scores
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+
+            <!-- Row 3 -->
+            <tr>
+              <td>Result/Findings</td>
+              <td>
+                <ol>
+                  <li>
+                    <b>Results</b>
+                    <br>
+                    The System Usability Scale assessment of the MediHeal application yielded the following quantitative
+                    results:
+                    <ul>
+                      <li>Mean SUS Score: 72.5 (SD = 8.3)</li>
+                      <li>Score Range: 62.5 - 85.0</li>
+                      <li>Benchmark Comparison: Exceeds the industry standard threshold of 68 for acceptable usability
+                      </li>
+                    </ul>
+                    Participant-level SUS scores demonstrated:
+                    <ul>
+                      <li>
+                        Two participants (1 patient, 1 nurse) achieved scores >80, indicating excellent perceived
+                        usability
+                      </li>
+                      <li>
+                        Three participants scored between 62.5-77.5, suggesting generally positive but variable
+                        experiences
+                      </li>
+                      <li>
+                        One patient participant scored 62.5, highlighting opportunities for improvement
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Identified Strengths</b>
+                    <ul>
+                      <li>
+                        Intuitive Interface Design:
+                        <ul>
+                          <li>Mean score of 4.2 for ease of use (Q3)</li>
+                          <li>Participants particularly praised the chatbot functionality and medication reminder system
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Rapid Learnability:
+                        <ul>
+                          <li>Mean score of 4.3 for quick adaptation (Q7)</li>
+                          <li>Nurses observed that patients required minimal instruction for core functions</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Effective Feature Integration:
+                        <ul>
+                          <li>Mean score of 4.1 for system coherence (Q5)</li>
+                          <li>Seamless transitions between tracking modules were frequently noted</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Opportunities for Improvement</b>
+                    <ul>
+                      <li>
+                        Workflow Efficiency:
+                        <ul>
+                          <li>Medication logging complexity scored 2.6 (Q2)</li>
+                          <li>Multiple participants described the process as unnecessarily cumbersome</li>
+                        </ul>
+                      </li>
+                      <li>
+                        User Support Systems:
+                        <ul>
+                          <li>Need for support scored 3.0 (Q4)</li>
+                          <li>Nurses specifically recommended enhanced onboarding materials</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Interface Consistency:
+                        <ul>
+                          <li>UI inconsistency scored 2.8 (Q6)</li>
+                          <li>Variations in button styles and navigation patterns were observed</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Qualitative Feedback Summary</b>
+                    <br>
+                    Participant comments provided valuable contextual insights:
+                    <ul>
+                      <li>Ability to submit images when recording vital signs</li>
+                      <li>Need for manual data entry options for both vitals and medication tracking</li>
+                      <li>Request to specify exact medication quantities (tablets/mL) when logging</li>
+                      <li>Desire for a history view to track previously taken medications</li>
+                      <li>Chatbot notifications about upcoming nurse visits would be helpful</li>
+                      <li>Routine well-being check-ins through the chatbot would be valuable</li>
+                      <li>Giving the chatbot a name could create more personal connection</li>
+                      <li>Progress overviews delivered by the chatbot would be appreciated</li>
+                      <li>Medication expiry date tracking and reminders when running low</li>
+                      <li>The bottom navigation bar was confusing to some users</li>
+                      <li>Chatbot interactions could feel more engaging after responses</li>
+                      <li>
+                        Individual notification system for:
+                        <ul>
+                          <li>Vital sign reminders</li>
+                          <li>Chatbot messages</li>
+                          <li>Medication alerts</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+
+            <!-- Row 4 -->
+            <tr>
+              <td>Conclusion</td>
+              <td>
+                The SUS evaluation demonstrates that the MediHeal application achieves good overall usability, meeting
+                established benchmarks for patient-facing health technologies. The assessment confirms the app's
+                effectiveness in core functionality while identifying specific opportunities for optimization. These
+                findings support moving forward with implementation while prioritizing the identified improvements.
+                <br><br>
+                Complete methodology, scoring details, and raw data are available in Appendix B.
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="sub-section-8-header-6-3">
+          <h3>8.6.3 Frontend Functionality Tests</h3>
+          <p>
+            For this iteration, the scope of the functionality tests cover the functionality of the layout of the
+            frontend implementation, like the position of the UI elements, scrollability of certain elements, and
+            interactivity of others.
+            <br><br>
+            The testing methodology is as follows:
+          </p>
+          <ul>
+            <li>
+              Devices: 3 different models of Android devices to be used
+            </li>
+            <li>
+              For each device, go through all of the screens
+            </li>
+            <li>
+              Note down any issues with navigation
+            </li>
+            <li>
+              Note down any issues with UI element functionality
+            </li>
+            <li>
+              Note down any issues with smoothness of application
+            </li>
+          </ul>
+          <p>
+            The results are as follows:
+          </p>
+          <table id="table-16" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+            <caption><i>Table 16. Frontend Functionality Test Results Across Devices</i></caption>
+            <th style="border:none;">
+              <img src="assets/table16.png" style="max-width:800px;">
+            </th>
+          </table>
+          <p>
+            From the tests, a major issue can be observed, which is the flexibility of the UI in the implementation to
+            cater to devices of different screen aspect ratios and resolutions. As padding was necessary to be used to
+            mimic the UI layout of the design template, Many of the screens, especially the home screen, used padding to
+            fix the layout to a certain desired position. This is not flexible as smaller screens will experience the
+            rendering overflow as seen by the 2 Samsung devices tested while screens with bigger width will have the
+            elements not exactly in the right place. The solution to this issue is to incorporate more flexible forms of
+            padding that flutter offers as a framework, such as Spacer(), UI layout directives like
+            Alignment.spaceBetween, and Flexible containers like Expanded().
+            <br><br>
+            For the next iteration, these layout considerations will be taken into account and rectified.
+          </p>
+        </div>
+      </div>
+
+      <div id="sub-section-8-header-7">
+        <h3>8.7 Third Iteration Prototype</h3>
+        <p>
+          Following feedback from Iteration 2, which highlighted areas of the design requiring refinement, Iteration 3
+          introduced updates inspired by contemporary mobile app interfaces. The primary focus was enhancing visual
+          hierarchy throughout the prototype, ensuring elements were strategically positioned to reflect their
+          importance to users.
+          <br><br>
+          Additionally, a color contrast checker was integrated to optimize readability. This tool verified that text
+          and background color combinations met sufficient contrast ratios, improving user comfort and accessibility.
+        </p>
+        <table id="table-17" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 17. Home Page Changes (Iteration 3)</i></caption>
+          <tr>
+            <th>Homepage</th>
+          </tr>
+          <tr>
+            <td><img src="assets/table17.png" style="max-width:800px;"></td>
+          </tr>
+          <tr>
+            <td>
+              The interface has been systematically redesigned to optimize information processing and workflow
+              efficiency. Through careful application of established design principles, textual content, visual
+              elements, and interactive components have been organized into a clear hierarchy that enhances both
+              readability and scannability. The implementation of balanced spacing creates distinct visual separation
+              between sections while maintaining logical relationships between related elements. This includes padding
+              between major content blocks, spacing between related items, and margins within components. The resulting
+              layout presents a clean, uncluttered interface that reduces cognitive load while intuitively guiding users
+              through clinical workflows.
+              <br><br>
+              The emergency call functionality has undergone a deliberate redesign based on extensive user research with
+              clinical staff. The button color has been changed from red to green to better align with healthcare
+              professionals' mental models, where green signifies accessible, ready-to-use systems while red is reserved
+              for critical equipment alarms. The redesigned button maintains WCAG AA compliance through appropriate
+              contrast ratios and has been enlarged to touch target to ensure reliable activation, even in high-stress
+              situations. This modification reflects the application's commitment to context-appropriate design
+              decisions grounded in user research.
+              <br><br>
+              The interface architecture has been refined through application of fundamental UX principles. Fitts's Law
+              has been implemented for critical actions, with enlarged touch targets and strategic positioning in
+              optimal reach zones [15]. Cognitive load has been reduced through simplified appointment cards that
+              display only four essential details: time of appointment, healthcare provider information, consultation
+              type (physical/online), and action options (link/reschedule). The layout follows eye-tracking optimized
+              patterns with left-aligned chronological organization and consistent visual grouping, while unnecessary
+              decorative elements have been removed to maintain focus on critical functionality.
+              <br><br>
+              The quick actions panel has been redesigned to support efficient one-handed operation. Positioned within
+              the natural thumb-zone, the panel features spaced equally apart to ensure reliable activation while
+              preventing accidental touches. The three core functions (Log Vitals, Add Medication, and Chat with
+              MediBot) are arranged to minimize thumb movement and maximize accessibility. This optimized layout
+              complements the overall information architecture while providing immediate access to frequently used
+              features, demonstrating how evidence-based design principles can enhance usability in critical healthcare
+              environments. The redesign maintains strict accessibility standards while improving operational efficiency
+              for clinical staff.
+            </td>
+          </tr>
+        </table>
+        <br>
+        <table id="table-18" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 18. Pills Page Changes (Iteration 3)</i></caption>
+          <tr>
+            <th>Medication/Pills Page</th>
+          </tr>
+          <tr>
+            <td><img src="assets/table18.png" style="max-width:800px;"></td>
+          </tr>
+          <tr>
+            <td>
+              The redesigned interface applies Jakob's Law to maintain visual and functional consistency across
+              application modules [16]. The "Pills Schedule" header now matches the typography and styling of other
+              major sections, creating a unified visual language. Strategic placement of the date 24px below the header
+              aligns with the layout conventions used in the Vitals page and Chatbot page. Light grey divider lines (1px
+              at 20% opacity) between medication entries improve scannability while maintaining a clean aesthetic. These
+              refinements create a cohesive experience that reduces cognitive load as users navigate between different
+              application functions.
+              <br><br>
+              The system now employs color-coded visual cues to quickly communicate medication instructions. Blue
+              indicators and left-positioned meal icons (→🍽️) denote medications to be taken before food, while green
+              indicators with right-positioned icons (🍽️→) identify after-food medications. Interactive checkboxes
+              provide adequate touch targets in accordance with Fitts's Law, with completed medications automatically
+              displaying grey strikethrough text. This visual treatment enables users to rapidly assess their medication
+              status at a glance, particularly important for patients managing complex regimens.
+              <br><br>
+              The manual "Add Pill" workflow has been restructured as a step-by-step process adhering to Miller's 7±2
+              Rule for cognitive load management [17]. The redesigned form presents information in logical groupings:
+              medication selection (with autocomplete functionality), dosage specification (using intuitive +/-
+              buttons), duration setting, food relationship designation, and notification scheduling. Primary ("Done")
+              and secondary ("Cancel") action buttons employ distinct color treatments and meet WCAG 2.1 AA contrast
+              requirements. The progressive disclosure of information fields guides users through the medication entry
+              process while preventing them from feeling overwhelmed.
+            </td>
+          </tr>
+        </table>
+        <br>
+        <table id="table-19" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 19. Vitals Page Changes (Iteration 3)</i></caption>
+          <tr>
+            <th>Vitals Page</th>
+          </tr>
+          <tr>
+            <td><img src="assets/table19-1.png" style="max-width:800px;"></td>
+          </tr>
+          <tr>
+            <td>
+              The most critical improvement involves the implementation of a standardized color-coding system for vital
+              status indicators. Normal ranges are now clearly marked in green, while abnormal or critical values appear
+              in red, creating immediate visual differentiation that follows universal medical conventions. This color
+              system is complemented by descriptive text labels ("Normal", "Below/Above Average") to ensure
+              accessibility for color-blind users. All color choices maintain WCAG 2.1 AA compliance with minimum 4.5:1
+              contrast ratios against their backgrounds, and have been tested under various lighting conditions common
+              in clinical environments.
+
+              Temporal context has been significantly enhanced through the consistent display of "Last Measured"
+              timestamps for each vital sign. These timestamps follow a standardized DD/MM/YYYY HH:MM format with clear
+              AM/PM designation, matching the temporal display conventions used throughout the application. The
+              timestamps are positioned directly below their respective measurements in a slightly smaller but equally
+              legible font size, creating a clear visual hierarchy between the current value and its recording time.
+
+              A "+ Add Vitals" button has been introduced, enabling users to manually log measurements. The input screen
+              follows a design pattern similar to the medication entry interface, ensuring familiarity and reducing
+              cognitive load. While not visually depicted here, this screen includes:
+              <ul>
+                <li>Structured fields for each vital sign.</li>
+                <li>Time/date selection with AM/PM clarity.</li>
+                <li>Input validation to prevent implausible entries.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="assets/table19-2.png" style="max-width:800px;"></td>
+          </tr>
+          <tr>
+            <td>
+              The implementation of stacked vertical bar charts adheres to ISO 9241-210 guidelines for ergonomic
+              human-system interaction, which recommends graphical representations for trend analysis to reduce
+              cognitive load [18]. This approach is further supported by Nielsen Norman Group research on dashboard
+              design, which validates stacked bars as effective for comparing multiple values while maintaining
+              individual data clarity. The dual-axis design presents absolute values alongside qualitative status
+              indicators, with a color-coding scheme (blue for normal ranges, red for critical values) that aligns with
+              clinical conventions. Horizontal reference lines have been added to contextualize measurements against
+              both personalized baselines and standard health ranges.
+              <br><br>
+              The time-scale toggle has been relocated to the bottom-middle, optimized as an interactive element with
+              clear visual distinction between active ("Daily") and inactive ("Weekly") states, improving accessibility
+              and selection speed. The bottom navigation bar remains consistent with the broader app for intuitive
+              navigation.
+              <br><br>
+              Medical terminology (e.g., "Elevated," "Hypertensive") has been standardized to match clinical guidelines.
+              The interface maintains visual harmony with other app modules through unified colors, typography, and time
+              formatting (24hr/AM-PM).
+              <br><br>
+              These changes ensure the vital trends page is intuitive, accessible, and clinically relevant, supporting
+              faster decision-making while maintaining regulatory compliance. Future iterations may include
+              pinch-to-zoom for detailed analysis and export options for care team collaboration.
+            </td>
+          </tr>
+        </table>
+        <br>
+        <table id="table-20" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 20. Chatbot Page Changes (Iteration 3)</i></caption>
+          <tr>
+            <th>Chatbot Page</th>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><img src="assets/table20.png" style="max-width:800px;"></td>
+          </tr>
+          <tr>
+            <td>
+              The chatbot interface has been refined to enhance usability while maintaining its core functionality, with
+              several thoughtful modifications implemented to improve the user experience. The most notable change is
+              the rebranding from a generic "Chat" label to "MediHeal Chat", which better communicates the
+              healthcare-specific purpose of the feature and aligns with the app's medical identity. Upon opening the
+              chat, users now encounter a friendly robot icon, intentionally designed to foster emotional connectivity
+              while maintaining professionalism. This visual element serves dual purposes: it provides immediate system
+              feedback and creates a more approachable digital assistant persona, which is particularly valuable in
+              healthcare contexts where users may experience anxiety.
+              <br><br>
+              Key functional improvements include the addition of bookmark toggle bubbles positioned in the middle
+              corner of each chatbot response. These 24x24px interactive elements allow users to flag and easily
+              retrieve important medical information, addressing a critical need in healthcare communication where users
+              often need to reference previous advice. The bookmark design follows Material Design 3's interactive
+              component guidelines, ensuring visual consistency with modern UI patterns while maintaining sufficient
+              touch target sizes [19]. Furthermore, timestamps have been incorporated for all messages, providing
+              temporal context to conversations while using subtle, low-contrast styling that prevents visual clutter
+              but remains legible.
+              <br><br>
+              The redesign maintains strict adherence to accessibility standards, including WCAG 2.1 AA compliance for
+              color contrast and text readability. The color scheme and navigation positioning remain consistent with
+              other app modules, ensuring a cohesive user experience across features.
+            </td>
+          </tr>
+        </table>
+        <br>
+        <p>
+          The notifications for vitals, medications, and chatbot check-ins will follow a consistent and structured
+          format, as illustrated in the provided example below.
+        </p>
+        <image-component id="fig-17" tag="image" source="assets/fig17.png"
+          subtitle="Figure 17. Notification Reminder Designs in Figma">
+        </image-component>
+        <p>
+          The implementation for this iteration seeks to implement the UI changes from the design phase, as well as to
+          fix the UI bugs discovered from the tests done in the previous phase. In addition, the full implementation of
+          two crucial functions of the app is a target. These are the chatbot integration with the backend, and the
+          frontend flow involving push notifications from the backend. All new and modified screens are shown below.
+        </p>
+        <image-component id="fig-18" tag="image" source="assets/fig18.png"
+          subtitle="Figure 18. New and Modified Screens Compared to Iteration 2">
+        </image-component>
+        <p>
+          Of the design changes, the vitals summary and the chatbot title and background changes were simple enough to
+          implement while following the design template of iteration 3's design phase. The more significant changes
+          implemented were towards functionality of key features of the application.
+          <br><br>
+          In the case of the chat page, user inputs will be recorded and rendered in the UI interface as user messages,
+          while the application sends a http request to the backend with the user input to invoke a response. The
+          application awaits the response, and then renders them in the UI interface as messages from the chatbot.
+          <br><br>
+          Enabling push notifications required backend support and Firebase integration. The process begins with
+          Firebase assigning a unique device registration token. Once the user grants permission, this token is sent to
+          the backend along with their ID. The backend scheduler then sends reminder notifications containing a title,
+          description, and a prompt statement as a payload. These notifications go through Firebase, which delivers them
+          to the user's device. When the user taps the notification, the app navigates to the chat page via its global
+          navigator. Simultaneously, the notification message is added to a message stream. The chatbot listens to this
+          stream, retrieves the most recent message, extracts the prompt, and sends it to the backend. The chatbot then
+          responds, prompting the user for input.
+          <br><br>
+          With the implementation of the main chatbot functions and push notification workflow, the application is ready
+          for integration testing and user testing.
+        </p>
+      </div>
+
+      <div id="sub-section-8-header-8">
+        <h3>8.8 Testing of Iteration 3</h3>
+
+        <div id="sub-section-8-header-8-1">
+          <h4>8.8.1 User Testing: Patient Experience SUS Survey (Round 2)</h4>
+          <table id="table-21" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+            <caption><i>Table 21. SUS Survey Round 2</i></caption>
+            <th style="border:none;">
+              <img src="assets/table21.png" style="max-width:800px;">
+            </th>
+          </table>
+        </div>
+        <div id="sub-section-8-header-8-2">
+          <h4>8.8.2 Integrated Testing</h4>
+          <p>
+            This suite of tests are designed to test the integration between the frontend and the backend, specifically
+            assessing the functionality of the frontend outcomes.
+            <br><br>
+            Two workflows are to be tested:
+          </p>
+          <ol>
+            <li>The chatbot query and response workflow</li>
+            <li>The push notification workflow</li>
+          </ol>
+          <p>
+            Test Suite:
+          </p>
+          <table id="table-22" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+            <caption><i>Table 22. Integration Testing with Backend</i></caption>
+            <th style="border:none;">
+              <img src="assets/table22.png" style="max-width:800px;">
+            </th>
+          </table>
+          <p>
+            From the tests conducted, a few implementation-specific issues are raised.
+            <br><br>
+            The first is the high chatbot latency after 3 consecutive responses, which has been discovered to be a
+            backend issue and is discussed in the backend testing section. Since this is primarily a backend issue, it
+            is out of scope of the frontend to address it.
+            <br><br>
+            Next is a bug in the notification data flow causing there not to be a chatbot response registered even
+            though the application opens to the chat page. After much investigation, the issue was discovered to be due
+            to duplicate instances of the plugin object used to handle the notification in flutter,
+            FlutterLocalNotificationsPlugin, leading to the notification not being streamed to the chat page. The simple
+            remedy for this is to use the same global instance of FlutterLocalNotificationsPlugin to handle function
+            calls.
+            <br><br>
+            Lastly, the bug in foreground notifications was investigated to be caused by the function calls to retrieve
+            the message and get a response being in the inappropriate listening function. Specifically, the function
+            calls were in initState(), which is a widget function that is only called when the chat page is first
+            loaded. To remedy this, instead of using initState(), didChangeDependencies(), which is called every time
+            the message stream is changed, should be used instead.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <sl-divider></sl-divider>
+
+    <div id="section-header-9">
+      <h2>9. Backend Prototyping</h2>
+      <div id="sub-section-9-header-1">
+        <h3>9.1. Purpose and Objectives</h3>
+        <p>
+          The backend of the system is designed to support a patient-centric home recovery platform, integrating an
+          AI-powered chatbot for patient interactions and real-time reporting of medication adherence and vital signs.
+          It provides a structured, scalable and secure infrastructure for seamless data management and communication
+          between patients and healthcare providers. By leveraging structured data management, AI-driven conversational
+          interactions, and automated notifications, the backend aims to bridge the gap between remote patients and
+          healthcare providers. The key objectives include enabling efficient storage and retrieval of patient records,
+          ensuring fast and contextually relevant chatbot responses, automating reminders for medication and vitals
+          monitoring and maintaining data security and privacy through localized AI processing. Ultimately, the system
+          seeks to optimize patient recovery outcomes while reducing the burden on healthcare facilities through
+          proactive monitoring and intervention.
+        </p>
+      </div>
+      <div id="sub-section-9-header-2">
+        <h3>9.2. Responsibilities and Deliverables</h3>
+        <table id="table-23" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
+          <caption><i>Table 23. Backend Group Members’ Responsibilities</i></caption>
+          <th style="border: none;">
+            <img src="assets/backend_tasks.png" style="max-width:800px;">
+            </image-component>
+          </th>
+        </table>
+      </div>
+      <div id="sub-section-9-header-3">
+        <h3>9.3. Overview of Backend Architecture</h3>
+        <p>
+          The backend architecture for our application is as follows:
+        </p>
+        <image-component id="fig-19" tag="image" source="assets/backend_architecture.png"
+          subtitle="Figure 19. Backend architecture">
+        </image-component>
+        <br><br>
+        <p>
+          The illustration above summarizes the backend architecture of our implementation, designed to support the
+          necessary functions of the front end. The architecture ensures seamless interaction between the patient-facing
+          interface, AI chatbot resources and backend data management components. The flow of information is represented
+          through directional arrows, illustrating how data moves between the front-end interface, AI-driven chatbot
+          processing, and hospital monitoring systems. Additionally, to facilitate real-time monitoring and proactive
+          patient care, the backend integrates structured data management and automated notifications. A detailed
+          explanation of the information flow is provided in <b>Appendix C.</b>
+          <br><br>
+          Following the planning phase, the design specifications taken into considerations for the backend development
+          are as follows:
+          <br><br>
+          <b> A. Functional Requirements </b>
+          <br><br>
+          The following define the system’s core functionalities necessary for patient data management, chatbot
+          interaction and user engagement.
+          <br><br>
+        <table id="table-24" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
+          <caption><i>Table 24. Functional Requirements of Backend</i></caption>
+          <th style="border: none;">
+            <img src="assets/backend_func_req.png" style="max-width:800px;">
+            </image-component>
+          </th>
+        </table>
+        <br><br>
+        <b> B. Non-Functional Requirements </b>
+        <br><br>
+        <table id="table-25" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
+          <caption><i>Table 25. Non-Functional Requirements for Backend</i></caption>
+          <th style="border: none;">
+            <img src="assets/backend_nonfunc_req.png" style="max-width:800px;">
+            </image-component>
+          </th>
+        </table>
+        <br><br>
+        <b> C. Endpoints </b>
+        <br><br>
+        The backend provides a set of endpoints to support key functionalities within the system, enabling smooth
+        communication between the front end, AI chatbot and data storage components. The following table outlines the
+        available API endpoints, their functions, inputs, responses and HTTP methods used.
+        <table id="table-26" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
+          <caption><i>Table 26. Endpoints of Backend</i></caption>
+          <th style="border: none;">
+            <img src="assets/backend_endpoints.png" style="max-width:800px;">
+            </image-component>
+          </th>
+        </table>
+        </p>
+      </div>
+      <div id="sub-section-9-header-4">
+        <h3>9.4. First Iteration Prototype</h3>
+      </div>
+      <div id="sub-section-9-header-4-1">
+        <h3>9.4.1. Chatbot Architecture</h3>
+        <p>
+          The chatbot in this project is implemented using LangGraph, leveraging a graph-based architecture to manage
+          conversation flow dynamically. This approach allows for flexible decision-making, ensuring the chatbot can
+          efficiently retrieve relevant information while maintaining a structured dialogue with the user. The figure
+          below shows the set up of the chatbot architecture.
+        </p>
+        <image-component id="fig-20" tag="image" source="assets/fig19.png"
+          subtitle="Figure 20. Diagrammatic overview of the chatbot's graph-based structure">
+        </image-component>
+        <p>
+          The conversation flow is structured around interconnected nodes, each serving a specific function:
+        </p>
+        <ol>
+          <li>
+            <b> Start Node:</b> Initiates the interaction and transfers control to the Chatbot Node.
+          </li>
+          <li>
+            <b> Chatbot Node:</b> The central hub responsible for analyzing user input and determining the appropriate
+            course of action.
+          </li>
+          <li>
+            <b> RAG tools Node:</b> Houses specialized tools to enhance response accuracy, with the following tools:
+            <ul>
+              <li>
+                Semantic Search Tool: Retrieves relevant information on specific medical conditions (e.g., jaundice,
+                dengue, UTI) from a structured knowledge base.
+              </li>
+              <li>
+                Internet Search Tool: Engages an external search function for broader information retrieval when
+                necessary.
+              </li>
+              <li>
+                Schedule Tool: Queries the user's medication timing and vital sign monitoring schedules stored in the
+                database.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b> End Node:</b> Marks the completion of the interaction if no further actions are required.
+          </li>
+        </ol>
+        <p>
+          When the RAG Tools Node is activated, it performs its designated function and returns control to the Chatbot
+          Node, which integrates the acquired information into its response. This structured, cyclical process allows
+          the chatbot to efficiently utilize external tools while maintaining conversation flow, resulting in more
+          intelligent and context-aware interactions.
+        </p>
+      </div>
+      <div id="sub-section-9-header-4-2">
+        <h3>9.4.2. Personalized Response Generation with Modifiable System Prompts</h3>
+        <p>
+          The chatbot node serves as a critical juncture in the system, where a system prompt is utilized to guide the
+          Language Model's (LLM) responses. This prompt defines the LLM's role and provides it with the essential
+          protocol required to address user queries effectively. The system prompt is designed with a standardized
+          template as its foundation. This template ensures consistency in the chatbot's basic functionality across all
+          interactions. However, to provide personalized and contextually relevant responses, the system prompt template
+          is augmented with user-specific information. This additional data includes:
+        </p>
+        <ul>
+          <li>
+            The user's individualized care plan
+          </li>
+          <li>
+            Current procedural guidelines as determined by healthcare professionals (doctors or nurses)
+          </li>
+          <li>
+            The context derived from previous interactions with the user
+          </li>
+        </ul>
+        <p>
+          By appending this user-specific information to the standard template, the system creates a tailored prompt for
+          each interaction. This approach enables the chatbot to generate responses that are not only aligned with its
+          general role but also highly relevant to the individual user's medical context and history as well as within
+          the guidelines set by the healthcare professionals.
+        </p>
+        <image-component id="fig-21" tag="image" source="assets/fig20.png" subtitle="Figure 21. System Prompt Template">
+        </image-component>
+      </div>
+      <div id="sub-section-9-header-4-3">
+        <h3>9.4.3. Structured Patient Database and AI-Driven Data Extraction</h3>
+        <p>
+          A structured MySQL database is implemented to securely store and manage patient data, ensuring seamless
+          integration with the hospital dashboard. The database consists of five main tables, each designed to support
+          key functionalities such as patient monitoring, medication adherence, and chatbot interaction logging. The
+          tables include:
+        </p>
+        <ol>
+          <li>
+            Patient Information Table – Stores patient information needed for sign up or log in for the frontend.
+          </li>
+          <li>
+            Medication Schedule Table – Maintains prescribed medications, including name, dosage, and timing.
+          </li>
+          <li>
+            Vitals Schedule Table – Logs the required vital sign monitoring schedule for each patient.
+          </li>
+          <li>
+            Tracker Table – Generates a daily schedule based on medication and vital sign requirements, used for push
+            notification alerts.
+          </li>
+          <li>
+            Chat History Table – Captures patient-chatbot interactions, enabling review by healthcare professionals.
+          </li>
+        </ol>
+        <image-component id="fig-22" tag="image" source="assets/fig21.png"
+          subtitle="Figure 22. Overview of Patient Database Schema">
+        </image-component>
+        <p>
+          <b>AI Integrations</b>
+          <b>A. AI-Driven Extraction of Medication and Vitals from Care Plans </b>
+          When a patient care plan is provided, the system utilizes AI-based extraction to identify and store key
+          details such as:
+        </p>
+        <ul>
+          <li>
+            Medication/ vital name
+          </li>
+          <li>
+            Dosage
+          </li>
+          <li>
+            Timing
+          </li>
+          <li>
+            Required vital signs monitoring
+          </li>
+        </ul>
+        <p>
+          This extracted information is stored in the database and linked to the tracker table, which generates a daily
+          schedule for the patient. The system then queries this schedule to send automated push notifications via
+          Firebase, reminding users when medications or vitals checks are due. An example of the prompt template for the
+          AI extraction and output is shown in the figure below.
+        </p>
+        <image-component id="fig-23" tag="image" source="assets/fig22.png" style="max-width:800px;"
+          subtitle="Figure 23. Prompt Template for Medication and Vitals Extraction">
+        </image-component>
+        <image-component id="fig-24" tag="image" source="assets/fig23.png"
+          subtitle="Figure 24.  JSON Output from AI Extraction">
+        </image-component>
+        <image-component id="fig-25" tag="image" source="assets/fig24.png"
+          subtitle="Figure 25. Tracker Table with Daily Medication and Vital Reminders">
+        </image-component>
+        <p>
+          <br><br>
+          <b>B. AI-Generated Summaries for Medication and Vitals Reporting</b>
+          <br><br>
+          Following medication intake or vital sign recording, patients can report their status directly via the
+          chatbot. The AI system continuously extracts these updates and compiles summarized reports, which are then
+          transmitted to the hospital dashboard. This enables healthcare professionals to:
+        </p>
+        <ul>
+          <li>
+            Monitor medication adherence trends.
+          </li>
+          <li>
+            Track vital sign fluctuations over time.
+          </li>
+          <li>
+            Identify potential health risks and intervene when necessary.
+          </li>
+        </ul>
+        <p>
+          By leveraging AI-driven data extraction and structured database management, the system ensures real-time
+          patient monitoring and proactive healthcare intervention, improving patient outcomes and adherence to
+          treatment plans.
+        </p>
+        <image-component id="fig-26" tag="image" source="assets/fig25.png"
+          subtitle="Figure 26. JSON Output from Chat History and Updating Tracker Table">
+        </image-component>
+      </div>
+      <div id="sub-section-9-header-5">
+        <h3>9.5. Backend testing for iteration 1</h3>
+        <p>
+          Since the frontend was still under development, the initial phase of testing focused on evaluating the
+          chatbot's response accuracy and retrieval process within the Retrieval-Augmented Generation (RAG) framework.
+          The primary goal was to assess whether the chatbot could effectively handle frequently asked questions (FAQs)
+          related to a given disease type, ensuring that responses were both relevant and medically appropriate.
+          <br><br>
+          For this test, the user’s care plan context was set to dengue. However, the chatbot’s retrieval tools included
+          multiple vector search tools trained on different medical conditions, such as jaundice, dengue and urinary
+          tract infections (UTI). This setup allowed us to test whether the Language Model (LLM) and chatbot node could
+          correctly invoke only the vector search tool relevant to the user's specified context rather than retrieving
+          unrelated information.
+          <br><br>
+          To conduct the evaluation, a set of common dengue-related queries was compiled by consulting individuals who
+          had previously experienced the illness as well as nursing students. These queries were then submitted to the
+          backend chatbot endpoint using Postman (Figure 27), simulating real user interactions. The chatbot’s responses
+          were collected and analyzed based on:
+        </p>
+        <ul>
+          <li>
+            Medical Relevance – Whether the response aligned with established medical guidelines and the user’s care
+            plan.
+          </li>
+          <li>
+            Retrieval Efficiency – Whether the chatbot invoked the appropriate semantic search tool, schedule retrieval
+            tool, or internet search tool based on the query.
+          </li>
+        </ul>
+        <image-component id="fig-27" tag="image" source="assets/fig27.png"
+          subtitle="Figure 27. JSON Output from Chat History and Updating Tracker Table">
+        </image-component>
+        <p>
+          Additionally, the tool invocation logs were traced in the terminal (Figure 28) to determine whether the
+          chatbot correctly selected the appropriate vector search tool based on the user’s condition. This step was
+          crucial in verifying that the LLM-based decision-making process effectively filtered information specific to
+          the user's medical context.
+        </p>
+        <image-component id="fig-28" tag="image" source="assets/fig28.png"
+          subtitle="Figure 28. Tracking of Tools Used Through The Terminal">
+        </image-component>
+        <p>
+          The initial testing provided critical insights into preliminary chatbot response and the usage of tools given
+          the background context of the user. It also provided insights into the chatbot’s retrieval accuracy and tool
+          selection process. For the next stage of assessment, we consolidated the responses from the chatbot to assess
+          the chatbot accuracy and user friendliness. Below are the chatbot responses and the assessment we conducted
+          (figure 29).
+        </p>
+        <image-component id="fig-29" tag="image" source="assets/fig29.png"
+          subtitle="Figure 29. Output of Chatbot for Assessment">
+        </image-component>
+        <p>
+          During testing, a key issue identified was the chatbot's tendency to explicitly mention the sources of its
+          retrieved information, such as referencing the tools used or directly stating that the response was derived
+          from the care plan. While this approach provides transparency, it was found to be less user-friendly and
+          detracted from a natural conversational experience. Users may not need to know the technical details of how
+          responses are generated, instead, they expect clear and human-like interactions that provide relevant
+          information without unnecessary system references.
+        </p>
+      </div>
+      <div id="sub-section-9-header-6">
+        <h3>9.6. Second Iteration</h3>
+        <p>
+          While the initial LangGraph architecture successfully retrieved accurate information for a single disease
+          state given a single care plan, it needed to be enhanced to accommodate multiple users with other medical
+          conditions, each with a unique care plan and personal medical history. Additionally, the chatbot's responses
+          required improved user friendliness response to ensure better engagement and clarity for patients.
+          <br><br>
+          To address these challenges, we introduced two key modifications to the LangGraph architecture:
+        </p>
+        <ol>
+          <li>
+            <b>Retrieval Node for User-Specific Information </b>
+            <p>
+              A Retrieval Node was added before the chatbot node to ensure that each chatbot interaction is
+              personalized. This node is responsible for retrieving:
+            </p>
+            <ul>
+              <li>
+                The user’s care plan, including prescribed medications and vital monitoring schedules.
+              </li>
+              <li>
+                Previous interactions with the chatbot to provide contextual continuity.
+              </li>
+              <li>
+                Current medication and vitals schedule for the day, ensuring accurate reminders and health tracking.
+              </li>
+            </ul>
+            <p>
+              By integrating this user-specific retrieval step, the chatbot can tailor responses based on individual
+              health conditions while maintaining modularity to accommodate multiple users.
+            </p>
+          </li>
+          <li>
+            <b>Supervisor Node for User Friendly Responses</b>
+            <p>
+              To enhance the clarity, coherence, and user-friendliness of chatbot interactions, a Supervisor Node was
+              integrated into the system. This node evaluates and refines the chatbot's responses before they are
+              delivered to the user, ensuring that the output is both medically relevant and easy to understand.
+              <br><br>
+              The Supervisor Node is responsible for:
+            </p>
+            <ul>
+              <li>
+                Ensuring clarity and structure – Responses are formatted in a conversational and easily comprehensible
+                manner, avoiding overly technical language.
+              </li>
+              <li>
+                Maintaining medical accuracy – All recommendations align with the user’s individualized care plan and
+                the procedural guidelines set by healthcare professionals.
+              </li>
+              <li>
+                Enhancing engagement and empathy – The chatbot consistently communicates in a compassionate and
+                supportive tone, fostering better patient interaction.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          By implementing the Supervisor Node, the chatbot now delivers well-structured and user-friendly responses,
+          enhancing patient engagement while maintaining medical accuracy and consistency in interactions. The figure
+          below shows the revised architecture of the chatbot.
+        </p>
+        <image-component id="fig-30" tag="image" source="assets/fig30.png" style="max-width:600px;"
+          subtitle="Figure 30. Revised Chatbot Architecture">
+        </image-component>
+      </div>
+      <div id="sub-section-9-header-7">
+        <h3>9.7. Backend testing for iteration 2 </h3>
+        <p>
+          To evaluate the backend's ability to accommodate multiple concurrent users, we conducted a load test by
+          sending 10 HTTP requests to the server. The test aimed to measure response time and system scalability under
+          increased demand. The results indicated an average response time of 67,797.36 ms ( 67.8 s or 1.13 min).
+          Notably, after processing the third request, the response time experienced a significant delay, highlighting a
+          potential latency issue in the backend system.
+          <br><br>
+          Upon further investigation, we identified the primary cause of latency as the waiting time for the backend to
+          send requests to the Groq API. This delay was likely due to rate limitations associated with the free-tier
+          version of Groq, which we were using for initial testing.
+        </p>
+        <image-component id="fig-31" tag="image" source="assets/fig31.png" style="max-width:800px;"
+          subtitle="Figure 31. Latency Analysis Results">
+        </image-component>
+        <p>
+          A function call analysis was performed to trace execution times and identify performance bottlenecks. The key
+          observations from the test were:
+        </p>
+        <ul>
+          <li>
+            High Latency Due to API Requests: The primary cause of delay was identified as the waiting time for the
+            backend to send requests to the Groq API. The system experienced prolonged delays in response time, which
+            could be attributed to the rate limitations associated with the free-tier version of Groq, which was used
+            for initial testing.
+          </li>
+          <li>
+            Excessive Wait Time (time.sleep): A significant portion of execution time (35.002 seconds) was consumed by
+            the time.sleep function, which may indicate an inefficient waiting mechanism within the chatbot’s process.
+          </li>
+          <li>
+            Network Latency and SSL Handshake: The Secure Socket Layer (SSL) handshake and read operations accounted for
+            additional delays (1.77 seconds), suggesting that network latency contributed to slow response times.
+          </li>
+        </ul>
+        <p>
+          To mitigate this issue and ensure faster response times, we concluded that moving to a locally hosted LLM
+          would be a more reliable approach when deploying to a real world context. This requires:
+        </p>
+        <ul>
+          <li>
+            Deploying a locally hosted LLM to reduce dependence on external API calls. Perhaps the use of quantized LLMs
+            can be explored for faster real-time interactions.
+          </li>
+          <li>
+            Ensuring the local machine has sufficient computational resources, including high-performance GPU drivers
+            capable of handling large-scale model inference.
+          </li>
+          <li>
+            Optimizing request handling by improving parallel processing and reducing unnecessary network latency.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br><br>
+    <sl-divider></sl-divider>
+
+    <div id="section-header-10">
+      <h2>10. Integrated User Tests</h2>
+
+      <div id="sub-section-10-header-1">
+        <h3>10.1 Test Methodology</h3>
+
+        <div id="sub-section-10-header-1-1">
+          <h4>10.1.1 Test Objectives</h4>
+          <p>
+            The main objective of these user tests is to understand how users interact with the app, identify areas for
+            improvement, and ensure the app meets user needs effectively. Specifically, we seek to answer 6 questions
+            regarding the users' experience with our application.
+          </p>
+          <ol>
+            <li>Is the app easy to navigate, and are key features accessible?</li>
+            <li>Are users able to log medications and track vital signs without confusion?</li>
+            <li>Do users find the chatbot helpful for answering health-related questions?</li>
+            <li>Are there any features or information missing that users would find useful?</li>
+            <li>How intuitive are the medication reminders and notifications?</li>
+            <li>Are users able to view and interpret historical health data easily?</li>
+          </ol>
+        </div>
+
+        <div id="sub-section-10-header-1-2">
+          <h4>10.1.2 Test Environment</h4>
+          <p>
+            The tests are conducted both online and in-person in a semi-guided fashion, with directed scenarios laid out
+            as well as an exploratory testing phase. For the online tests, the application is loaded onto an emulator on
+            the host's device and the testers direct the host to interact with the application. For in-person tests, a
+            provided mobile device has the application loaded onto it for the testers to interact with.
+            <br><br>
+            Participants are first made known of the context of MIC@Home. Then, they are given a short introduction to
+            the MediHeal application and its features. They will run through a set of scenarios assuming the role of a
+            certain demographic as specified in our use cases, then they will be free to conduct exploratory testing on
+            the application.
+          </p>
+        </div>
+
+        <div id="sub-section-10-header-1-3">
+          <h4>10.1.3 Test Participants</h4>
+          <p>
+            A total of six participants were recruited to be involved in two sessions of user tests, three in-person and
+            three online. The participants are fluent in English and have previously had experience as a patient in the
+            hospital.
+          </p>
+        </div>
+
+        <div id="sub-section-10-header-1-4">
+          <h4>10.1.4 Test Scenarios</h4>
+          <table id="table-27" style="margin-left:auto; margin-right:auto; border:none; padding:0px;">
+            <caption><i>Table 27. Testing Procedure for User Test</i></caption>
+            <th style="border: none;">
+              <img src="assets/table27.png" style="max-width:800px;">
+            </th>
+          </table>
+        </div>
+
+        <div id="sub-section-10-header-1-5">
+          <h4>10.1.5 Data Collection</h4>
+          <p>
+            Data collection is done via a questionnaire, which has three sections of questions with the Likert scale as
+            answers. These three sections are overall chatbot satisfaction, chatbot functionality, and application UI/UX
+            satisfaction. After the three sections is a section for open ended questions.The full questionnaire is in
+            <b>Appendix D</b>.
+          </p>
+        </div>
+      </div>
+
+      <div id="sub-section-10-header-2">
+        <h3>10.2 Test Results</h3>
+
+        <div id="sub-section-10-header-2-1">
+          <h4>10.2.1 Result Summary</h4>
+          <table id="table-28" style="margin-left:auto; margin-right:auto; border:none; padding:0px;">
+            <caption><i>Table 28. Results Summary</i></caption>
+            <th style="border: none;">
+              <img src="assets/table28.png" style="max-width:800px;">
+            </th>
+          </table>
+          <br>
+          <table id="table-29" style="margin-left:auto; margin-right:auto; border:none; padding:0px;">
+            <caption><i>Table 29. Summary of User Test Responses</i></caption>
+            <th style="border: none;">
+              <img src="assets/table29.png" style="max-width:800px;">
+            </th>
+          </table>
+        </div>
+
+        <div id="sub-section-10-header-2-2">
+          <h4>10.2.2 Key Takeaways and Conclusion</h4>
+          <p>
+            From this round of user tests, three major issues can be highlighted.
+          </p>
+          <ol>
+            <li>The accuracy and reliability of suggestions given by the chatbot</li>
+            <li>The ability of the chatbot to properly resolve issues raised by the user</li>
+            <li>The humanisation of the chatbot's responses</li>
+            <li>The ability of reminders to alert the user</li>
+          </ol>
+          <p>
+            Most of these issues stem from the chatbot. In particular, these are issues with the size of the knowledge
+            base and with the system prompt in the backend. These necessitate the expansion of our current knowledge
+            base and fine tuning of the system prompt to introduce more variation in sentence structure and to encourage
+            resolution of a patient's issues over referring the patient to their health provider. The ability for the
+            chatbot to give useful suggestions is integral to the functioning of the chatbot, and thus the system prompt
+            modification will be worked on for the final prototype.
+            <br><br>
+            On the frontend, the current notifications system is deemed by some users not to be sustained and impactful
+            enough. This can be improved with an opt-in calling or alarm system that can better incentivise these
+            patients to conduct their daily routine tasks. The chatbot interface can also be overhauled to allow the
+            display of links from relevant websites to assure patients that the chatbot's information comes from
+            reliable sources. These issues are less critical to the function of the application, and so the priority for
+            the resolution of these issues is medium to low and can be slated for future works.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <sl-divider></sl-divider>
+
+    <div id="section-header-11">
+      <h2>11. Evaluation whether intended deliverables were met</h2>
+      <p>
+        For the final version of the prototype, the application' UI design remains unchanged from the last frontend
+        iteration, while implementation bugs caught during the integration and user tests were fixed. For the backend,
+        the system prompt was improved with the addition of a few additional clauses to alter the chatbot's response.
+      </p>
+      <table id="table-30" style="margin-left:auto; margin-right:auto; border:none; padding:0px;">
+        <caption><i>Table 30. Evaluation of Intended Deliverables</i></caption>
+        <th style="border: none;">
+          <img src="assets/table30.png" style="max-width:800px;">
+        </th>
+      </table>
+    </div>
+    <sl-divider></sl-divider>
+
+    <div id="section-header-12">
+      <h2>12. Future Works and Conclusion</h2>
+
+      <div id="sub-section-12-header-1">
+        <h3>12.1 Frontend</h3>
+        <image-component id="fig-32" tag="image" source="assets/fig32.png" subtitle="Figure 32. Sample Nurse Wireframe">
+        </image-component>
+        <p>
+          The nurse side of this application, following the design phase's future work, can be implemented fully as a
+          desktop application to be used by nurses and staff at the hospital.
+          <br><br>
+          The open source packages used restrict the design of the application, preventing some functional features,
+          like website recommendations, from being implemented. Creating the components from scratch is much more
+          time-consuming, but allows a much greater level of customisation in UI and functionality of the application.
+          Thus, implementing these packages is part of future work.
+          <br><br>
+          The current implementation also does not have proper authentication protocols implemented, due to the
+          time-consuming nature of programming with data security in mind. For future work, user authentication can be
+          implemented in a secure fashion with authentication of the user during bootstrapping and login, and proper
+          data encryption protocols implemented for all communication between the frontend and backend.
+          <br><br>
+          The current implementation can also improve the efficiency at which it sends and retrieves user data from the
+          backend. Since multiple screens actually require the same set of data, such as medications and vitals
+          measurements, a class meant to retrieve and cache user data from the backend can be implemented to reduce
+          requests sent to the backend while ensuring that user data is updated periodically on the frontend.
+        </p>
+      </div>
+
+      <div id="sub-section-12-header-2">
+        <h3>12.2 Backend</h3>
+        <p>
+          While the chatbot is capable of providing medically relevant responses based on the knowledge base provided,
+          it does not always deliver fully satisfactory interactions for users, as major healthcare decisions are still
+          deferred to medical professionals. Thus, leaving users dissatisfied by its response. To improve the chatbot's
+          effectiveness and ensure appropriate handling of medical inquiries, future enhancements can focus on
+          implementing a differentiated response mechanism based on the severity and urgency of patient queries. This
+          could include integrating the chatbot with features that loops nurses to intervene and assist with more
+          serious concerns, thereby ensuring that users receive timely, accurate support when needed. A continuous
+          learning mechanism will be implemented where the chatbot analyzes user feedback to refine its conversational
+          style. By adapting its responses based on previous interactions and feedback, the chatbot can develop a more
+          natural, empathetic and human-like conversational tone over time.
+        </p>
+      </div>
+
+      <div id="sub-section-12-header-3">
+        <h3>12.3 Speech and Image Recognition</h3>
+        <p>
+          To enhance MediHeal's accessibility for elderly users, we recommend implementing speech-to-text (STT) and
+          image-to-text (ITT) functionality through a carefully designed technical integration. The system would utilize
+          Google's Cloud Speech-to-Text API with medical domain adaptation to ensure accurate transcription of
+          medication and vitals data. This would be configured with continuous dictation capabilities and wake-word
+          detection, while incorporating noise reduction algorithms to accommodate various home environments. A
+          HIPAA-compliant audio processing pipeline would maintain data security throughout the voice interaction
+          process [21].
+          <br><br>
+          For visual data capture, we propose implementing Tesseract OCR with custom-trained models specifically
+          optimized for medical use cases. These models would be capable of parsing prescription labels to extract
+          dosage, frequency, and administration instructions, while also recognizing data from medical device displays
+          such as glucose meters and blood pressure monitors. The system would include image preprocessing features
+          including perspective correction and glare reduction to handle imperfect capture conditions. This
+          comprehensive technical solution would significantly improve accessibility while maintaining rigorous data
+          security and privacy standards.
+          <br><br>
+          The implementation would follow a phased approach, beginning with core STT functionality before adding ITT
+          capabilities. Each phase would include extensive testing with elderly users to refine the interface and
+          interaction models. The technical architecture would be designed for scalability, allowing for future
+          enhancements such as multilingual support or integration with additional medical devices. This recommendation
+          aligns with MediHeal's commitment to inclusive healthcare technology while addressing the specific needs of
+          elderly users through thoughtful technical implementation.
+        </p>
+      </div>
+
+      <div id="sub-section-12-header-4">
+        <h3>12.4 Conclusion</h3>
+        <p>
+          With the emergence of MIC@Home as part of a movement towards shifting care away from the hospital, great care
+          must be taken to ensure the quality of patient care at home does not diminish even without a nurse present
+          24/7. MediHeal was designed with the needs of these patients in mind, to streamline the patient-provider
+          connection and relieve the mental burden placed on patients.
+          <br><br>
+          With the focus on patient task and query management, a set of functional and non-functional requirements were
+          drafted for MediHeal, specifying backend and frontend goals. From these requirement specifications, multiple
+          iterations of prototyping were conducted, each one building off the last and using feedback from various forms
+          of testing to refine the application.
+          <br><br>
+          Integrated user testing revealed positive aspects of the application such as the convenient user interface,
+          while there was room to improve in terms of chatbot satisfaction. For the future, there are certainly areas of
+          refinement and expansion, like the refinement of the backend chatbot prompts and architecture, and the design
+          and implementation of a nurse-facing aspect of the application.
+          <br><br>
+          All in all, although such an application might not be able to fully replace a nurse's duties, it certainly has
+          the potential to fill in the gaps left by nurses during their hospital stay at home.
+        </p>
+      </div>
+    </div>
+    <sl-divider></sl-divider>
 
     <!-- This is an example of how you can use the references component to create references -->
     <div id="references" class="references">
-      <sl-divider></sl-divider>
       <h2>References</h2>
-      <ul>
+      <ol>
         <li>
-          Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved from
-          http://www.dowjones.com/factiva/
+          "Action plan for successful ageing 2023," Ministry of Health,
+          <a
+            href="https://www.moh.gov.sg/others/resources-and-statistics/action-plan-for-successful-ageing">https://www.moh.gov.sg/others/resources-and-statistics/action-plan-for-successful-ageing</a>
+          (accessed Apr. 5, 2025).
         </li>
         <li>
-          Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker well-being: Occupational
-          health psychologists convene to share their research on work, stress, and health. Monitor on Psychology,
-          39(5), 26-29.
+          "Hospital bed occupancy rate," Ministry of Health,
+          <a
+            href="https://www.moh.gov.sg/newsroom/hospital-bed-occupancy-rate">https://www.moh.gov.sg/newsroom/hospital-bed-occupancy-rate</a>
+          (accessed Apr. 5, 2025).
         </li>
         <li>
-          Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied Psychology, 2(2),
-          38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
+          L. T. Tierney and K. M. Conroy, “Optimal occupancy in the ICU: A literature review,” <i>Australian Critical
+            Care</i>, vol. 27, no. 2, pp. 77-84, May 2014. doi:10.1016/j.aucc.2013.11.003
         </li>
-      </ul>
+        <li>
+          S. Khalik, “Longer Hospital stays for older patients a major reason for high bed occupancy: MOH,” The Straits
+          Times,
+          <a
+            href="https://www.straitstimes.com/singapore/longer-hospital-stays-for-older-patients-a-major-reason-for-high-bed-occupancy-moh">https://www.straitstimes.com/singapore/longer-hospital-stays-for-older-patients-a-major-reason-for-high-bed-occupancy-moh</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          "Waiting times for admissions at Public Hospitals". Ministry of Health. (2023, July 5).
+          <a
+            href="https://www.moh.gov.sg/newsroom/waiting-times-for-admissions-at-public-hospitals">https://www.moh.gov.sg/newsroom/waiting-times-for-admissions-at-public-hospitals</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          “Patients delaying discharge from hospitals due to lack of suitable care arrangements at home,” Ministry of
+          Health,
+          <a
+            href="https://www.moh.gov.sg/newsroom/patients-delaying-discharge-from-hospitals-due-to-lack-of-suitable-care-arrangements-at-home">https://www.moh.gov.sg/newsroom/patients-delaying-discharge-from-hospitals-due-to-lack-of-suitable-care-arrangements-at-home</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          “Expanding Healthcare capacity and transforming the healthcare workforce,” Ministry of Health,
+          <a
+            href="https://www.moh.gov.sg/newsroom/expanding-healthcare-capacity-and-transforming-the-healthcare-workforce">https://www.moh.gov.sg/newsroom/expanding-healthcare-capacity-and-transforming-the-healthcare-workforce</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          “HDB | Committee of Supply 2025,” Housing and Development Board,
+          <a
+            href="https://www.hdb.gov.sg/cs/infoweb/hdbnews/Committee-of-Supply-2025">https://www.hdb.gov.sg/cs/infoweb/hdbnews/Committee-of-Supply-2025</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          R. Loh and N. Elangovan, “The big read: With more seniors needing care, is assisted living the answer for
+          s'pore's 'missing middle' and their caregivers?,” TODAY,
+          <a
+            href="https://www.todayonline.com/big-read/big-read-seniors-caregiving-assisted-living-singapore-caregivers-2198511">https://www.todayonline.com/big-read/big-read-seniors-caregiving-assisted-living-singapore-caregivers-2198511</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          N. Lam, “The big read: When home is where the hospital bed is,” CNA,
+          <a
+            href="https://www.channelnewsasia.com/today/big-read/big-read-hospital-bed-crunch-home-4216886">https://www.channelnewsasia.com/today/big-read/big-read-hospital-bed-crunch-home-4216886</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          “Mobile Inpatient Care @ Home Sandbox to expand to more public hospitals to cover more medical conditions,”
+          MOH Office for Healthcare Transformation,
+          <a
+            href="https://www.moht.com.sg/news-and-updates/mobile-inpatient-care-home-sandbox-to-expand-to-more-public-hospitals-to-cover-more-medical-conditions">https://www.moht.com.sg/news-and-updates/mobile-inpatient-care-home-sandbox-to-expand-to-more-public-hospitals-to-cover-more-medical-conditions</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          “Delivering care beyond hospitals,” Ministry of Health,
+          <a
+            href="https://www.moh.gov.sg/newsroom/delivering-care-beyond-hospitals">https://www.moh.gov.sg/newsroom/delivering-care-beyond-hospitals</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          “Web content accessibility guidelines (WCAG) 2.1,” Singapore Government Developer Portal,
+          <a
+            href="https://www.developer.tech.gov.sg/guidelines/standards-and-best-practices/wcag-2-1.html">https://www.developer.tech.gov.sg/guidelines/standards-and-best-practices/wcag-2-1.html</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          W. T, “Measuring and interpreting system usability scale (SUS),” UIUX Trend,
+          <a
+            href="https://uiuxtrend.com/measuring-system-usability-scale-sus/">https://uiuxtrend.com/measuring-system-usability-scale-sus/</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          R. Budiu, “Fitts's law and its applications in UX,” Nielsen Norman Group,
+          <a href="https://www.nngroup.com/articles/fitts-law/">https://www.nngroup.com/articles/fitts-law/</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          J. Nielsen, “Jakob's law of the internet user experience,” UX Tigers,
+          <a href="https://www.uxtigers.com/post/jakobs-law">https://www.uxtigers.com/post/jakobs-law</a> (accessed Apr.
+          5, 2025).
+        </li>
+        <li>
+          H. Dewra, “The 7+2 rule: The real science behind Miller's law that will shock you & your deepest memory!,”
+          Medium,
+          <a
+            href="https://medium.com/design-bootcamp/the-7-2-rule-the-real-science-behind-millers-law-that-will-shock-you-your-deepest-memory-4a35be25bb3b">https://medium.com/design-bootcamp/the-7-2-rule-the-real-science-behind-millers-law-that-will-shock-you-your-deepest-memory-4a35be25bb3b</a>
+          (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          British Standards Institution and O. For, Ergonomics of human-system interaction. Part 210. Human-centred
+          design for interactive systems (ISO 9241-210:2010). London: British Standards Institution, 2010.
+        </li>
+        <li>
+          “Material design,” Material Design,
+          <a href="https://m3.material.io/">https://m3.material.io/</a> (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          “Groq Inference Performance, Quality, & Cost Savings,” Groq, Mar. 08, 2023.
+          <a href="https://groq.com/inference/">https://groq.com/inference/</a> (accessed Apr. 5, 2025).
+        </li>
+        <li>
+          “Summary of the HIPAA privacy rule,” HHS.gov,
+          <a
+            href="https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html">https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html</a>
+          (accessed Apr. 5, 2025).
+        </li>
+      </ol>
+      <br><br>
+    </div>
+    <sl-divider></sl-divider>
+
+    <div id="appendix">
+      <h2>Appendix</h2>
+      <div id="appendix-A">
+        <h3>Appendix A: Wireframe Iterations</h3>
+        <p>
+          <b>Iteration 1</b>
+          <image-component tag="image" source="assets/app1.png" style="max-width:800px;"
+            subtitle="Figure 1. Iteration 1 Wireframe (Patients App)">
+          </image-component>
+          <br><br>
+
+          <image-component tag="image" source="assets/app2.png" style="max-width:800px;"
+            subtitle="Figure 2. Continuation of Iteration 1 Wireframe (Patients App)">
+          </image-component>
+          <br><br>
+        </p>
+        <p>
+          <b>Iteration 2</b>
+          <br><br>
+
+        <div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin-bottom: 40px;">
+          <!-- First Row -->
+          <image-component tag="image" source="assets/app3.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 3. Iteration 2 Log In Page Wireframe "></image-component>
+          <image-component tag="image" source="assets/app4.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 4. Iteration 2 Sign Up Page Wireframe "></image-component>
+          <!-- Second Row -->
+          <image-component tag="image" source="assets/app5.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 5. Iteration 2 Homepage Wireframe  "></image-component>
+          <image-component tag="image" source="assets/app6.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 6. Iteration 2 My Vital Signs Wireframe "></image-component>
+        </div>
+
+
+        <div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin-bottom: 40px;">
+          <!-- First Row -->
+          <image-component tag="image" source="assets/app7.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 7. Iteration 2 Vital Sign Graph Wireframe"></image-component>
+          <image-component tag="image" source="assets/app8.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 8. Iteration 2 Pills Schedule Wireframe "></image-component>
+          <!-- Second Row -->
+          <image-component tag="image" source="assets/app9.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 9. Iteration 2 Chatbot Wireframe"></image-component>
+          <image-component tag="image" source="assets/app10.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 10. Iteration 2 Chatbot Sample Conversation Wireframe"></image-component>
+        </div>
+        <div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin-bottom: 40px;">
+          <!-- First Row -->
+          <image-component tag="image" source="assets/app11.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 11. Iteration 2 Chatbot History Wireframe"></image-component>
+          <image-component tag="image" source="assets/app12.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 12. Iteration 2 Chatbot Bookmarked Wireframe  "></image-component>
+        </div>
+        </p>
+        <p>
+          <b>Iteration 3</b>
+          <br><br>
+
+        <div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin-bottom: 40px;">
+          <!-- First Row -->
+          <image-component tag="image" source="assets/app13.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 13. Iteration 3 Homepage Wireframe "></image-component>
+          <image-component tag="image" source="assets/app14.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 14. Iteration 3 Vitals Wireframe"></image-component>
+          <!-- Second Row -->
+          <image-component tag="image" source="assets/app15.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 15. Iteration 3 Vitals Trend Wireframe"></image-component>
+          <image-component tag="image" source="assets/app16.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 16.  Iteration 3 Pills Schedule Wireframe "></image-component>
+        </div>
+
+
+        <div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin-bottom: 40px;">
+          <!-- First Row -->
+          <image-component tag="image" source="assets/app17.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 17. Iteration 3 Add Pill Wireframe "></image-component>
+          <image-component tag="image" source="assets/app18.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 18. Iteration 3 MediHeal Chat Wireframe "></image-component>
+          <!-- Second Row -->
+          <image-component tag="image" source="assets/app19.png" style="width: 200px; object-fit: cover;"
+            subtitle="Figure 19. Iteration 3 MediHeal Chat Sample Conversation Wireframe"></image-component>
+        </div>
+        <image-component tag="image" source="assets/app20.png" style="max-width:800px;"
+          subtitle="Figure 20. Sample Vitals Pop Up Notification Wireframe">
+        </image-component>
+        </p>
+      </div>
+      <sl-divider></sl-divider>
+
+      <div id="appendix-B">
+        <h3>Appendix B: SUS Survey Instrument and Scoring Methodology</h3>
+        <ol>
+          <li>
+            <b> Complète SUS Questionnaire</b>
+            <p>
+              Participants rated the following 10 statements on a 5-point Likert scale (1 = Strongly Disagree to 5 =
+              Strongly Agree):
+            <ol>
+              <li>
+                I think I would like to use MediHeal frequently under MIC@Home.
+              </li>
+              <li>
+                I feel MediHeal is unnecessarily complex. (Inverse-scored)
+              </li>
+              <li>
+                I think MediHeal will be easy to use.
+              </li>
+              <li>
+                I think I need support to use MediHeal. (Inverse-scored)
+              </li>
+              <li>
+                I feel the features in MediHeal are well-integrated.
+              </li>
+              <li>
+                I think there is too much inconsistency in MediHeal. (Inverse-scored)
+              </li>
+              <li>
+                I feel that most patients would learn to use MediHeal quickly.
+              </li>
+              <li>
+                I feel that MediHeal would be difficult or frustrating to use. (Inverse-scored)
+              </li>
+              <li>
+                I feel confident using MediHeal.
+              </li>
+              <li>
+                I feel I need to learn a lot before I can use MediHeal properly. (Inverse-scored)
+              </li>
+            </ol>
+            </p>
+          </li>
+          <li>
+            <b>SUS Score Calculation </b>
+            <p>
+              Step 1: Adjust scores for inverse questions (marked above):
+            <ul>
+              <li>
+                For odd-numbered questions (Q1, Q3, Q5, Q7, Q9): → Adjusted Score = Raw Score - 1
+              </li>
+              <li>
+                For even-numbered questions (Q2, Q4, Q6, Q8, Q10): → Adjusted Score = 5 - Raw Score
+              </li>
+            </ul>
+            Step 2: Sum all adjusted scores (range: 0–40)
+            Step 3: Multiply the total by 2.5 to convert to a 0–100 scale:
+            <ul>
+              <li>
+                Final SUS Score = Total Adjusted Score × 2.5
+              </li>
+            </ul>
+            </p>
+          </li>
+          <li>
+            <b>Benchmark Interpretation </b>
+            <ul>
+              <li>
+                more than 80.3: Excellent usability (top 10% of systems)
+              </li>
+              <li>
+                68–80.3: Good usability
+              </li>
+              <li>
+                less than 68: Below average; needs improvement
+              </li>
+            </ul>
+          </li>
+          <br><br>
+          <li>
+            <b> Round 1 Results and Calculations </b>
+            <table style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
+              <caption><i>Table 1. Results of SUS round 1</i></caption>
+              <th style="border: none;">
+                <img src="assets/sus1.png" style="max-width:500px;">
+                </image-component>
+              </th>
+            </table>
+            <p>
+            <ul>
+              <li>
+                Round 1 MediHeal App Average: 72.5 (Good, with room for refinement)
+              </li>
+              <li>
+                Standard Deviation: 8.3
+              </li>
+              <li>
+                Range: 62.5 - 85.0
+              </li>
+            </ul>
+            </p>
+          </li>
+          <li>
+            <b> Round 2 Results and Calculations</b>
+          </li>
+          <table style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
+            <caption><i>Table 2. Results of SUS round 2</i></caption>
+            <th style="border: none;">
+              <img src="assets/sus2.png" style="max-width:500px;">
+              </image-component>
+            </th>
+          </table>
+          <p>
+          <ul>
+            <li>
+              Round 2 MediHeal App Average: 76.8 (Good usability)
+            </li>
+            <li>
+              Standard Deviation: 6.2
+            </li>
+            <li>
+              Range: 70.0 - 85.0
+            </li>
+          </ul>
+          <br>
+          Qualitative feedback revealed several validated design improvements. The redesigned homepage received
+          particular praise for its enhanced visual hierarchy, with participants specifically noting the effectiveness
+          of balanced spacing and logical element grouping. The strategic repositioning and recoloring of the emergency
+          call function (from red to green) successfully aligned with healthcare professionals' mental models while
+          maintaining accessibility standards. Medication management enhancements, including color-coded meal timing
+          indicators and completed-dose strikethroughs, were frequently cited as particularly valuable features that
+          reduced cognitive load during testing scenarios.
+          <br><br>
+          However, the evaluation also identified persistent usability challenges requiring attention. Action button
+          differentiation, especially between "Snooze" and "Skip" functions, continued to cause occasional confusion
+          despite interface refinements. The vitals logging workflow, while improved, still presented friction points
+          during manual data entry. Chatbot interactions, though enhanced with bookmarking functionality and improved
+          visual identity, were noted to sometimes feel overly generic in their responses.
+          </p>
+        </ol>
+      </div>
+      <sl-divider></sl-divider>
+
+      <div id="appendix-C">
+        <h3>Appendix C: Information Flow and AI Integration</h3>
+        <p>
+          This section outlines the information flow within the backend, detailing how patient interactions, medication
+          adherence and hospital dashboards function together. Additionally, the AI tools set up and utilization in
+          LangChain are explained in the context of chatbot interactions and patient engagement.
+        </p>
+        <image-component tag="image" source="assets/backend_architecture.png" subtitle="Figure 1. Backend architecture">
+        </image-component>
+        <ul>
+          <li>
+            Information Flow
+            <ol>
+              <li>
+                <b> User-Chatbot Interaction Logging (Orange)</b>
+                <p>
+                  All interactions between the user and chatbot are recorded and saved in the database. Hospital
+                  management can access this data when needed, ensuring transparency and enabling better patient
+                  oversight. Additionally, a summarized version of these interactions is made available on the nurses’
+                  dashboard, allowing them to monitor patient engagement and address any critical concerns raised by the
+                  chatbot.
+                </p>
+              </li>
+              <li>
+                <b> Medication & Vitals Compliance Tracking (Red)</b>
+                <p>
+                  Based on the prescribed care plan, the Medication and Vitals tables in the database store the schedule
+                  for medication administration and vital signs monitoring. A daily query extracts this scheduled
+                  information and leverages Firebase to send timely push notifications to the relevant users (patients
+                  or caregivers), ensuring adherence to the care plan and promoting proactive health management.
+                </p>
+              </li>
+              <li>
+                <b> Hospital Dashboard for Real-Time Monitoring (Blue)</b>
+                <p>
+                  To facilitate comprehensive patient oversight, key data points are aggregated and presented on
+                  hospital dashboards. These dashboards provide nurses and healthcare providers with real-time insights,
+                  enabling them to efficiently track patient progress, identify potential adherence issues and intervene
+                  promptly when necessary. The dashboard serves as a centralized hub for monitoring recovery trends and
+                  ensuring timely interventions.
+                </p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            LangChain Tools Integration
+            <p>
+              To enhance chatbot interactions and ensure patients receive accurate and relevant responses, the system
+              leverages various LangChain tools:
+            </p>
+            <ul>
+              <li>
+                <b>RAG Tool (Retrieval-Augmented Generation)</b>
+                <p>
+                  This tool is designed to perform semantic search from the knowledge base relevant to the query of the
+                  users to get answers that are related to the condition type that the user is suffering from.
+                </p>
+              </li>
+              <li>
+                <b>SQL Query Tool</b>
+                <p>
+                  This is a custom function tool that does a query for the medication and vital schedule and record to
+                  remind users when asked about the schedule for the day.
+                </p>
+              </li>
+              <li>
+                <b>Tavily Search Tool</b>
+                <p>
+                  This is an internet search tool that does an internet search if in the case the rag tool does not have
+                  any relevant information as requested by the user, this tool is only activated when the “look up “ key
+                  word is provided by the user.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <sl-divider></sl-divider>
+      <div id="appendix-D">
+        <h3>Appendix D: Data Collected from Integrated User Tests</h3>
+        <table style="margin-left:auto; margin-right:auto;">
+          <caption><i>Data Collected from Integrated User Tests: Likert Scale Questions</i></caption>
+
+          <!-- Row 1 -->
+          <tr>
+            <th>Question</th>
+            <th>User 1</th>
+            <th>User 2</th>
+            <th>User 3</th>
+            <th>User 4</th>
+            <th>User 5</th>
+            <th>User 6</th>
+            <th>Mean Score</th>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr>
+            <td>I am satisfied with the chatbot's performance.</td>
+            <td>3</td>
+            <td>3</td>
+            <td>4</td>
+            <td>2</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3.166666667</td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr>
+            <td>The chatbot is easy to use and navigate.</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4.5</td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr>
+            <td>The chatbot provides accurate and helpful responses.</td>
+            <td>3</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3.333333333</td>
+          </tr>
+
+          <!-- Row 5 -->
+          <tr>
+            <td>The chatbot responds in a timely manner.</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+
+          <!-- Row 6 -->
+          <tr>
+            <td>The chatbot understands my queries effectively.</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3.333333333</td>
+          </tr>
+
+          <!-- Row 7 -->
+          <tr>
+            <td>The chatbot provides responses tailored to my needs.</td>
+            <td>2</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>1</td>
+            <td>3.166666667</td>
+          </tr>
+
+          <!-- Row 8 -->
+          <tr>
+            <td>The chatbot helps me resolve my issues effectively.</td>
+            <td>1</td>
+            <td>3</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>1</td>
+            <td>2.666666667</td>
+          </tr>
+
+          <!-- Row 9 -->
+          <tr>
+            <td>The chatbot communicates in a friendly and engaging manner.</td>
+            <td>5</td>
+            <td>5</td>
+            <td>2</td>
+            <td>5</td>
+            <td>3</td>
+            <td>4</td>
+            <td>4</td>
+          </tr>
+
+          <!-- Row 10 -->
+          <tr>
+            <td>I would recommend this chatbot to others.</td>
+            <td>2</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>2.666666667</td>
+          </tr>
+
+          <!-- Row 11 -->
+          <tr>
+            <td>My overall experience with the chatbot has been positive.</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>3.666666667</td>
+          </tr>
+
+          <!-- Row 12 -->
+          <tr>
+            <td>The chatbot effectively reminds me to take my medication on time.</td>
+            <td>4</td>
+            <td>3</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>3.5</td>
+          </tr>
+
+          <!-- Row 13 -->
+          <tr>
+            <td>The chatbot provides helpful suggestions to aid in my recovery.</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>3.666666667</td>
+          </tr>
+
+          <!-- Row 14 -->
+          <tr>
+            <td>I trust the information and recommendations provided by the chatbot.</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+
+          <!-- Row 15 -->
+          <tr>
+            <td>The chatbot is able to respond appropriately to urgent health-related questions</td>
+            <td>2</td>
+            <td>4</td>
+            <td>2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>1</td>
+            <td>2.333333333</td>
+          </tr>
+
+          <!-- Row 16 -->
+          <tr>
+            <td>The chatbot provides responses that feel personalized to my health condition and needs.</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3.333333333</td>
+          </tr>
+
+          <!-- Row 17 -->
+          <tr>
+            <td>The chatbot explains health-related topics in a clear and understandable manner.</td>
+            <td>5</td>
+            <td>4</td>
+            <td>5</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>4</td>
+          </tr>
+
+          <!-- Row 18 -->
+          <tr>
+            <td>The chatbot provides emotional support and reassurance when I have health concerns.</td>
+            <td>5</td>
+            <td>4</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>1</td>
+            <td>3.666666667</td>
+          </tr>
+
+          <!-- Row 19 -->
+          <tr>
+            <td>The chatbot is a valuable companion for managing my healthcare needs.</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>1</td>
+            <td>3.5</td>
+          </tr>
+
+          <!-- Row 20 -->
+          <tr>
+            <td>Compared to traditional rule-based chatbots, I find this AI-powered chatbot to be more approachable.</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td>2</td>
+            <td>3</td>
+            <td>1</td>
+            <td>2.333333333</td>
+          </tr>
+
+          <!-- Row 21 -->
+          <tr>
+            <td>I think I would like to use Mediheal frequently under MIC@Home.</td>
+            <td>3</td>
+            <td>3</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3.666666667</td>
+          </tr>
+
+          <!-- Row 22 -->
+          <tr>
+            <td>I feel Mediheal is unnecessarily complex.</td>
+            <td>2</td>
+            <td>3</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>2</td>
+            <td>2.166666667</td>
+          </tr>
+
+          <!-- Row 23 -->
+          <tr>
+            <td>I think Mediheal will be easy to use.</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+          </tr>
+
+          <!-- Row 24 -->
+          <tr>
+            <td>I think I need support to use MediHeal.</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+
+          <!-- Row 25 -->
+          <tr>
+            <td>I feel the features in Mediheal are well-integrated.</td>
+            <td>5</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4.166666667</td>
+          </tr>
+
+          <!-- Row 26 -->
+          <tr>
+            <td>I think there is too much inconsistency in Mediheal.</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1.833333333</td>
+          </tr>
+
+          <!-- Row 27 -->
+          <tr>
+            <td>I feel that most patients would learn to use Mediheal quickly.</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3.833333333</td>
+          </tr>
+
+          <!-- Row 28 -->
+          <tr>
+            <td>I feel confident using Mediheal.</td>
+            <td>4</td>
+            <td>5</td>
+            <td>4</td>
+            <td>5</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4.333333333</td>
+          </tr>
+
+          <!-- Row 29 -->
+          <tr>
+            <td>I feel that Mediheal would be difficult or frustrating to use.</td>
+            <td>3</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>1</td>
+            <td>2.166666667</td>
+          </tr>
+
+          <!-- Row 30 -->
+          <tr>
+            <td>I feel I need to learn a lot before I can use Mediheal properly.</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1.333333333</td>
+          </tr>
+        </table>
+        <br>
+        <table style="margin-left:auto; margin-right:auto;">
+          <caption><i>Data Collected from Integrated User Tests: Open Ended Questions</i></caption>
+
+          <!-- Row 1 -->
+          <tr>
+            <th>Question</th>
+            <th>User 1</th>
+            <th>User 2</th>
+            <th>User 3</th>
+            <th>User 4</th>
+            <th>User 5</th>
+            <th>User 6</th>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr>
+            <td>
+              What features or improvements would you like to see in the chatbot to better assist with your healthcare needs?
+            </td>
+            <td>
+              A contact to the relevant healthcare provider or check with them whenever they are free and get back to me when the information is available
+            </td>
+            <td>
+              Regarding drug related information, it is better that the chatbot do not provide information than to hallucinate and provide potentially wrong information
+            </td>
+            <td>
+              I would like a “chat with the nurse” function.
+            </td>
+            <td>
+              More accurate responses and timely reminders to take my medication.
+            </td>
+            <td>
+              the chat can answer faster. It can try to mimic a human instead of saying sorry for every prompt which makes it unusual
+            </td>
+            <td>
+              The chat bot is not replying to the previous prompt on symptom.
+            </td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr>
+            <td>
+              Do you find the chatbot's medication reminders helpful for you to stay consistent with your medication schedule? If not, what could improve them?
+            </td>
+            <td>
+              I think it would be helpful
+            </td>
+            <td>
+              Most apps on smartphones have similar notification system where a pop-up is sent followed by a short buzz. It might be better to integrate like a calling function which might deter against user fatigue to phone notifications as people will definitely respond to calls.
+            </td>
+            <td>
+              I think it is helpful. Maybe there could be an option to choose a few reminders before the medicine is meant to be taken.
+            </td>
+            <td>
+              NIL
+            </td>
+            <td>
+              yes it is useful, but must be on time with no lag
+            </td>
+            <td>
+              Louder and longer reminder, pure notification pop up is insufficient and the patient may not be able to hear it
+            </td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr>
+            <td>
+              Can you share an example of a recovery suggestion from the chatbot that you found particularly useful or ineffective?
+            </td>
+            <td>
+              the chatbot consistently says it is best to check with the provider or just stick to the plan regarded of the changes in symptoms fed to it, which can be inaccurate or inconsistent at times
+            </td>
+            <td>
+              In the case of me having fever, the chatbot is able to ask me to drink up and eat panadol which is kind of the standard action when one has fever
+            </td>
+            <td>
+              One recovery suggestion that I found particularly useful was it trying to convince me to take medicine after I told it that I want to heal naturally.
+            </td>
+            <td>
+              Told me to drink plenty of fluids, which is a general suggestion for a patient with UTI.
+            </td>
+            <td>
+              It said that I cannot take cranberry juice but actually it is useful for patients with UTI, which was contradictory
+            </td>
+            <td>
+              The prompt given was to have high fever, the bot say he will send doctor over, however when asked how long the doctor will come, the bot say it will bring water over.
+            </td>
+          </tr>
+
+          <!-- Row 5 -->
+          <tr>
+            <td>
+              How confident are you in the chatbot's ability to provide accurate and trustworthy health-related guidance? What would make you trust it more?
+            </td>
+            <td>
+              I am not very confident in trusting it, I feel that I would still double check everything with the healthcare provider and this puts an unnecessary information step in between, rather than directly asking the nurse or doctor. I think I will be more trusting of it if it can retrieve information from healthcare providers and pass it on, acting as a messenger
+            </td>
+            <td>
+              I am kind of skeptical regarding the use of a chatbot when it comes to health-related guidance. It would be helpful to know where its information is coming from so users can refer to the actual sources if possible. If it is an internal database, it should mention so.
+            </td>
+            <td>
+              I am not very confident in the chatbot's ability to provide accurate and trustworthy guidance. I would trust it more if it sends a link to back up its advice.
+            </td>
+            <td>
+              Not really. More consistent accurate responses.
+            </td>
+            <td>
+              I am confident with its ability but it needs to be thoroughly fact checked.
+            </td>
+            <td>
+              Not very. It needs to give proper data and advice when a prompt is given
+            </td>
+          </tr>
+
+          <!-- Row 6 -->
+          <tr>
+            <td>
+              Do you feel that the chatbot provides enough emotional support when you have health concerns? How could it improve in this aspect?
+            </td>
+            <td>
+              yes, it responds conversationally, in a friendly manner and it is not dismissive of my concerns
+            </td>
+            <td>
+              It does have a relatively friendly tone but at the end of the day, it is a chatbot and it can feel artificial. I am not sure if its a chatbot that one can speak to. If it has a more human-like voice might be better than just text replies.
+            </td>
+            <td>
+              I feel like there is a basic level of emotional support. However, it always begins with the same sentence which can get annoying at times.
+            </td>
+            <td>
+              yes.
+            </td>
+            <td>
+              It does not really help emotionally but it has the potential to do so. It can be trained with more ways to respond to human emotions
+            </td>
+            <td>
+              No. give it a more human kind of tone
+            </td>
+          </tr>
+
+          <!-- Row 7 -->
+          <tr>
+            <td>
+              Have there been any instances where the chatbot's response was unclear or confusing? How do you think it could communicate better?
+            </td>
+            <td>
+              There was once where it changed its response regarding a skipped medication because I fed it extra information about my symptoms. If I had not fed it this information because I do not know that it is relevant to its response, then I would have just followed the first general advice that the chatbot gave me. I think this can be improved if, when I ask the chatbot something eg. about skipping medications, the chatbot returns follow up questions about symptoms or context information that is relevant to the question before giving a final response
+            </td>
+            <td>
+              There are ways to get the chatbot to change topic etc and it can sometime fail in keeping up with the original convo. Users might need to learn how to prompt it for better replies since its a LLM
+            </td>
+            <td>
+              The chatbot is clear and not confusing. But the bot could do better with more variability in its reassurance responses.
+            </td>
+            <td>
+              Yes. The chatbot needs to better understand what user is saying.
+            </td>
+            <td>
+              It is clear and convincing, but instead of following a fixed template, it can try different ways to say things in a different format. Like giving a list of remedies with bullet points
+            </td>
+            <td>
+              The prompt given was to have high fever, the bot say he will send doctor over, however when asked how long the doctor will come, the bot say it will bring water over. It needs to give more exact data or ETA
+            </td>
+          </tr>
+
+          <!-- Row 8 -->
+          <tr>
+            <td>
+              Would you recommend this chatbot to others who need healthcare assistance? Why or why not?
+            </td>
+            <td>
+              At this stage, I would be slightly reluctant. I would still recommend it but I would offer a word of caution to take its responses lightly
+            </td>
+            <td>
+              I would not recommend it for now. I feel that a lot more user testing is needed and if possible, some sort of regulatory approval before it goes public
+            </td>
+            <td>
+              I would recommend this bot to younger people as older patients might be more resistant to change. They might want to talk to a real nurse instead.
+            </td>
+            <td>
+              not really. Too much delay in communication and not very foolproof.
+            </td>
+            <td>
+              Yes, it is helpful in certain ways to help the user with their problems in between nurse visits.
+            </td>
+            <td>
+              No, it is currently unsafe and inaccurate
+            </td>
+          </tr>
+
+          <!-- Row 9 -->
+          <tr>
+            <td>
+              How would you consider this AI based chatbot to be different from traditional chatbots
+            </td>
+            <td>
+              It is different because it can take into account varying symptoms and situations, tailoring the response, but the tailored response often seems to be “check with the healthcare provider”
+            </td>
+            <td>
+              It uses a RAG architecture that might have information that are not found or easily accessible on the internet
+            </td>
+            <td>
+              It does not give me too much of a mechanical response when I ask it very off-topic questions.
+            </td>
+            <td>
+              Tailored for healthcare.
+            </td>
+            <td>
+              it is different as it focuses on healthcare related problems only
+            </td>
+            <td>
+              It is more interactive
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 

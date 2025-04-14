@@ -1,11 +1,9 @@
 new gridjs.Grid({
-  columns: ["Name", "Email", "Phone Number"],
+  columns: ["No.", "Patient's Insights", "Identified Limitations"],
   data: [
-    ["John", "john@example.com", "(353) 01 222 3333"],
-    ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
-    ["Eoin", "eoin@gmail.com", "0097 22 654 00033"],
-    ["Sarah", "sarahcdd@gmail.com", "+322 876 1233"],
-    ["Afshin", "afshin@mail.com", "(353) 22 87 8356"],
+    ["1", "\"I'm constantly worried I'll forget a dose. It's exhausting managing so many medications and keeping them all straight. I'm scared I'm making mistakes sometimes.\"", "Patients struggle to manage multiple medications with complex schedules, leading to confusion, anxiety, and a higher risk of missed doses or incorrect intake."],
+    ["2", "\"I have many doubts to clarify but being left alone with my worries, not being able to reach anyone, just makes me feel very anxious and lost.\"", "(01) 22 888 4444"],
+    ["3", "\"I do log in my vitals but without any feedback, I worry if I’m making any progress in my recovery journey, how long will it take?\"", "0097 22 654 00033"],
   ],
 }).render(document.getElementById("table-1"));
 
