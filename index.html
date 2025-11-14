@@ -35,20 +35,18 @@
 
 <body>
   <div class="content">
-    <h1>Project Title</h1>
+    <h1>EcoSpool</h1>
 
     <!-- This is the team member component use to display details about your team members -->
     <div class="team-member-wrapper">
-      <team-member avatar="assets/blackranger.png" name="Black" department="Mechanical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/yellowranger.png" name="Yellow" department="Computer Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/redranger.png" name="Red" department="Electrical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/pinkranger.png" name="Pink" department="Biomedical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/blueranger.png" name="Blue" department="Chemical Engineering"
-        year="1993"></team-member>
+      <team-member avatar="assets/jay.png" name="Chong Jay-En" department="Electrical Engineering"
+        year="2001"></team-member>
+      <team-member avatar="assets/yichee.png" name="Huang Yi Chee" department="Computer Science"
+        year="2003"></team-member>
+      <team-member avatar="assets/redranger.png" name="James Wang" department="Mechanical Engineering"
+        year="2001"></team-member>
+      <team-member avatar="assets/tsehan.png" name="Low Tse Han" department="Electrical Engineering"
+        year="2002"></team-member>
     </div>
 
     <!-- This is a divide from the shoelace library for aesthetic purpose -->
@@ -58,28 +56,140 @@
     <div class="table-of-content">
       <h2>Table of Contents</h2>
       <sl-tree>
+        <sl-tree-item>
+          <a href="#acknowledgements">Acknowledgements</a>
+        </sl-tree-item>
+
         <sl-tree-item expanded>
-          <a href="#section-header-1">1. Section Header 1</a>
+          <a href="#introduction">1. Introduction</a>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#project-scope">2. Project Scope</a>
           <sl-tree-item>
-            <a href="#sub-section-1-header-1">1.1. Sub-section Header 1</a>
+            <a href="#problem-identification">2.1 Problem Identification</a>
+            <sl-tree-item>
+              <a href="#evaluating-pp-recycling-rate">2.1.1 Evaluating Polypropylene's Recycling rate</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#core-challenge">2.1.2 Core Challenge</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#viable-methods-pp-waste">2.1.3 Viable Methods for Handling PP Waste</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#evaluation-potential-methods">2.1.3 Evaluation of Potential Methods for PP Recycling</a>
+            </sl-tree-item>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#sub-section-1-header-2">1.2. Sub-section Header 2</a>
+            <a href="#our-solution">2.2 Our Solution</a>
+            <sl-tree-item>
+              <a href="#circular-plastic-economy">2.2.1 Creating a Circular Plastic Economy</a>
+            </sl-tree-item>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#users-insights">2.3 Users Insights</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#target-audience">2.4 Target Audience</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#analysis-current-solutions">2.5 Analysis of Current Solutions</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#value-proposition">2.6 Value Proposition</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#scope-of-work">2.7 Scope of Work</a>
           </sl-tree-item>
         </sl-tree-item>
 
         <sl-tree-item expanded>
-          <a href="#section-header-2">2. Section Header 1</a>
+          <a href="#design-methodology">3. Design Methodology</a>
           <sl-tree-item>
-            <a href="#sub-section-2-header-1">2.1. Sub-section Header 1</a>
+            <a href="#design-challenges">3.1 Design Challenges</a>
+            <sl-tree-item>
+              <a href="#semi-crystalline-structure">3.1.1 Semi-Crystalline Structure</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#complex-viscosity-sensitivity">3.1.2 Complex Viscosity Sensitivity to Temperature Changes</a>
+            </sl-tree-item>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#sub-section-2-header-2">2.2. Sub-section Header 2</a>
+            <a href="#design-approach">3.2 Design Approach</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#functional-decomposition">3.3 Functional Decomposition</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#system-specifications">3.4 System Specifications</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#morphological-chart">3.5 Morphological Chart</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#experimentation-prototyping">4. Experimentation & Rapid Prototyping / Iterations</a>
+          <sl-tree-item>
+            <a href="#cooling-system">4.1 Cooling System</a>
+            <sl-tree-item>
+              <a href="#hypothesis">4.1.1 Hypothesis</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#set-up">4.1.2 Set Up</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#methodology">4.1.3 Methodology</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#testing">4.1.4 Testing</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#modification-1">4.1.5 Modification 1</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#modification-2">4.1.6 Modification 2</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#overall-conclusions-insights">4.1.7 Overall Conclusions and Insights</a>
+            </sl-tree-item>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#evaluation">5. Evaluation</a>
+          <sl-tree-item>
+            <a href="#evaluation-target-specs">5.1 Evaluation against Target System Specifications</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#limitations">5.2 Limitations</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#future-work">5.3 Future Work</a>
+            <sl-tree-item>
+              <a href="#gradual-cooling">5.3.1 Gradual Cooling</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#deviation-diameter">5.3.2 Deviation of Diameter</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#varying-feedstock">5.3.3 Varying Feedstock</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#systems-integration">5.3.4 Systems Integration</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#pilot-programme">5.3.5 EcoSpool Filament Pilot Programme</a>
+            </sl-tree-item>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#timeline">5.4 Timeline</a>
           </sl-tree-item>
         </sl-tree-item>
 
         <sl-tree-item>
-          <a href="#references">References</a>
+          <a href="#appendix">Appendix</a>
         </sl-tree-item>
       </sl-tree>
     </div>
