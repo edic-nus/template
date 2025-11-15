@@ -16,3 +16,10 @@ p {
   text-align: justify;
   font-size: 1.1rem;
 }
+
+h5 {
+  font-weight: normal;
+  text-decoration: underline;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
